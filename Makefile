@@ -29,7 +29,7 @@
 #     BCAL_nim  - Elton Smith 10/03/16  -- use pdflatex
 #
 #
-TEX_FILES_0 = GlueX_nim beamline solenoid detector_overview tracking_detectors \
+TEX_FILES_0 = GlueX_nim gluex_experiment beamline solenoid detector_overview tracking_detectors \
               calorimeters scintillators triggerdaq controls online reconstruction simulation \
               performance summary authors
 TEX_FILES = $(addsuffix .tex,$(TEX_FILES_0)) # add .tex suffix
