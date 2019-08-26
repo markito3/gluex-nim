@@ -3,8 +3,133 @@
 %=================================================
 
 
-\section{The GlueX experiment \label{sec:gluexexperiment} }
+\section[The \gx{} experiment (TCR)]{The \gx{} experiment \label{sec:gluexexperiment} }
 
-The primary motivation of the GlueX experiment is to search for and, ultimately, study the pattern of gluonic excitations in the meson spectra produced 
+The primary motivation of the \gx{} experiment is to search for and, ultimately, study the pattern of gluonic excitations in the meson spectra produced 
 in $\gamma p$ collisions at 9~GeV~\cite{gluex-ref}. Specifically, GlueX aims to study the properties of hybrid mesons --- particles where the gluonic field 
 contributes directly to the $J^{PC}$ quantum numbers of the mesons~\cite{meyer:2015eta}. 
+
+\subsection[The Hall D complex]{The Hall D complex \label{sec:gluexexperiment:complex}}
+The Hall D complex consists of a tagger hall where incident 12~GeV electrons produce
+a beam of linearly polarized photons, and the experimental hall, where the photons interact
+in an experimental target and the resulting interactions are recorded by the \GX{} detector.
+A schematic of the complex, including the tagger area and the \GX{} experiment, is shown 
+in Figure~\ref{fig:gluex_schematic}.
+\begin{figure}[h!]\centering
+\includegraphics[width=0.9\textwidth]{../../apparatus/general/figs/GlueX_detector_labels_noplug}
+\caption[]{\label{fig:gluex_schematic}A cut-away drawing of the \GX{} detector in Hall D.}
+\end{figure}
+More information on the production, tagging and monitoring of the photon beam can be found in
+Chapter~\ref{sec:chap:beam}. The \GX{} detector is described in detail in 
+Chapter~\ref{sec:hall-d-spectrometer}.
+\mysubsection[Experimental Description]{Experimental Description}
+\label{sec:intro:detector}
+As seen in Figure~\ref{fig:gluex_schematic}, the 12~GeV electron beam passes through a 
+thin diamond wafer, where bremsstrahlung photons are produced. The electrons are then deflected
+by the tagger magnet. Non-radiating electrons are sent to a beam dump, while the electrons which
+have radiated more than a half of their energy
+are detected by a pair of hodoscope arrays. These arrays are aligned such that each detector element
+maps onto a narrow momentum range in the deflected electrons, and hence, a narrow energy range
+in the produced photons. Thus, the energy of each photon is ``tagged'' and known in  the experiment.
+The photon beam then travels about $80\, m$ to the experimental hall, where prior to entering the
+experiment, it is collimated, and monitored using both a polarimeter and a pair spectrometer.
+
+The photons can then interact in the target in \GX{}. Much of the experimental apparatus is inside
+a solenoidal magnet with central field of 2~T. The charged particles produced by the interacting
+photons are tracked by the start counter immediately outside the target (not shown in the figure),
+and then a pair of tracking systems. The central drift chamber is based on 28 layers of axial and stereo
+straws. The forward drift chambers are 24 drift chambers planes with both cathode
+and anode readout.  The flight-time of charged
+particles are measured using a combination of the start counter and the time-of-flight wall in the forward
+direction, and the start counter and the barrel calorimeter inside the solenoid.
+
+The final-state photons are detected in a pair of calorimeters. The barrel calorimeter, located inside the 
+solenoid, consists if layers of scintillating fiber alternating with lead sheets. The forward calorimeter
+is downstream of the time-of-flight wall, and consists of $2800$ lead-glass blocks. 
+
+\subsection[Experimental Requirements]{Experimental Requirements \label{sec:intro:requirements}}
+In order to be able to exclusively reconstruct events with final states given in Table~\ref{tab:exotic_modes},
+accurate reconstruction of the incident photon, as well as the produced charge particles and photons
+is necessary. 
+
+The linear polarization of the incident photon beam is produced through the coherent 
+bremsstrahlung process. These coherent photons have energies in the range of 8.4 to 9~GeV,
+and will be about $40\%$, after the beam collimation to $\sim{}25~\mu$rad with respect to the incoming 
+electron direction. For these linearly-polarized photons, it is necessary to accurately know the photon 
+energy, both for the exclusive final state reconstruction and also to accurately determine the photon 
+polarization on an event-by-event basis. In \GX{}, this energy is known to an accuracy of $0.1\%$ of the
+incident photon energy.
+
+In order to exclusively reconstruct multi-particle final states, the \GX{} detector needs be nearly
+hermetic with good momentum and energy resolution for both charged particles and photons.
+In order to be able to carry out the needed amplitude analysis, the detector acceptance  needs to 
+be reasonably uniform, and well understood and modeled in simulation. Typical momentum resolution
+for charged particles $1$--$2\%$, while for very-forward high-momentum particles, it is somewhat
+worse at around $8$-$9\%$. For high-momentum charged particles, the tracking system has 
+nearly hermetic acceptance for polar angles from about $2^{\circ}$ to $150^{\circ}$ in the lab. 
+Because of target material, protons with momentum below about 350~MeV/c are not detected,
+and pions with momentum under 200~MeV/c can have spiraling trajectories in the detector,
+which make reconstruction challenging.
+
+For photons, the typical energy resolution is $(5\,\mathrm{to}\,6\%)/\sqrt{E_{\gamma}}$. There is some 
+variation in the barrel calorimeter resolution, depending on the incident angle of the photon,
+but generally, photons above about 50~MeV are detected in the BCAL. The interaction point
+along the beam direction is determined by comparing the information from the readouts on the 
+upstream and downstream ends of the detector. The forward calorimeter can reconstruct photons
+whose energy is larger than 100~MeV, with uniform resolution across the face of the detector.
+There is an overlap region between the calorimeters at around $11^{\circ}$. Both photon detection 
+efficiency and energy resolution is degraded in this region. 
+ 
+\subsection{Data Requirements \label{sec:intro:data_requirements}}
+In addition to the ability to reconstruct exclusive final states, the \GX{} experiment
+will need to collect sufficient statistics to carry out amplitude analyses in small bins 
+of meson invariant mass, and in momentum transfer, $|t|$. Large production cross
+sections for reactions of interest are 10~$\mu$b, while more typical final-state 
+cross sections are a few hundred nb. The \GX{} experiment has been built with a 
+data acquisition system capable of collecting data using photon beams with $10^{8}~\gamma/$s
+in the coherent peak. However, the experiment may be limited by electromagnetic backgrounds
+in the detector, and force to run at photon  rates smaller than the design limit.
+
+Expected raw event sizes are $15$kilobytes, and the data acquisition limit is expected to 
+be 20~kHz. The level-1 hardware trigger alone will allow the experiment to run 
+at in incident photon rate of $10^{7}~\gamma/$s in the coherent peak. Of the 20~kHz
+event rate, about 2~kHz corresponds to hadronic interaction with photon in the coherent
+peak. In order to run at higher beam intensities, the level-3 software trigger is needed to 
+keep the rate of events to tape limited to 20~kHz. Including the events where the energy
+of the interacting photon is above 9~GeV roughly doubles the number of interesting hadronic
+events. 
+
+The typical final states listed in Table~\ref{tab:exotic_modes} are expected to range from $3.5\%$ 
+of the hadronic events for $\gamma p \rightarrow p 3\pi$ to under $1\%$. Assuming an $85\%$
+reconstruction efficiency per final state particle, and that $60\%$ of the final state protons
+are detectable, Table~\ref{tab:decay_rate_fractions} shows the number of reconstructed events per
+hour assuming a total hadronic rate of 2~kHz for events with photon energies in the coherent
+peak. These events are ultimately binned in both an meson invariant mass, as well as momentum
+transfer, $|t|$, but for most of these channels $40$ days of running at $50\%$ efficiency would 
+produce about a factor of $500$ times the number listed in the table.This is sufficient for
+an initial amplitude analysis on many of these channels. Phase IV running of \GX{} anticipates 
+$200$ days of running with $5\times  10^{7}$ photon beam intensity, a factor of $25$ over the
+above estimate.
+
+\begin{table}[h!]\centering
+\caption[]{\label{tab:decay_rate_fractions}PYTHIA predictions for the fraction of hadronic events
+in some final states interesting for exotic hybrid meson searches. The superscript on $(n\pi)^{0\pm}$
+indicates the net electric charge of the $n$ pions. The specific final state column looks are one
+particular charge combination, and the event rate column show the number of reconstructed events
+per second assuming $10^{7}$ incident photons per second, and $85\%$ reconstruction efficiency
+for each detected particle.}
+\begin{tabular}{|l|r|l|r|}  \hline
+Reaction & Fraction & Specific f.s. & Events/hour \\ \hline
+$\gamma p \rightarrow p (3\pi)^{0}$ & $3.5\, \%$ & $p\pi^{+}\pi^{-}\pi^{0}$  & $87\times 10^{3}$ \\
+$\gamma p \rightarrow n (3\pi)^{+}$ & $2.0\, \%$ & $n\pi^{+}\pi^{+}\pi^{-}$ & $58\times 10^{3}$ \\
+$\gamma p \rightarrow p (2\pi)^{0}\omega$ & $1.8\, \%$ & $p2\pi^{+}2\pi^{-}\pi^{0}$ & $35\times 10^{3}$ \\
+$\gamma p \rightarrow n (2\pi)^{+}\omega$ &  $1.0\, \%$ & $n2\pi^{+}\pi^{-}2\pi^{0}$ & $28\times 10^{3}$ \\
+$\gamma p \rightarrow p (3\pi)^{0}\eta$ & $2.0\, \%$ & $p\pi^{+}\pi^{-}\pi^{0}\eta$ &  $14\times 10^{3}$ \\
+$\gamma p \rightarrow n (3\pi)^{+}\eta$ &  $1.0\, \%$ & $n\pi^{+}\pi^{+}\pi^{-}\eta$ &  $7\times 10^{3}$ \\
+$\gamma p \rightarrow p (2\pi)^{0}\eta$ & $1.0\, \%$ & $p\pi^{+}\pi^{-}\eta$ &  $8\times 10^{3}$ \\
+$\gamma p \rightarrow n (2\pi)^{+}\eta$ &  $<1\, \%$ & $n\pi^{+}\pi^{0}\eta$ &  $<13\times 10^{3}$ \\
+$\gamma p \rightarrow p \pi^{0}\omega$ & $<1\, \%$ & $p\pi^{+}\pi^{-}2\pi^{0}$ &  $<19\times 10^{3}$ \\
+$\gamma p \rightarrow n \pi^{+}\omega$ &  $<1\, \%$ & $n2\pi^{+}\pi^{-}\pi^{0}$ &  $<33\times 10^{3}$ \\
+\hline
+\end{tabular} 
+\end{table}
