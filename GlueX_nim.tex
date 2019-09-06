@@ -1,0 +1,123 @@
+%\documentclass[final,5p,times,twocolumn]{elsarticle}
+%\documentclass[3pd]{elsarticle}
+\documentclass{elsarticle}
+ % The package hyperref provides LaTeX the ability to create hyperlinks within the document. Comment out the next line to load document onto the arXiv.
+\usepackage{hyperref}    
+
+%\usepackage{draftwatermark}
+
+% Use the option doublespacing or reviewcopy to obtain double line spacing
+% \documentclass[doublespacing]{elsart}
+
+%\documentclass[<options>]{elsarticle}
+%where the options can be the following:
+%(1) preprint ? default option which formats the document for submission to
+%Elsevier journals. 
+%(2) review ? similar to preprint option, but increases the baselineskip to facilitate easier review process.
+%(3) 1p ? formats the article to the look and feel of the final format of model 1+ journals. This is always single column style.
+%(4) 3p ? formats the article to the look and feel of the final format of model 3+ journals. If the journal is a two column model, use twocolumn option in combination.
+%(5) 5p ? formats for model 5+ journals. This is always two column style.
+% etc., see http://www.elsevier.com/framework_authors/misc/elsdoc.pdf
+
+% if you use PostScript figures in your article
+% use the graphics package for simple commands      
+%\usepackage{graphics}
+% or use the graphicx package for more complicated commands
+\usepackage{graphicx}
+
+% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+% The amsmath package provides miscellaneous enhancements for improving the information structure and printed output of documents that contain mathematical formulas.
+\usepackage{amsmath}
+% The amsthm package provides an enhanced version of LATEX?s \newtheorem command for defining theorem-like environments. 
+%\usepackage{amsthm}
+\usepackage{multirow}
+
+% The package lineno adds line numbers to LaTeX documents.
+\usepackage{lineno}
+
+\begin{document}  
+
+\input{symbols.tex}
+  
+\begin{frontmatter} 
+
+% Title, authors and addresses   
+
+\title{The GlueX Beam Line and Detector}
+
+\input{authors.tex}
+
+
+
+\begin{abstract}
+***DRAFT place holder***\\
+The GlueX experiment was designed to study photoproduction reactions with a 9-GeV linearly polarized beam. The energy and time of beam photons are tagged using a scintillator
+hodoscope and scintillating fiber array. The flux is determined using a pair spectrometer and its polarization is determined using a triplet polarimeter. 
+Charged particle tracks are analyzed in solenoidal field using a central straw tube
+drift chamber and six packages planar chambers with cathode strips and drift wires. Electromagnetic showers are reconstructed in a cylindrical scintillating fiber calorimeter inside the magnet and
+a lead glass array downstream. Charged particle identification is achieved by measuring energy loss in the wire chambers and using the flight time of particles between the target and outside 
+detectors. The signals from all detectors are recorded with flash ADCs or pipeline TDCs into memories allowing trigger decisions with a latency of 4 $\mu$s. The detector operates routinely at
+trigger rates of 50 kHz. We describe the photon beam, the GlueX detector components, electronics, data-acquisition and monitoring, and the performance of the system during the first three 
+years of operation.
+\end{abstract}   
+
+%\begin{keyword}
+% keywords here, in the form: keyword \sep keyword
+% electromagnetic calorimeter \sep sampling calorimeter \sep scintillating fibers  \sep silicon photomultipliers \sep MPPC \sep GlueX
+% PACS codes here, in the form: \PACS code \sep code
+% \PACS 29.40.Mc \sep 29.40.Vj 
+% \end{keyword}
+
+\end{frontmatter}
+
+% \linenumbers    
+  
+   
+
+%===============================+================================
+%============    Project Background  and Detector Requirements =============
+%================================================================
+
+\newpage 
+
+\tableofcontents
+
+\input{gluex_experiment}
+\input{beamline}
+\input{solenoid}
+\clearpage   % avoid formatting problems with empty sections
+\input{detector_overview}
+\input{tracking_detectors}
+\input{tracking_performance}
+\input{calorimeters}
+\clearpage    % avoid formatting problems with empty sections
+\input{scintillators}
+\input{triggerdaq}
+\input{controls}  
+\input{online}
+\clearpage   % avoid formatting problems with empty sections
+\input{simulation}
+\input{reconstruction}
+\input{performance}
+\input{summary}   
+
+%================+===================
+%========  Acknowledgments  =========
+%====================================
+
+\section{Acknowledgments}   
+***DRAFT modified from eta eta' paper***\\
+We would like to acknowledge the outstanding efforts of technical support at all the collaborating institutions and the support groups at Jefferson Lab that completed the assembly, installation
+and assist with the maintenance of the detector. This work was  supported by the Natural Sciences and Engineering Research Council of Canada grant SAPPJ-2018-00021 and by the U.S. Department of Energy, Office of Science, Office of Nuclear Physics under contract DOE Grant No. DE-FG02-87ER40315.  This work was also supported in part by the U.S. Department of Energy, the U.S. National Science Foundation, the German Research Foundation, GSI Helmholtzzentrum f\"{u}r Schwerionenforschung GmbH, the Russian Foundation for Basic Research, the UK Science and Technology Facilities Council, the Chilean Comisi\'{o}n Nacional de Investigaci\'{o}n Cient\'{i}fica y Tecnol\'{o}gica, the National Natural Science Foundation of China, and the China Scholarship Council. This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Nuclear Physics under contract DE-AC05-06OR23177. 
+
+\newpage
+
+\section*{References}
+   
+%\nocite{*}
+\bibliography{GlueX_nim}
+\bibliographystyle{unsrt}
+%\bibliographystyle{elsarticle-num}
+
+\end{document}
