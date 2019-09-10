@@ -1,9 +1,73 @@
 \section{Tracking detectors \label{sec:tracking}}
-\subsection[Central drift chambers (Naomi)]{Central drift chambers \label{sec:cdc}}
+\subsection[Central drift chamber (Naomi)]{Central drift chamber \label{sec:cdc}}
+
+The Central Drift Chamber (CDC) is a cylindrical straw-tube drift chamber which is used to track charged particles, providing timing and energy loss measurements~\cite{CDC_nim_paper}.
+It is situated inside the Barrel Calorimeter, surrounding the target and start counter, and upstream of the Forward Drift Chambers. 
+All of these are inside the solenoid. 
+The active volume of the CDC is traversed
+by particles coming from the target with polar angles between $6^{\circ}$ and $168^{\circ}$, with optimum 
+coverage for polar angles between $29^{\circ}$ and $132^{\circ}$.  
+
+The CDC contains 3522 mylar straw tubes of diameter 1.6~cm in $28$ layers,
+located in a cylindrical volume which is 1.5~m long, with an inner radius of 10~cm and outer radius of 56~cm, as measured from the beamline.  
+The straws are arranged in 28 layers; 22 of these are axial and 16 are at stereo angles of $\pm 6^{\circ}$ to provide position information in the beam direction. Fig x shows the CDC during construction. 
+
+The volume surrounding the straws is enclosed by an inner cylindrical wall of G10, an outer cylindrical wall of aluminum, and circular endplates, of aluminum at the upstream end, and carbon fiber at the downstream end.  
+Small components are glued into the ends of the straws and into holes through the endplates which hold the straws in place. 
+These components also support the anode wires, which are 20~$\mu$m diameter gold-plated tungsten, installed with typically held at +2.1kV during normal operation. 
+At the upstream end these components are made of aluminum and were glued in place using conductive epoxy. 
+This provides a good electrical connection to the inside walls of the straw tubes, which are coated in aluminum.
+
+
+The components at the downstream end are made of noryl and were glued in place using conventional non-conductive epoxy.
+The materials used for the downstream end were chosen to be as lightweight as feasible so as to minimize the energy loss of charged particles passing through them. 
+
+The anode wires are 20~$\mu$m diameter gold-plated tungsten, typically held at +2.1kV during normal operation. 
+
+
+At each end of the chamber there is a cylindrical gas plenum outside the endplate; the downstream plenum is 2.54~cm deep, with a sidewall of rohacell and a final outer wall of mylar film, and the upstream plenum is 3.18~cm deep, with a polycarbonate sidewall and a polycarbonate disc as its outer wall. 
+Five thermocouples are located in each plenum and used to monitor the temperature of the gas.
+The gas mixture used is 50$\%$ argon and 50$\%$ carbon dioxide, at atmospheric pressure, with a 1$\%$ admixture of propanol to delay ageing.
+The gas supply runs in 12 tubes through the volume surrounding the straws into the downstream plenum. 
+There it enters the straws and flows through them into the upstream plenum. From the upstream plenum the gas flows into the volume surrounding the straws, and from there it exhausts to the outside, through bubblers.
+
+The readout wires pass through the polycarbonate disc and the upstream plenum to reach the anode wires. 
+They are connected in groups of 20 to 24 to transition boards which are mounted onto the polycarbonate disc. Preamplifiers\cite{preamp} are mounted on high voltage boards which are bolted onto the transition boards. The aluminum endplate, outer cylindrical wall of the chamber, aluminum components connecting the straws to the aluminum endplate and the inside walls of the straws are all connected to a common electrical ground. 
+
 \subsection{Forward drift chambers \label{sec:fdc}}
 \subsection{Electronics \label{sec:dcelectronics}}
+The high voltage (HV) supply units used are CAEN A1550P with noise-reducing modules added to each crate chassis. 
+The low voltage (LV) supplies are MPOD MPV8008. 
+The preamplifiers are a custom JLab design~\cite{Fernando GASS2}
+with 24 channels per board; they are charge-sensitive, and are capacitatively coupled to the drift chamber. 
+
+Pulse information from the CDC anode wires and FDC cathode strips is obtained and read out using 72-channel 125 MHz 12-bit flash ADCs \cite{Gerard}. 
+Each fADC receives signals from three preamps. 
+The signal cables from different regions of the drift chambers are distributed between the fADCs in order to share out the processing load as evenly as possible.  
+
+The fADC firmware is activated by a signal from the GlueX trigger. It then computes the following for the next pulses observed above a given threshold within a given time window: pulse number, arrival time, pulse height, pulse integral, pedestal height immediately before the pulse, and a quality factor indicating if the arrival time was likely to be less accurate than usual. 
+Signal filtering and interpolation is used to obtain the arrival time to the nearest 0.8~ns. 
+The firmware performs these calculations for the CDC and FDC alike, and uses different readout modes to provide the data with the precision required by the separate detectors. 
+For example, the CDC electronics read out only one pulse but requires both pulse height and integral, while the FDC electronics read out up to 4 pulses and do not require pulse integral.  
+
+
+The FDC anode wires are read out using the GlueX f1TDC\cite{f1TDC}. 
+
+
+
+
 \subsection[Gas system (Beni)]{Gas system \label{sec:gas}}
 \subsection{Calibration and monitoring \label{sec:dccalib}}
+The CDC gain calibration procedure entails matching the position of the minimum ionizing peak for each of the 3522 straws, and then matching the dE/dx at 1.5 GeV/c to the calculated value of 2.0 keV/cm. 
+This takes place during the early stages of data analysis.
+Gain calibration for the individual wires is performed each time the HV is switched on and whenever any electronics modules are replaced. 
+Gain calibration for the chamber as a whole is performed for each session of data-taking; these are limited to two hours as the gain is very sensitive to the atmospheric pressure.
+The time calibrations involve finding the time offset needed to place the earliest possible arrival time of pulse signals at 0, and fitting the parameters used to describe the relationship between the pulse arrival time and the closest distance between the track and the anode wire. This is also performed for each session of data-taking. 
+Online monitoring software enables the shift-takers to check that the number of straws recording data, the distribution of signal arrival times and the dE/dx are as expected. 
+
 \subsection{Performance \label{sec:dcperformance}}
+
+
+
 \subsection{Summary \label{sec:dcsummary}}
  

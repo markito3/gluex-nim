@@ -28,6 +28,10 @@ using a chilled water system and then stabilized the gain
 using a custom circuit that adjusted the bias voltage based on the measured temperature. Two stages of preamplifiers and summing electronics are attached to the sensors. In order to reduce the number of signals that are digitized, circuits sum the outputs of the preamplifiers in groups of radial columns, with coarser granularity away from the target. The layer closest to the target consists of a single SiPM. On the end of each module, forty SiPMs generate sixteen signals that are delivered to flash ADCs (FADCs) and twelve signals that are discriminated and then recorded with pipeline TDCs. The FADCs and TDCs are conveniently located on the floor of the experimental hall in VXS crates.
   
 \subsection{Forward calorimeter \label{sec:fcal}}
+The forward calorimeter (FCAL) detects photon showers with energies ranging from 0.1 GeV to several GeV between $1^{\circ}$--$11^{\circ}$. The FCAL is located 5.6 m downstream from the center of the GlueX target and consists of 2800 lead glass blocks stacked in a circular array that has a diameter of 2.4 m, as seen in Fig. \ref{}. Optically coupled to each block is a FEU 84-3 photomultiplier tube (PMT). 
+
+The lead glass and PMTs are the same components that were used in the RADPHI and E852 experiments \cite{JONES2007384}, \cite{CRITTENDEN1997377}. Each PMT is powered by a Crockcroft--Walton (CW) base, with each consuming 0.2 W of power each \cite{BRUNNER1998466}. The use of CW bases eliminates the need for a 2400 channel high voltage power system. 
+
 \subsection{Electronics \label{sec:calelectronics}}
 Custom readout electronics are mounted in standard VXS crates and include 
 JLab 12-bit 250~MHz FADCs \cite{hdnote1022}, discriminators \cite{hdnote2511} and F1 Time-to-Digital Converters (TDCs) \cite{hdnote1021}. The maximum input scale of the FADCs (4095 counts) is set to 2\,V.
