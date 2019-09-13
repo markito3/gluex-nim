@@ -13,10 +13,9 @@
 \label{fig:beam:cebaf-dwg} 
 \end{figure}
 
-The CEBAF schematics is shown in Fig.~\ref{fig:beam:cebaf-dwg}.
-Parallel operations of up to three halls including Hall D are provided
-with the help of a 750~MHz RF separator. Each hall receives a 250~MHz
-electron beam. The beam to halls A-C can be extracted after 1-5 passes
+The CEBAF schematics are shown in Fig.~\ref{fig:beam:cebaf-dwg}.
+Parallel operations of up to four halls including Hall D are provided.
+The beam to halls A-C can be extracted after 1-5 passes
 around the accelerator. The beam to Hall D is extracted magnetically
 after 5.5 passes. The beam line carries the beam to the Tagger Hall,
 4.7~m higher than the level of the accelerator.  The nominal beam
@@ -122,28 +121,28 @@ front endplate of the solenoid.
 \label{fig:beam:hall-d} 
 \end{figure}
 
-\begin{table}[h]
-  \begin{center}
-    \caption{Thin windows in the beam areas 
-       \label{tab:beam:thin-windows}
-    }
-    %\vspace{3mm}
-    \begin{tabular}{l|l|r}
-       \hline
-       Window & Material & Thickness \\
-       \hline
-       \hline
-        Tagger focal plane               & Aluminum            & 0.008" = 0.203~mm \\
-        Collimator cave entrance         & Kapton              & 0.010" = 0.254~mm \\
-        Downstream of Primary Collimator & Kapton              & 0.010" = 0.254~mm \\
-        Pair Spectrometer 2 arms         & Aluminized Kapton   & 0.005" = 0.127~mm \\
-        Target beam pipe                 &            Kapton   & 0.005" = 0.127~mm \\
-        FCAL platform beampipe entrance  & Kapton              & 0.010" = 0.254~mm \\
-        FCAL platform beampipe exit      & Kapton              & 0.010" = 0.254~mm \\
-       \hline
-    \end{tabular}
-  \end{center}
-\end{table}
+%\begin{table}[h]
+%  \begin{center}
+%    \caption{Thin windows in the beam areas 
+%       \label{tab:beam:thin-windows}
+%    }
+%    %\vspace{3mm}
+%    \begin{tabular}{l|l|r}
+%       \hline
+%       Window & Material & Thickness \\
+%       \hline
+%       \hline
+%        Tagger focal plane               & Aluminum            & 0.008" = 0.203~mm \\
+%        Collimator cave entrance         & Kapton              & 0.010" = 0.254~mm \\
+%        Downstream of Primary Collimator & Kapton              & 0.010" = 0.254~mm \\
+%        Pair Spectrometer 2 arms         & Aluminized Kapton   & 0.005" = 0.127~mm \\
+%        Target beam pipe                 &            Kapton   & 0.005" = 0.127~mm \\
+%        FCAL platform beampipe entrance  & Kapton              & 0.010" = 0.254~mm \\
+%        FCAL platform beampipe exit      & Kapton              & 0.010" = 0.254~mm \\
+%       \hline
+%    \end{tabular}
+%  \end{center}
+%\end{table}
 
 %
 %
@@ -232,10 +231,34 @@ Hadronic rate in the effective range & 15 kHz \\
 \end{table}
 
 
-\subsection{Radiators \label{sec:radiators}}
+\subsection{Goniometer and Radiators \label{sec:radiators}}
+The goniometer is a device which can position and precisely move horizontally, vertically and rotationally about the x, y and z axes.
+The Hall D goniometer holds several radiators, each used depending on the requirements of the experiment.
+
+For the linearly polarized photon beams typically used in GlueX production running, diamond radiators are used in the coherent bremsstrahlung technique.
+The properties of diamond make it suitable for use as the radiator in coherent bremsstrahlung; its small lattice constant and high Debye temperature result in small thermal motion of the atoms in the lattice, and its lattice structure suffers minimal thermal effects.
+
+An important consideration when choosing a radiator is its thickness. The thickness of the radiator affects the angular divergence of the resulting photon beam, due to multiple scattering effects of the electron beam, and crystal defects in the radiator.
+Minimising this divergence enhances the coherent bremsstrahlung spectrum, so the diamond used should be as thin as the considerations of manufacturing and
+positioning of the radiator allow.
+Hall D diamonds are typically 50-70 $\mu m$ thick.
+
+%Coherent bremsstrahlung requires precise alignment of a diamond radiator, in order to produce a highly polarised beam by scattering off the appropriate crystal planes associated with a particular reciprocal lattice vector.
+
+Several thin aluminium radiators, of varying thickness, are also available for collecting data to normalise the incoherent bremsstrahlung component from the linearly polarized beam data.
+
+\subsection{Photon Tagging System \label{sec:tag}}
+After passing through a radiator, the mixed photon-electron beam produced enters the photon tagging system (``tagger''), where the electrons are swept out of the beamline by a dipole magnet and detected by one of two systems in the tagger focal plane; the broadband hodoscope (TAGH) or the high resolution microscope (TAGM).
+Both devices are used to determine the photon beam energy via the relation $E_{\gamma} = E_{0} - E_{e}$, where $E_{0}$ is the primary electron beam energy from CEBAF, before interaction with the radiator, and $E_{e}$ is the energy of the electron determined by its detected position in the focal plane.
+Electrons that did not interact with the radiator are swept into the electron beam dump.
 
 
-\subsection{Tagging counters \label{sec:tag}}
+\subsubsection{Tagger Magnet \label{sec:tagMagnet}}
+The Hall D tagger magnet deflects electrons in the horizontal plane, allowing the bremsstrahlung-produced photons to continue to the experimental hall while having the electrons that produced them deposited in the focal plane detectors.
+Electrons that didn't interact with the radiator are directed into the electron beam dump.
+
+The Hall D tagger magnet is a dipole magnet 1.13 m wide, 1.41 m high and 6.3 m long, weighing 80 metric tons.
+It has a normal operating field of 1.5 Tesla, with a maximum field of 1.75 T, and a pole gap of 30 mm
 
 
 \subsubsection{Tagger Microscope (TAGM)}\label{sec:TAGM}
@@ -267,200 +290,195 @@ The triplet polarimeter, or TPol, is used to measure the degree of polarisation 
 The polarimeter uses the process of pair production on atomic electrons in a beryllium target foil, with these scattered atomic electrons measured using a silicon strip detector.
 Information of the degree of polarisation of the photon beam can be obtained by analysing the azimuthal distribution of the scattered atomic electrons measured by this device.
 
-\subsection[Pair spectrometer (TCR)]{Pair spectrometer \label{sec:ps}}
+\subsection{Pair spectrometer \label{sec:ps}}
 
-The Pair Spectrometer is located at the entrance to Hall D
+The Pair Spectrometer \cite{BARBOSA2015376} is located at the entrance to Hall D
 (Fig.~\ref{fig:beam:hall-d}).  The spectrometer reconstructs the
 energy of a beam photon by detecting the $e^\pm$ pair produced by the
-photon in a thin converter. The main purpose of the spectrometer is to
-measure the spectrum of the collimated photon beam and determine the
-fraction of linearly polarized photons in the coherent peak energy
-region. It will also monitor the photon beam flux and can be used for
-the energy calibration of the tagging hodoscope and microscope
-detectors.
+photon in a thin converter. 
+Electrons and positrons are registered in two layers of scintillator
+detectors: a high-granularity hodoscope and a set of coarse counters,
+referred to as PS and PSC, respectively.
 
+The main purpose of the spectrometer is to measure the spectrum of the
+collimated photon beam and determine the fraction of linearly polarized
+photons in the coherent peak energy region.
+It is also used to monitor the photon beam flux and can be used for 
+energy calibration of the tagging hodoscope and microscope detectors.
 
-\subsubsection[Spectrometer]{Spectrometer
-  \label{sec:beamline:ps-spetrometer}}
+%\subsubsection[Spectrometer]{Spectrometer\label{sec:beamline:ps-spetrometer}}
 
-Layout of the Hall D pair spectrometer is presented in Fig.~\ref{fig:beam:ps-layout}. 
+%Layout of the Hall D pair spectrometer is presented in Fig.~\ref{fig:beam:ps-layout}. 
 % --------------------------------------------
-\begin{figure}[h]
-\begin{center}
-%   \tikzstyle{background grid}=[draw, black!50,step=.5cm]
-%   \begin{tikzpicture}[show background grid]
-%%   \begin{tikzpicture}[]
-%                  % The above right option is used to place the lower left corner
-%                  % of the image at the (0,0) coordinate. 
-%     \node [inner sep=0pt,above right] 
-%      {\includegraphics[angle=0,width=0.98\linewidth]{figs/ps_layout}};
-%       \node (halla)    at (2.0,0.3) [] {{\color{yellow} \scalebox{1.0}{\large A}}};  
-%       \draw[->,yellow,very thick] (halla) edge [] (3.25,1.75);
-%   \end{tikzpicture}
-   \includegraphics[angle=0,width=0.98\linewidth]{figs/ps_layout}
-\end{center}
-\caption{Pair Spectrometer simplified layout. In reality the detectors 
-         are tilted by 4.7$^\circ$ - perpendicular to the average
-         trajectories.
-        }
-\label{fig:beam:ps-layout} 
-\end{figure}
-% --------------------------------------------
-
-Electron-positron pairs are created by beam photons inside a thin
-converter with a typical thickness ranging between 0.03\% and 0.5\% of
-a radiation length. The choice of the converter thickness depends on
-the photon beam flux. The maximum photon flux for GlueX physics runs
-is expected to be 50~MHz in the coherent peak energy region. Three
-converters with different thicknesses are installed in a movable fork
-that can insert one of them into the photon beam. Produced leptons are
-deflected in a 18D36 dipole magnet with an effective field length of
-about 0.94~m. The magnet was brought from Brookhaven National
-Laboratory and was modified at Jefferson Lab by reducing the pole gap
-from 6 inches to 3 inches. The magnet is operated at a nominal field
-of 1.8~T; the field integral is $\int{}Bdl\approx$1.60~T\,m. The beam
-angular spread is $<0.04$~mrad, and the angular spread of the pair
-production is $\sim{}\gamma^{-1}<0.2$~mrad. The multiple scattering at
-3~GeV in the thickest converter adds about 0.3~mrad. The particle
-deflection by the magnet at the momentum $p$ is
-$\theta{}=0.3\,[\mathrm{GeV/c/T/m}]\int{}Bdl/p$;
-$\theta\approx{}80~\mathrm{mrad}=4.6^\circ$ at 6~GeV.  
-A 1.5~m long
-vacuum chamber is installed after the magnet. Electrons and positrons
-are registered in two layers of scintillator detectors: a
-high-granularity hodoscope and a set of coarse counters, denoted in
-Fig.~\ref{fig:beam:ps-layout} as PS and PSC, respectively. The
-detectors are organized into two arms positioned symmetrically with
-respect to the photon beam line.  Each detector arm covers a momentum
-range of $e^\pm$ between 3.0 GeV/c and 6.2 GeV/c, corresponding to
-reconstructed photon energies between 6~GeV and 12.4~GeV. Relatively
-large acceptance of the hodoscope allows one to reconstruct photons
-with energies in the coherent peak energy region and also in the range
-near the beam end-point energy of 12~GeV. This can be used for the
-energy calibration of the hodoscope detectors.
-
-\begin{table}[h]
-  \begin{center}
-    \caption{The coordinates of the inner counters (the edge closest to the beam)
-             with respect to the magnet center. The survey was done at 2-Nov-2015. 
-       \label{tab:beam:ps-ccordinates}
-    }
-    %\vspace{3mm}
-    \begin{tabular}{l|r|r}
-       \hline
-       Detector & $Z$, mm & $X$, mm \\
-       \hline
-       \hline
-       PS~ Right arm & 2928.4 & -238.7 \\
-       PS~ Left~ arm & 2928.3 &  238.3 \\
-       PSC Right arm & 3416.2 & -274.4 \\
-       PSC Left~ arm & 3416.1 & ~274.8 \\
-       \hline
-    \end{tabular}
-  \end{center}
-\end{table}
-
-\subsubsection[PS: High Resolution Detector]{PS: High Resolution Detector
-  \label{sec:beamline:ps-hresol}
-}
-
-Each arm of the high resolution detector consists of 145 rectangular
-tiles made of EJ-212 scintillator~\footnote{
-  ELJEN Technology Plastic Scintillators \url{http://www.eljentechnology.com}. 
-}, stacked together as
-shown in Fig.~\ref{fig:beam:ps-tiles}. The tile height is 3 cm and the
-length along the particle path in scintillator is 1 cm. Out of 145 tiles,
-40 tiles close to the beam are 1~mm thick, the rest are 2~mm thick.
- The momentum
-bin size of the tile depends on the electron/positron energy as 
-$\Delta{}p=\Delta{}x/x\cdot{}p$ 
-and constitutes about 13~MeV/c for 3~GeV and 24~MeV/c for 6~GeV particles.
-Tiles are optically isolated using 10~$\mu$m
-aluminized Mylar foil. This reflective foil also covers the bottom of
-the tile assembly. In order to keep the tiles parallel to the
-particle trajectories, the tiles are organized into 18 groups. Each
-group is tilted by $\sim$0.005~mrad using 0.05~mm thick shims
-(adhesive strips) positioned between the adjacent groups. The 
-first group is tilted by about 80~mrad, so that the tiles are parallel
-the 6~GeV particle trajectories.
-
-Light from a tile is collected using two 20~cm long 2$\times$2~mm$^2$
-double-clad BCF-92 wave-length shifting (WLS) fibers,
-glued to the sides of the tile using BC 600 Optical Cement. A tile
-assembly with two WLS optical fibers is shown in
-Fig.~\ref{fig:beam:ps-tiles}. The peak of the emission spectrum for EJ-212
-scintillator occurs at the wavelength of 423 nm, which couples well
-with the absorption spectrum of the BCF-92 fiber. Light is
-subsequently re-emitted inside the fiber in the green range with an
-emission peak of 492 nm.
-
-Collected light is transmitted to the end of the WLS fiber. A pair of
-fibers from each tile is inserted into a hole in an aluminum mounting
-plate. %, as shown on the upper plot of Fig.~\ref{fig:hodoscope}. 
-The light detection is performed using Hamamatsu
-surface mount S10931-050P silicon photomultipliers with an effective
-photosensitive area of 3$\times$3~mm$^2$ and a pixel size of 0.05$\times$0.05~mm$^2$.
-These sensors have a photon detection efficiency (PDE) larger
-than 20\% at a wavelength of 500~nm and a typical gain of about
-$7\cdot{}10^5$~\footnote{
- Hamamatsu Corporation, MPPC S10931-050P, 
- \url{http://www.electronicsdatasheets.com/pdf-datasheets/hamamatsu/s10931050p}.
-}.
-Each photo sensor is coupled to two WLS fibers
-from a single tile.
-The electronics board (Fig.~\ref{fig:beam:ps-electr-assemb} left) 
-with 145 SiPMs is attached
-to the mounting plate.
-The SiPMs are arranged in two arrays
-of 3$\times$35 and 5$\times$8 sensors, which are connected to 2~mm and~1 mm
-tiles, respectively. SiPMs are optically isolated using a plastic
-spacer.
-
-
-
-% --------------------------------------------
-\begin{figure}[h]
-\begin{center}
-   \includegraphics[angle=0,width=0.45\linewidth]{figs/ps_tiles_photo_small}\hspace{0.05\linewidth}%
-   \includegraphics[angle=0,width=0.38\linewidth]{figs/ps_assembly_photo}
-\end{center}
-\caption{Scintillator tiles with two WLS fibers glued to sides of each tile: 30$\times$10$\times$1~mm$^3$ tile (left) 
-         and 30$\times$10$\times$2~mm$^3$  tile (right).
-        }
-\label{fig:beam:ps-tiles} 
-\end{figure}
+%\begin{figure}[h]
+%\begin{center}
+%%   \tikzstyle{background grid}=[draw, black!50,step=.5cm]
+%%   \begin{tikzpicture}[show background grid]
+%%%   \begin{tikzpicture}[]
+%%                  % The above right option is used to place the lower left corner
+%%                  % of the image at the (0,0) coordinate. 
+%%     \node [inner sep=0pt,above right] 
+%%      {\includegraphics[angle=0,width=0.98\linewidth]{figs/ps_layout}};
+%%       \node (halla)    at (2.0,0.3) [] {{\color{yellow} \scalebox{1.0}{\large A}}};  
+%%       \draw[->,yellow,very thick] (halla) edge [] (3.25,1.75);
+%%   \end{tikzpicture}
+%   \includegraphics[angle=0,width=0.98\linewidth]{figs/ps_layout}
+%\end{center}
+%\caption{Pair Spectrometer simplified layout. In reality the detectors 
+%         are tilted by 4.7$^\circ$ - perpendicular to the average trajectories.}
+%\label{fig:beam:ps-layout} 
+%\end{figure}
 % --------------------------------------------
 
-% --------------------------------------------
-\begin{figure}[h]
-\begin{center}
-   \includegraphics[angle=0,width=0.43\linewidth]{figs/ps_sipm_plate_photo}\hspace{0.05\linewidth}%
-   \includegraphics[angle=0,width=0.47\linewidth]{figs/ps_assembly_drawing}
-\end{center}
-\caption{Electronics board with 145 SiPMs (left); 
-         the PS detector assembly (right).
-        }
-\label{fig:beam:ps-electr-assemb} 
-\end{figure}
-% --------------------------------------------
+%Electron-positron pairs are created by beam photons inside a thin
+%converter with a typical thickness ranging between 0.03\% and 0.5\% of
+%a radiation length. The choice of the converter thickness depends on
+%the photon beam flux. The maximum photon flux for GlueX physics runs
+%is expected to be 50~MHz in the coherent peak energy region. Three
+%converters with different thicknesses are installed in a movable fork
+%that can insert one of them into the photon beam. Produced leptons are
+%deflected in a 18D36 dipole magnet with an effective field length of
+%about 0.94~m. The magnet was brought from Brookhaven National
+%Laboratory and was modified at Jefferson Lab by reducing the pole gap
+%from 6 inches to 3 inches. The magnet is operated at a nominal field
+%of 1.8~T; the field integral is $\int{}Bdl\approx$1.60~T\,m. The beam
+%angular spread is $<0.04$~mrad, and the angular spread of the pair
+%production is $\sim{}\gamma^{-1}<0.2$~mrad. The multiple scattering at
+%3~GeV in the thickest converter adds about 0.3~mrad. The particle
+%deflection by the magnet at the momentum $p$ is
+%$\theta{}=0.3\,[\mathrm{GeV/c/T/m}]\int{}Bdl/p$;
+%$\theta\approx{}80~\mathrm{mrad}=4.6^\circ$ at 6~GeV.  
+%A 1.5~m long vacuum chamber is installed after the magnet.
+%Electrons and positrons are registered in two layers of scintillator detectors: a
+%high-granularity hodoscope and a set of coarse counters, referred to as PS and PSC, respectively.
+%The detectors are organized into two arms positioned symmetrically with
+%respect to the photon beam line.  Each detector arm covers a momentum
+%range of $e^\pm$ between 3.0 GeV/c and 6.2 GeV/c, corresponding to
+%reconstructed photon energies between 6~GeV and 12.4~GeV. Relatively
+%large acceptance of the hodoscope allows one to reconstruct photons
+%with energies in the coherent peak energy region and also in the range
+%near the beam end-point energy of 12~GeV. This can be used for the
+%energy calibration of the hodoscope detectors.
 
-\subsubsection[PSC: Coarse Resolution Detector]{PSC: Coarse Resolution Detector
-  \label{sec:beamline:ps-coarse} }
+%\begin{table}[h]
+%  \begin{center}
+%    \caption{The coordinates of the inner counters (the edge closest to the beam)
+%             with respect to the magnet center. The survey was done at 2-Nov-2015. 
+%       \label{tab:beam:ps-ccordinates}
+%    }
+%    %\vspace{3mm}
+%    \begin{tabular}{l|r|r}
+%       \hline
+%       Detector & $Z$, mm & $X$, mm \\
+%       \hline
+%       \hline
+%       PS~ Right arm & 2928.4 & -238.7 \\
+%       PS~ Left~ arm & 2928.3 &  238.3 \\
+%       PSC Right arm & 3416.2 & -274.4 \\
+%       PSC Left~ arm & 3416.1 & ~274.8 \\
+%       \hline
+%    \end{tabular}
+%  \end{center}
+%\end{table}
 
+%\subsubsection[PS: High Resolution Detector]{PS: High Resolution Detector
+%  \label{sec:beamline:ps-hresol}
+%}
+%
+%Each arm of the high resolution detector consists of 145 rectangular
+%tiles made of EJ-212 scintillator~\footnote{
+%  ELJEN Technology Plastic Scintillators \url{http://www.eljentechnology.com}. 
+%}, stacked together as
+%shown in Fig.~\ref{fig:beam:ps-tiles}. The tile height is 3 cm and the
+%length along the particle path in scintillator is 1 cm. Out of 145 tiles,
+%40 tiles close to the beam are 1~mm thick, the rest are 2~mm thick.
+% The momentum bin size of the tile depends on the electron/positron energy as 
+%%$\Delta{}p=\Delta{}x/x\cdot{}p$ 
+%and constitutes about 13~MeV/c for 3~GeV and 24~MeV/c for 6~GeV particles.
+%Tiles are optically isolated using 10~$\mu$m
+%aluminized Mylar foil. This reflective foil also covers the bottom of
+%the tile assembly. In order to keep the tiles parallel to the
+%particle trajectories, the tiles are organized into 18 groups. Each
+%group is tilted by $\sim$0.005~mrad using 0.05~mm thick shims
+%(adhesive strips) positioned between the adjacent groups. The 
+%first group is tilted by about 80~mrad, so that the tiles are parallel
+%the 6~GeV particle trajectories.
+%
+%Light from a tile is collected using two 20~cm long 2$\times$2~mm$^2$
+%double-clad BCF-92 wave-length shifting (WLS) fibers,
+%glued to the sides of the tile using BC 600 Optical Cement. A tile
+%assembly with two WLS optical fibers is shown in
+%Fig.~\ref{fig:beam:ps-tiles}. The peak of the emission spectrum for EJ-212
+%%scintillator occurs at the wavelength of 423 nm, which couples well
+%with the absorption spectrum of the BCF-92 fiber. Light is
+%subsequently re-emitted inside the fiber in the green range with an
+%emission peak of 492 nm.
+%
+%Collected light is transmitted to the end of the WLS fiber. A pair of
+%fibers from each tile is inserted into a hole in an aluminum mounting
+%plate. %, as shown on the upper plot of Fig.~\ref{fig:hodoscope}. 
+%The light detection is performed using Hamamatsu
+%surface mount S10931-050P silicon photomultipliers with an effective
+%photosensitive area of 3$\times$3~mm$^2$ and a pixel size of 0.05$\times$0.05~mm$^2$.
+%These sensors have a photon detection efficiency (PDE) larger
+%than 20\% at a wavelength of 500~nm and a typical gain of about
+%$7\cdot{}10^5$~\footnote{
+% Hamamatsu Corporation, MPPC S10931-050P, 
+% \url{http://www.electronicsdatasheets.com/pdf-datasheets/hamamatsu/s10931050p}.
+%}.
+%Each photo sensor is coupled to two WLS fibers
+%from a single tile.
+%The electronics board (Fig.~\ref{fig:beam:ps-electr-assemb} left) 
+%with 145 SiPMs is attached
+%to the mounting plate.
+%The SiPMs are arranged in two arrays
+%of 3$\times$35 and 5$\times$8 sensors, which are connected to 2~mm and~1 mm
+%tiles, respectively. SiPMs are optically isolated using a plastic
+%spacer.
+%
+%
+%% --------------------------------------------
+%\begin{figure}[h]
+%\begin{center}
+%   \includegraphics[angle=0,width=0.45\linewidth]{figs/ps_tiles_photo_small}\hspace{0.05\linewidth}%
+%   \includegraphics[angle=0,width=0.38\linewidth]{figs/ps_assembly_photo}
+%\end{center}
+%\caption{Scintillator tiles with two WLS fibers glued to sides of each tile: %30$\times$10$\times$1~mm$^3$ tile (left) 
+%         and 30$\times$10$\times$2~mm$^3$  tile (right).
+%        }
+%\label{fig:beam:ps-tiles} 
+%\end{figure}
+%% --------------------------------------------
+%
+%% --------------------------------------------
+%\begin{figure}[h]
+%\begin{center}
+%   \includegraphics[angle=0,width=0.43\linewidth]{figs/ps_sipm_plate_photo}\hspace{0.05\linewidth}%
+%   \includegraphics[angle=0,width=0.47\linewidth]{figs/ps_assembly_drawing}
+%\end{center}
+%\caption{Electronics board with 145 SiPMs (left); 
+%         the PS detector assembly (right).
+%        }
+%\label{fig:beam:ps-electr-assemb} 
+%\end{figure}
+%% --------------------------------------------
 
-Sixteen coarse scintillator counters, eight in each detector arm, are
-positioned about 40~cm behind the hodoscope.  The counters are 4.4~cm
-wide in the direction perpendicular to the particle trajectory, 2~cm
-thick, and 6~cm in height.  Hamamatsu R6427-01 PMTs are used to detect
-the scintillation light. The counters are used to produce a pair
-spectrometer trigger by requiring a coincidence of hits in the two
-detector arms. They also help to reduce background originating from
-interactions of $e^\pm$ inside the magnet pole edges to the level
-below 1\% by constraining the $e^\pm$ trajectories.  Counter rates
-depend on the converter thickness and photon beam flux. The maximum
-rate will not exceed 10~kHz per PSC counter during GlueX operation.
-
-
+%\subsubsection[PSC: Coarse Resolution Detector]{PSC: Coarse Resolution Detector
+%  \label{sec:beamline:ps-coarse} }
+%
+%Sixteen coarse scintillator counters, eight in each detector arm, are
+%positioned about 40~cm behind the hodoscope.  The counters are 4.4~cm
+%wide in the direction perpendicular to the particle trajectory, 2~cm
+%thick, and 6~cm in height.  Hamamatsu R6427-01 PMTs are used to detect
+%the scintillation light. The counters are used to produce a pair
+%spectrometer trigger by requiring a coincidence of hits in the two
+%detector arms. They also help to reduce background originating from
+%interactions of $e^\pm$ inside the magnet pole edges to the level
+%below 1\% by constraining the $e^\pm$ trajectories.  Counter rates
+%depend on the converter thickness and photon beam flux. The maximum
+%rate will not exceed 10~kHz per PSC counter during GlueX operation.
+%
+%
 %\subsubsection[Electronics]{Electronics\label{sec:beamline:ps-electronics}}
 %
 %The PS hodoscope front end electronics consists of an amplifier and a
