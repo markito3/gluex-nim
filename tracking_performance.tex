@@ -26,7 +26,7 @@ the hits farthest from the beam line toward the beam line, taking into account
 energy loss and multiple scattering at each step along the way and incorporating
 a map of the magnetic field within the bore of the solenoid magnet.  For the 
 first 
-inital pass of the filter we do not use the drift time information from the 
+initial pass of the filter we do not use the drift time information from the 
 wires.  We assume that each particle is a pion, except for low momentum track 
 candidates (p$<$0.8 GeV/c), for which we redo the fits with a proton hypothesis.
 
@@ -38,5 +38,83 @@ the drift information multiple times using the set \{$e^\pm,\pi^\pm,K^\pm,p^\pm$
 of mass hypotheses.
 
 \subsection{Tracking efficiency}
+
+We estimated the tracking efficiency by analyzing $\gamma p \rightarrow p \omega$, $\omega\rightarrow\pi^+\pi^-\pi^0$ events where we used the proton, the $\pi^0$ and one of the charged pions to predict the three-momentum of the other charged pion. We used two methods to calculate $\varepsilon=N_{found}/(N_{found}+N_{missing})$.  Events for which no track is reconstructed in the predicted region of 
+phase space contribute to $N_{missing}$.  For the first method, the $\omega$ yields for $N_{found}$ and $N_{missing}$ was estimated from the missing mass off the 
+proton; for the second method, the invariant mass of the $\pi^+\pi^-\pi^0$ system was computed.  Examples of mass histograms for a particular bin in $\phi$ are shown in Fig.~\ref{fig:omega mass}.  The exercise was repeated for a sample of $\omega$ Monte Carlo events.   A comparison of the efficiency for pion reconstruction derived from the 
+two methods for both Monte Carlo and experimental data is shown in Fig.~\ref{fig:tracking efficiency}.  The efficiencies for Monte Carlo and experimental data 
+agree within 5\%.
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/MissingOmegaFit.pdf}
+\includegraphics[width=0.45\textwidth]{figures/ThreePiFit.pdf}
+\caption{\label{fig:omega mass}
+Reconstructed mass distributions for the reaction $\gamma p \to p\pi^0\pi^{\pm}(\pi^\mp)$ for a bin in $\phi$.
+  (Left) Distribution of the missing mass off the proton.
+(Right) Invariant mass distribution for the $\pi^+\pi^-\pi^0$ system.  The black
+curves show the results of fits to the distributions.
+ (Color online)}
+\end{center}
+\end{figure}
+
+\begin{figure}[tpb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/PiPlusEfficiency.pdf}
+\includegraphics[width=\textwidth]{figures/PiMinusEfficiency.pdf}
+\caption{\label{fig:tracking efficiency}
+(Top row) Tracking efficiency for $\pi^+$ tracks. (Bottom row) Tracking efficiency for $\pi^-$ tracks.  (Color online)}
+\end{center}
+\end{figure}
+
+
+
+
 \subsection{Momentum resolution}
+
+The momentum resolution as a function of angle and magnitude for pions and 
+protons is shown in Fig.~\ref{fig:dp_p}.  The angular resolution is shown in 
+Fig.~\ref{fig:angle res}.
+
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/PionMomentumResolution.pdf}
+\includegraphics[width=0.45\textwidth]{figures/ProtonMomentumResolution.pdf}
+\caption{\label{fig:dp_p} (Left) Momentum resolution for $\pi^-$ tracks.
+(Right) Momentum resolution for proton tracks. (Color online)}
+\end{center}
+\end{figure}
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/PionThetaResolution.pdf}
+\includegraphics[width=0.45\textwidth]{figures/PionPhiResolution.pdf}
+\caption{\label{fig:angle res} (Left) Polar angle resolution for $\pi^-$ tracks.
+(Right) Azimuthal angle resolution for $\pi^-$ tracks.
+ (Color online)}
+\end{center}
+\end{figure}
+
+
 \subsection{Vertex resolution}
+
+The thin windows of the cryogenic target and the exit window of the target
+vacuum chamber provide a means to estimate the 
+vertex resolution of the tracking system.  We use pairs of tracks from 
+``empty target'' runs to reconstruct these windows as illustrated in 
+Fig.~\ref{fig:z-vertex}.  We required $d<1$ cm, where $d$ is the 
+distance-of-closest-approach between the two tracks. The ``vertex'' position 
+is at the mid-point of the line segment of length $d$ connecting the two tracks.
+The estimated z-position resolution is 3 mm.
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/zvertex.png}  
+\caption{\label{fig:z-vertex} Reconstructed vertex positions within 1 cm radial
+ distance with respect to the beam line for an empty target run.  The curve shows the result of a fit to the vertex distribution used to determine the vertex
+resolution.  (Color online). 
+}   
+\end{center}  
+\end{figure}
+
