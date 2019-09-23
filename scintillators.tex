@@ -66,10 +66,17 @@ directly upstream of the end of the scintillator array, ST3 is located
 further upstream, outside the bore of the solenoid magnet, adjacent to
 the beam pipe.
 
-ST1 houses the MPPCs themselves as well as a thermocouple for
+The ST1 board houses the MPPCs themselves as well as a thermocouple for
 temperature monitoring. Each ST1 board services three scintillator
 paddles (twelve MPPCs per board). There are ten of them altogether. An
 example ST1 is shown in Fig.~{figure:st-ST1}.
+
+There is one ST2 board for each ST1 board and it services the
+corresponding three electronic channels. For each channel there is a
+pre-amplifier whose output is split, one side of the signal goes to a
+buffer and then to a Flash ADC, the other goes to a
+5$\times$~amplifier and is sent to a discriminator and from there to a
+TDC.
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
