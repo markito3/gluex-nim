@@ -1,8 +1,9 @@
 \section[Scintillation detectors (Mark I./Beni)]{Scintillation detectors \label{sec:scintillators}}
 \subsection{Start counter \label{sec:st}}
 
-The Start Counter detector, shown in Fig.\ ??? surrounds the target
-region and covers about 90 of the solid angle for particles
+The Start Counter detector, shown in Fig.~\ref{figure:st-overview-drawing}
+surrounds the target
+region and covers about 90\% of the solid angle for particles
 originating from the center of the target. It is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
 in the coherent peak. It has a high degree of segmentation to limit
@@ -12,13 +13,20 @@ independent of particle type and trajectory (because of its proximity
 to the target), can provide particle identification via $dE/dx$, and
 can be used in the Level 1 trigger.
 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1.0\columnwidth]{figures/start_counter/start_counter_all.pdf}
+\caption{The \gx{} Start Counter mounted to the liquid $\mathrm{H_2}$
+  target assembly.  The beam goes from left to right down the central
+  axis.}\label{fig:st-overview-drawing}
+\end{figure}
+
 The \ST consist of 30 scintillor paddles arranged in a cylinder for most of
 its length with a ``nose'' section that bends towards the beam line at
 the downstream end. EJ-200 scintillator from Eljen
-Technology\cite{Eljen-reference} was selected. EJ-200 has a decay time
-of 2.1 ns and a long attenuation
-length\cite{scint-reference-for-start-counter}. Silicon
-photomultiplier (SiPM) detectors were use as light sensors. These were
+Technology\cite{EljenTech} was selected. EJ-200 has a decay time
+of 2.1~ns and an attenuation length of 380~cm. Silicon
+photomultiplier (SiPM) detectors were use as light sensors [specs?]. These were
 not affected by the 2 T[?] magnetic field produced by the GlueX
 solenoid. The SiPMs were placed as close as possible to the upstream
 end of each scintillator element to maximize light collection.
@@ -26,8 +34,19 @@ end of each scintillator element to maximize light collection.
 Each scintillator paddle started from stock 3~mm thick and 600 mm in
 length. The paddles were bent at Eljen to create the nose section, and
 then machined at McNeal Enterprises Inc.\cite{mcneal-reference} to
-their final shape, including edges beveled at 6^degrees to minimize
-loss of acceptance.
+their final shape, including edges beveled at $6^\circ$ to minimize
+loss of acceptance. The geometry for a single paddle is shown in
+Fig.~\ref{figure:st-single-paddle-geometry}.
+
+The scintillabor paddles are supported by a Rohacell closed-cell foam
+structure. The Rohacell is 11 mm thick and is rigidly attached to an
+aluminum support hub at its upstream end. The downstream support
+extends partially into the nose section. The cylindrical length of the
+Rohacell is further reinforced with three layers of carbon fiber, each
+layer 650~$\mu$m thick. The assembly is made light-tigh with a Tedlar
+wrapping. The Tedlar is attached to a plastic collar at the upstream
+end. A summary of the materials used in the assembly are presented in
+Table~\ref{table:st-summary-of-materials}
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
