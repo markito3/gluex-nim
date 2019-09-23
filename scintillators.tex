@@ -21,6 +21,8 @@ can be used in the Level 1 trigger.
   axis.}\label{fig:st-overview-drawing}
 \end{figure}
 
+\subsubsection{Detector Description}
+
 The \ST consist of 30 scintillor paddles arranged in a cylinder for most of
 its length with a ``nose'' section that bends towards the beam line at
 the downstream end. EJ-200 scintillator from Eljen
@@ -46,7 +48,28 @@ Rohacell is further reinforced with three layers of carbon fiber, each
 layer 650~$\mu$m thick. The assembly is made light-tigh with a Tedlar
 wrapping. The Tedlar is attached to a plastic collar at the upstream
 end. A summary of the materials used in the assembly are presented in
-Table~\ref{table:st-summary-of-materials}
+Table~\ref{table:st-summary-of-materials} and are shown schematically in Fig.~\ref{figure:st-materials}
+
+\subsubsection{Read-Out Electronics}
+
+Each scintillator bar is read out with an array of four
+magnetic-field-insensitive Hamamatsu S109031-050P multi-pixel photon
+counters (MPPCs)\cite{st-hamamatsu-mppc}. Each MPPCs consist of 3600
+$50 \times 50$ $\mu$m$^2$ avalanche photo-diode pixel counters
+operating in Geiger mode. The signals from all pixels are summed. [no
+  more mention of SiPM?] The scintillator is optically coupled to the
+MPPCs through a 250 $\mu$m air gap.
+
+The read-out electronics are deployed on three separate board designs,
+``ST1,'' ``ST2,'' and ``ST3.'' The ST1 and ST2 boards are located
+directly upstream of the end of the scintillator array, ST3 is located
+further upstream, outside the bore of the solenoid magnet, adjacent to
+the beam pipe.
+
+ST1 houses the MPPCs themselves as well as a thermocouple for
+temperature monitoring. Each ST1 board services three scintillator
+paddles (twelve MPPCs per board). There are ten of them altogether. An
+example ST1 is shown in Fig.~{figure:st-ST1}.
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
