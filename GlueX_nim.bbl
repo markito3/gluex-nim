@@ -1,0 +1,215 @@
+\begin{thebibliography}{10}
+
+\bibitem{gluex-ref}
+{The GlueX Collaboration}.
+\newblock {The GlueX Experiment in Hall~D}, 2010.
+\newblock
+  \href{https://halldweb1.jlab.org/wiki/index.php/GlueX_Project_Overviews}{GlueX
+  Project Overviews} (hyperlink).
+
+\bibitem{meyer:2015eta}
+C.~A. Meyer and E.~S. Swanson.
+\newblock Hybrid mesons.
+\newblock {\em Prog. Part. Nucl. Phys.}, 82:21--58, 2015.
+
+\bibitem{Ghoul:2015ifw}
+C.A. Meyer et~al.
+\newblock {First Results from The GlueX Experiment}.
+\newblock In {\em {16th International Conference on Hadron Spectroscopy (Hadron
+  2015) Newport News, Virginia, USA, September 13-18, 2015}}, 2015.
+
+\bibitem{Pooser:2019rhu}
+E.~Pooser et~al.
+\newblock {The GlueX Start Counter Detector}.
+\newblock {\em Nucl. Instrum. Meth.}, A927:330--342, 2019.
+
+\bibitem{VanHaarlem:2010yq}
+Y.~Van Haarlem et~al.
+\newblock {The GlueX Central Drift Chamber: Design and Performance}.
+\newblock {\em Nucl.Instrum.Meth.}, A622:142--156, 2010.
+
+\bibitem{Pentchev2017281}
+L.~Pentchev et~al.
+\newblock Studies with cathode drift chambers for the gluex experiment at
+  jefferson lab.
+\newblock {\em Nucl. Instrum. Meth.}, 845:281 -- 284, 2017.
+\newblock Proceedings of the Vienna Conference on Instrumentation 2016.
+
+\bibitem{MORIYA201360}
+K.~Moriya et~al.
+\newblock {}a measurement of the energy and timing resolution of the gluex
+  forward calorimeter using an electron beam.
+\newblock {\em Nucl. Instrum. Meth.}, pages 60 -- 66.
+
+\bibitem{DUGGER2017115}
+M.~Dugger et~al.
+\newblock Design and construction of a high-energy photon polarimeter.
+\newblock {\em Nucl. Instrum. Meth.}, A867:115 -- 127, 2017.
+
+\bibitem{BARBOSA2015376}
+F.~Barbosa et~al.
+\newblock {Pair spectrometer hodoscope for Hall D at Jefferson Lab}.
+\newblock {\em Nucl. Instrum. Meth. A}, 795:376 -- 380, 2015.
+
+\bibitem{GlueXCDCNIM}
+{The GlueX Collaboration}.
+\newblock {The Central Drift Chamber for GlueX}.
+
+\bibitem{Barbosa2007}
+F.~Barbosa.
+\newblock Gluex preamp card user’ manual.
+
+\bibitem{Barbosa2008}
+F.~Barbosa.
+\newblock Gluex front end analog signal processing asic.
+
+\bibitem{Visser2008}
+G.~Visser.
+\newblock {High Density 125 MSPS Differential Input ADC Module Specifications
+  – for GlueX Drift Chamber Application }.
+
+\bibitem{5873864}
+G.~{Visser} et~al.
+\newblock {A 72 channel 125 MSPS analog-to-digital converter module for drift
+  chamber readout for the GlueX detector}.
+\newblock In {\em IEEE Nuclear Science Symposuim Medical Imaging Conference},
+  pages 777--781, Oct 2010.
+
+\bibitem{JLAB2002}
+JLAB.
+\newblock The f1tdc high resolution, multi-hit, vme64x time-to-digital
+  converter.
+
+\bibitem{BrooksInst}
+
+
+\bibitem{AllenBradley}
+
+
+\bibitem{BEATTIE201824}
+T.D. Beattie et~al.
+\newblock Construction and performance of the barrel electromagnetic
+  calorimeter for the gluex experiment.
+\newblock {\em NIMA}, 896:24 -- 42, 2018.
+
+\bibitem{hdnote2913}
+E.S. Smith.
+\newblock {Development of Silicon Photomultipliers and their Applications to
+  GlueX}.
+\newblock Technical report, Jefferson Lab, December 2015.
+\newblock {AIP Proceedings 1753 -- XI Latin American Symposium on Nuclear
+  Physics and Applications, Medell\'in, Colombia}.
+  \href{https://halldweb.jlab.org/doc-public/DocDB/ShowDocument?docid=2913}{Technical
+  Report GlueX-doc-2913} (hyperlink).
+
+\bibitem{Barbosa2012100}
+F.~Barbosa et~al.
+\newblock {Silicon photomultiplier characterization for the GlueX barrel
+  calorimeter}.
+\newblock {\em Nucl. Instrum. Methods A}, 695:100 -- 104, 2012.
+
+\bibitem{Qiang2013234}
+Yi~Qiang et~al.
+\newblock {Radiation hardness tests of SiPMs for the JLab Hall D Barrel
+  calorimeter}.
+\newblock {\em Nucl. Instrum. Meth.}, A698:234 -- 241, 2013.
+
+\bibitem{soto}
+O.~Soto et~al.
+\newblock {Characterization of novel Hamamatsu Multi Pixel Photon Counter
+  (MPPC) arrays for the GlueX experiment}.
+\newblock {\em Nucl. Instrum. Methods A}, 732:431--436, 2013.
+
+\bibitem{Soto201489}
+O.~Soto et~al.
+\newblock {Novel Hamamatsu Multi-Pixel Photon Counter (MPPC) array studies for
+  the GlueX experiment: New results}.
+\newblock {\em Nucl. Instrum. Methods A}, 739:89--97, 2014.
+
+\bibitem{doi:10.1063/1.4955340}
+E.S. Smith.
+\newblock {Development of Silicon Photomultipliers and their Applications to
+  GlueX Calorimetry}.
+\newblock {\em AIP Conference Proceedings}, 1753(1):010001, 2016.
+
+\bibitem{JONES2007384}
+R.T. Jones et~al.
+\newblock Performance of the radphi detector and trigger in a high rate tagged
+  photon beam.
+\newblock {\em Nucl. Instrum. Meth.}, A570(3):384 -- 398, 2007.
+
+\bibitem{CRITTENDEN1997377}
+R.R. Crittenden et~al.
+\newblock A 3000 element lead-glass electromagnetic calorimeter.
+\newblock {\em Nucl. Instrum. Meth.}, A387(3):377 -- 394, 1997.
+
+\bibitem{BRUNNER1998466}
+A~Brunner et~al.
+\newblock A cockcroftâwalton base for the feu84-3 photomultiplier tube.
+\newblock {\em Nucl. Instrum. Meth.}, A414(2):466 -- 476, 1998.
+
+\bibitem{hdnote1022}
+F.~Barbosa et~al.
+\newblock {A VME64x, 16-Channel, Pipelined 250 MSPS Flash ADC With Switched
+  Serial (VXS) Extension}.
+\newblock Technical report, Jefferson Lab, April 2008.
+\newblock
+  \href{https://halldweb.jlab.org/doc-public/DocDB/ShowDocument?docid=1022}{Technical
+  Report GlueX-doc-1022} (hyperlink).
+
+\bibitem{hdnote2511}
+M.~Dugger et~al.
+\newblock {Hall D / GlueX Technical Construction Report, Chapter 3.10}.
+\newblock Technical report, Jefferson Lab, July 2017.
+\newblock
+  \href{https://halldweb.jlab.org/doc-public/DocDB/ShowDocument?docid=2511}{Technical
+  Report GlueX-doc-2511} (hyperlink).
+
+\bibitem{hdnote1021}
+F.~Barbosa et~al.
+\newblock {The Jefferson Lab High Resolution Time-to-Digital Converter (TDC)}.
+\newblock Technical report, Jefferson Lab, April 2008.
+\newblock
+  \href{https://halldweb.jlab.org/doc-public/DocDB/ShowDocument?docid=1021}{Technical
+  Report GlueX-doc-1021} (hyperlink).
+
+\bibitem{Anassontzis201441}
+E.G. Anassontzis et~al.
+\newblock Relative gain monitoring of the gluex calorimeters.
+\newblock {\em Nucl. Instrum. Methods A}, 738:41 -- 49, 2014.
+
+\bibitem{EljenTech}
+
+
+\bibitem{HamamatsuPhotonics}
+
+
+\bibitem{Dong:2007}
+H.~{Dong}, C.~{Cuevas}, D.~{Curry}, E.~{Jastrzembski}, F.~{Barbosa},
+  J.~{Wilson}, M.~{Taylor}, and B.~{Raydo}.
+\newblock Integrated tests of a high speed vxs switch card and 250 msps flash
+  adcs.
+\newblock In {\em 2007 IEEE Nuclear Science Symposium Conference Record},
+  volume~1, pages 831--833, Oct 2007.
+
+\bibitem{CAENCompany}
+
+
+\bibitem{GlueXTOFNIM}
+{The GlueX Collaboration}.
+\newblock {The Time-Of-Flight Detector for GlueX}.
+
+\bibitem{jana_v0_8_1b}
+David Lawrence, Mark~M. Ito, Simon Taylor, and Dmitry Romanov.
+\newblock {JeffersonLab/JANA}: v0.8.1b (version 0.8.1b)., September 2019.
+\newblock Zenodo.
+  \href{https://doi.org/10.5281/zenodo.3406573}{https://doi.org/10.5281/zenodo.3406573}\EatDot.
+
+\bibitem{gx3821}
+Mark Ito and David Lawrence.
+\newblock Gluex computing model for runperiod-2017-01.
+\newblock Technical Report 3821, Jefferson Lab,
+  https://halldweb.jlab.org/doc-public/DocDB/ShowDocument?docid=3821, June
+  2018.
+
+\end{thebibliography}

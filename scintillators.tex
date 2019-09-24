@@ -1,7 +1,7 @@
 \section[Scintillation detectors (Mark I./Beni)]{Scintillation detectors \label{sec:scintillators}}
 \subsection{Start counter \label{sec:st}}
 
-The Start Counter detector, shown in Fig.\ ??? surrounds the target
+The Start Counter (ST) detector, shown in Fig.\ ??? surrounds the target
 region and covers about 90 of the solid angle for particles
 originating from the center of the target. It is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
@@ -12,12 +12,12 @@ independent of particle type and trajectory (because of its proximity
 to the target), can provide particle identification via $dE/dx$, and
 can be used in the Level 1 trigger.
 
-The \ST consist of 30 scintillor paddles arranged in a cylinder for most of
+The ST consist of 30 scintillator paddles arranged in a cylinder for most of
 its length with a ``nose'' section that bends towards the beam line at
 the downstream end. EJ-200 scintillator from Eljen
-Technology\cite{Eljen-reference} was selected. EJ-200 has a decay time
+Technology\footnote{Eljen Technology, "https://eljentechnology.com/products/plastic-scintillators"} was selected. EJ-200 has a decay time
 of 2.1 ns and a long attenuation
-length\cite{scint-reference-for-start-counter}. Silicon
+length. Silicon
 photomultiplier (SiPM) detectors were use as light sensors. These were
 not affected by the 2 T[?] magnetic field produced by the GlueX
 solenoid. The SiPMs were placed as close as possible to the upstream
@@ -25,8 +25,8 @@ end of each scintillator element to maximize light collection.
 
 Each scintillator paddle started from stock 3~mm thick and 600 mm in
 length. The paddles were bent at Eljen to create the nose section, and
-then machined at McNeal Enterprises Inc.\cite{mcneal-reference} to
-their final shape, including edges beveled at 6^degrees to minimize
+then machined at McNeal Enterprises Inc.\footnote{mcneal-reference} to
+their final shape, including edges beveled at 6$^\circ$ to minimize
 loss of acceptance.
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
@@ -34,7 +34,7 @@ The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m
 an angular region from 0.6$^{\circ}$ to 13$^{\circ}$ in polar angle. The detector has two planes of
 scintillator paddles stacked in the horizontal and vertical direction, respectively. Most paddles are 252~cm long and 2.54~cm
 thick with a width of 6~cm. 
-The scintillator material is EJ-200 from Eljen technology~\cite{EljenTech}.
+The scintillator material is EJ-200 from Eljen technology.
 To accommodate the photon beam to pass through a central region of 12~cm by 12~cm is kept
 free of any detector material giving rise to four short paddle detectors with a length of 120~cm around the beam hole
 in each detector plane. These paddles also have a width of 6~cm with a thickness of 2.54~cm. In order to keep the
@@ -46,14 +46,14 @@ protect against external light sources.
 The main purpose of the detector is to provide fast timing for charged particles passing through the detector thereby providing information for particle identification and to the determine the event RF beam bunch of the photon that initiated the event.
 
 \subsection{Electronics \label{sec:scelectronics}}
-The full length scintillator paddles are read out on both ends using photo multiplier tubes (PMT) from Hamamatsu~\cite{HamamatsuPhotonics}. These tubes of type H10534 have 10-stages and are complete assemblies with high voltage base, casing and $\mu$-metal shielding. Due to the significant stray field from the spectrometer solenoid magnet additional external
+The full length scintillator paddles are read out on both ends using photo multiplier tubes (PMT) from Hamamatsu~\footnote{Hamamatsu Photonics "https://www.hamamatsu.com/us/en/index.html"}. These tubes of type H10534 have 10-stages and are complete assemblies with high voltage base, casing and $\mu$-metal shielding. Due to the significant stray field from the spectrometer solenoid magnet additional external
 shielding based on soft iron is necessary to protect the PMTs from the magnetic field.
 The high voltage (HV) to the PMTs is provided by CAEN HV modules of type A1535SN initially controlled by a CAEN SY1527 main frame
 later upgraded to a SY4527.
 The PMT output is connected to a splitter by a 50' long cables (WHAT TYPES?). The signal is split by
 an passive splitter into two equal amplituded signals. One signals is directly connected to a flash ADC250~\cite{Dong:2007}
 analog to digital converter (fADC) while the second signal passes first through a leading edge discriminator (LED) before connecting to 
-a high resolution TDC VX1290A form CAEN~\cite{CAENCompany}. The digitizer electronics (fADC250 and TDC) are mounted
+a high resolution TDC VX1290A form CAEN~\footnote{CAEN "https://www.caen.it/"}. The digitizer electronics (fADC250 and TDC) are mounted
 in VXS crates controlled by custom electronics as described in section~\label{sec:online}.
 The threshold of the leading edge discriminator is controlled for each channel separately and has an intrinsic
 dead time of about 25~ns.
