@@ -1,8 +1,9 @@
 \section[Scintillation detectors (Mark I./Beni)]{Scintillation detectors \label{sec:scintillators}}
 \subsection{Start counter \label{sec:st}}
 
-The Start Counter (ST) detector, shown in Fig.\ ??? surrounds the target
-region and covers about 90 of the solid angle for particles
+The Start Counter detector, shown in Fig.~\ref{figure:st-overview-drawing}
+surrounds the target
+region and covers about 90\% of the solid angle for particles
 originating from the center of the target. It is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
 in the coherent peak. It has a high degree of segmentation to limit
@@ -12,22 +13,70 @@ independent of particle type and trajectory (because of its proximity
 to the target), can provide particle identification via $dE/dx$, and
 can be used in the Level 1 trigger.
 
-The ST consist of 30 scintillator paddles arranged in a cylinder for most of
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1.0\columnwidth]{figures/start_counter/start_counter_all.pdf}
+\caption{The \gx{} Start Counter mounted to the liquid $\mathrm{H_2}$
+  target assembly.  The beam goes from left to right down the central
+  axis.}\label{fig:st-overview-drawing}
+\end{figure}
+
+\subsubsection{Detector Description}
+
+The \ST consist of 30 scintillor paddles arranged in a cylinder for most of
 its length with a ``nose'' section that bends towards the beam line at
 the downstream end. EJ-200 scintillator from Eljen
-Technology\footnote{Eljen Technology, "https://eljentechnology.com/products/plastic-scintillators"} was selected. EJ-200 has a decay time
-of 2.1 ns and a long attenuation
-length. Silicon
-photomultiplier (SiPM) detectors were use as light sensors. These were
+Technology\cite{EljenTech} was selected. EJ-200 has a decay time
+of 2.1~ns and an attenuation length of 380~cm. Silicon
+photomultiplier (SiPM) detectors were use as light sensors [specs?]. These were
 not affected by the 2 T[?] magnetic field produced by the GlueX
 solenoid. The SiPMs were placed as close as possible to the upstream
 end of each scintillator element to maximize light collection.
 
 Each scintillator paddle started from stock 3~mm thick and 600 mm in
 length. The paddles were bent at Eljen to create the nose section, and
-then machined at McNeal Enterprises Inc.\footnote{mcneal-reference} to
-their final shape, including edges beveled at 6$^\circ$ to minimize
-loss of acceptance.
+then machined at McNeal Enterprises Inc.\cite{mcneal-reference} to
+their final shape, including edges beveled at $6^\circ$ to minimize
+loss of acceptance. The geometry for a single paddle is shown in
+Fig.~\ref{figure:st-single-paddle-geometry}.
+
+The scintillabor paddles are supported by a Rohacell closed-cell foam
+structure. The Rohacell is 11 mm thick and is rigidly attached to an
+aluminum support hub at its upstream end. The downstream support
+extends partially into the nose section. The cylindrical length of the
+Rohacell is further reinforced with three layers of carbon fiber, each
+layer 650~$\mu$m thick. The assembly is made light-tigh with a Tedlar
+wrapping. The Tedlar is attached to a plastic collar at the upstream
+end. A summary of the materials used in the assembly are presented in
+Table~\ref{table:st-summary-of-materials} and are shown schematically in Fig.~\ref{figure:st-materials}
+
+\subsubsection{Read-Out Electronics}
+
+Each scintillator bar is read out with an array of four
+magnetic-field-insensitive Hamamatsu S109031-050P multi-pixel photon
+counters (MPPCs)\cite{st-hamamatsu-mppc}. Each MPPCs consist of 3600
+$50 \times 50$ $\mu$m$^2$ avalanche photo-diode pixel counters
+operating in Geiger mode. The signals from all pixels are summed. [no
+  more mention of SiPM?] The scintillator is optically coupled to the
+MPPCs through a 250 $\mu$m air gap.
+
+The read-out electronics are deployed on three separate board designs,
+``ST1,'' ``ST2,'' and ``ST3.'' The ST1 and ST2 boards are located
+directly upstream of the end of the scintillator array, ST3 is located
+further upstream, outside the bore of the solenoid magnet, adjacent to
+the beam pipe.
+
+The ST1 board houses the MPPCs themselves as well as a thermocouple for
+temperature monitoring. Each ST1 board services three scintillator
+paddles (twelve MPPCs per board). There are ten of them altogether. An
+example ST1 is shown in Fig.~{figure:st-ST1}.
+
+There is one ST2 board for each ST1 board and it services the
+corresponding three electronic channels. For each channel there is a
+pre-amplifier whose output is split, one side of the signal goes to a
+buffer and then to a Flash ADC, the other goes to a
+5$\times$~amplifier and is sent to a discriminator and from there to a
+TDC.
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
