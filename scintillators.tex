@@ -15,7 +15,7 @@ can be used in the Level 1 trigger.
 
 \begin{figure}[!htb]
 \centering
-% \includegraphics[width=1.0\columnwidth]{figures/start_counter/start_counter_all.pdf}
+\includegraphics[width=1.0\columnwidth]{figures/start_counter_all.pdf}
 \caption{The \gx{} Start Counter mounted to the liquid $\mathrm{H_2}$
   target assembly.  The beam goes from left to right down the central
   axis.\label{fig:st-overview-drawing}}
@@ -47,14 +47,21 @@ extends partially into the nose section. The cylindrical length of the
 Rohacell is further reinforced with three layers of carbon fiber, each
 layer 650~$\mu$m thick. The assembly is made light-tigh with a Tedlar
 wrapping. The Tedlar is attached to a plastic collar at the upstream
-end. A summary of the materials used in the assembly are presented in
-Table~\ref{table:st-summary-of-materials} and are shown schematically in Fig.~\ref{figure:st-materials}
+end. A summary of the materials used in the assembly are shown
+schematically in Fig.~\ref{fig:st-materials}.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{figures/st_materials.pdf}
+  \caption{Start Counter materials.}
+  \label{fig:st-materials}
+\end{figure}
 
 \subsubsection{Read-Out Electronics}
 
 Each scintillator bar is read out with an array of four
 magnetic-field-insensitive Hamamatsu S109031-050P multi-pixel photon
-counters (MPPCs)\cite{st-hamamatsu-mppc}. Each MPPCs consist of 3600
+counters (MPPCs). Each MPPC consists of 3,600
 $50 \times 50$ $\mu$m$^2$ avalanche photo-diode pixel counters
 operating in Geiger mode. The signals from all pixels are summed. [no
   more mention of SiPM?] The scintillator is optically coupled to the
@@ -68,15 +75,23 @@ the beam pipe.
 
 The ST1 board houses the MPPCs themselves as well as a thermocouple for
 temperature monitoring. Each ST1 board services three scintillator
-paddles (twelve MPPCs per board). There are ten of them altogether. An
-example ST1 is shown in Fig.~{figure:st-ST1}.
+paddles (twelve MPPCs per ST1 board). There are ten ST1 boards altogether. An ST1 board is shown in Fig.~\ref{fig:st-ST1}.
 
-There is one ST2 board for each ST1 board and it services the
-corresponding three electronic channels. For each channel there is a
-pre-amplifier whose output is split, one side of the signal goes to a
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{figures/st1_ruler}
+  \caption{ST1 of Start Counter readout system.  Only the central array 
+    is populated with SiPMs.  Approximately 72\% of the scintillator light 
+    is collected at the upstream end.  The ST readout has 10 ST1 units in 
+    total.  The ruler shown above is in inches.}
+  \label{fig:st-ST1}
+\end{figure}
+
+For each ST1 board there is a corresponding ST2 board that services all
+three electronic channels. For each channel there is a
+pre-amplifier whose output is split. One side of the signal goes to a
 buffer and then to a Flash ADC, the other goes to a
-5$\times$~amplifier and is sent to a discriminator and from there to a
-TDC.
+5$\times$~amplifier and is sent from there to a discriminator and TDC.
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
@@ -103,7 +118,7 @@ The PMT output is connected to a splitter by a 50' long cables (WHAT TYPES?). Th
 an passive splitter into two equal amplituded signals. One signals is directly connected to a flash ADC250~\cite{Dong:2007}
 analog to digital converter (fADC) while the second signal passes first through a leading edge discriminator (LED) before connecting to 
 a high resolution TDC VX1290A form CAEN~\footnote{CAEN "https://www.caen.it/"}. The digitizer electronics (fADC250 and TDC) are mounted
-in VXS crates controlled by custom electronics as described in section~\label{sec:online}.
+in VXS crates controlled by custom electronics as described in Section~\ref{sec:online}.
 The threshold of the leading edge discriminator is controlled for each channel separately and has an intrinsic
 dead time of about 25~ns.
 The readout threshold for
