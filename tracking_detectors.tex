@@ -16,9 +16,8 @@ The straws are arranged in 28 layers; 22 of these are axial and 16 are at stereo
 \begin{center}
 \includegraphics[width=0.7\textwidth]{figures/CDC_stereotubes}  
 \caption{\label{fig:CDC_stereotubes}          
-  The Central Drift Chamber during construction. A partially completed layer of stereo tubes is shown, surrounding a layer of tubes at the opposing stereo angle. Part of the carbon fiber endplate, some temporary support rods and some of the 12 tension rods linking the two endplates are also visible. 
-}   
-\end{center}  
+  The Central Drift Chamber during construction. A partially completed layer of stereo tubes is shown, surrounding a layer of tubes at the opposing stereo angle. Part of the carbon fiber endplate, some temporary support rods and some of the 12 rods linking the two endplates are also shown.}  
+\end{center}
 \end{figure}
 
 The volume surrounding the straws is enclosed by an inner cylindrical wall of G10, an outer cylindrical wall of aluminum, and two circular endplates. 
@@ -32,7 +31,7 @@ The materials used for the downstream end were chosen to be as lightweight as fe
 
 At each end of the chamber there is a cylindrical gas plenum outside the end-plate; the downstream plenum is 2.54~cm deep, with a sidewall of ROHACELL\footnote{www.rohacell.com} and a final outer wall of aluminized Mylar film, and the upstream plenum is 3.18~cm deep, with a polycarbonate sidewall and a polycarbonate disc as its outer wall. 
 Five thermocouples are located in each plenum and used to monitor the temperature of the gas.
-The gas mixture used is 50$\%$ argon and 50$\%$ carbon dioxide, at atmospheric pressure, with a 1$\%$ admixture of propanol to delay ageing.
+The gas mixture used is 50$\%$ argon and 50$\%$ carbon dioxide, at atmospheric pressure, with a small admixture of isopropanol to delay aging.
 The gas supply runs in 12 tubes through the volume surrounding the straws into the downstream plenum. 
 There it enters the straws and flows through them into the upstream plenum. From the upstream plenum the gas flows into the volume surrounding the straws, and from there it exhausts to the outside, bubbling through small jars of mineral oil.
 
@@ -40,6 +39,16 @@ The readout wires pass through the polycarbonate disc and the upstream plenum to
 They are connected in groups of 20 to 24 to transition boards which are mounted onto the polycarbonate disc. 
 Preamplifiers\cite{hdnote2515} are mounted on high voltage boards which are bolted onto the transition boards. The aluminum endplate, outer cylindrical wall of the chamber, aluminum components connecting the straws to the aluminum endplate and the inside walls of the straws are all connected to a common electrical ground. 
 The anode wires are held at +2.1kV during normal operation. 
+
+Fig.\,\ref{fig:CDC_rhs}  shows the CDC during initial readout tests 
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/cdc_rhs.jpg}  
+\caption{\label{fig:CDC_rhs}          
+  The Central Drift Chamber during initial readout tests. Several HVBs and preamplifiers and many transition boards are visible.}
+  \end{center}
+\end{figure}
+
 
 \subsection[Forward drift chambers (Lubomir)]{Forward drift chambers
 \label{sec:fdc} }
@@ -53,7 +62,6 @@ The FDC registers tracks with polar angles as low as $1^\circ$ and up to $10^\ci
 with all the chambers, while having partial coverage up to $20^\circ$.
 
 One FDC chamber consists of a wire plane and two cathode planes on both sides at a distance of $5$~mm from the wires (Fig.~\ref{FDC_OneCell}).
-
 \begin{figure}[tbp]
 \begin{center}
 \includegraphics[width=0.75\textwidth]{figures/FDC_OneCell.jpg}  
@@ -72,7 +80,7 @@ The cathodes are made out of $2$-$\mu$m-thin $Cu$ strips on Kapton foil with a p
 The six chambers of a package are separated by thin aluminized Mylar.
 Each chamber is rotated w.r.t. the previous one by $60^\circ $.
 The total material of a package in the sensitive area is $0.43\%$~R.L. and about half of that in the area along the beam line that has no copper on the cathodes.
-The sense wires in the inner area of $6-7.8$~cm diameter(depending on the distance of the package to the target) are thickened from $20$~$\mu$m to $\sim 80$~$\mu$m which makes them insensitive to the high raters along the beam.
+The sense wires in the inner area of $6-7.8$~cm diameter (depending on the distance of the package to the target) are thickened from $20$~$\mu$m to $\sim 80$~$\mu$m which makes them insensitive to the high raters along the beam.
 The distance between the first and last package is $169$~cm. 
 All the chambers are supplied with gas in parallel. 
 In total $2,304$ wires and $10,368$ strips are read using charge pre-amplifiers with $10$~ns peaking time with a gain of $0.77$~mV/fC for the wires and $2.6$~mV/fC for the strips.
@@ -101,7 +109,7 @@ The FDC anode wires are read out using the GlueX f1TDC\cite{JLAB2002}.
 Both tracking chambers the CDC and FDC operate with the same type of gases, argon and CO$_{2}$. Since the relative mixture of
 the two gases are slightly different for the two tracking chambers the gas system has two separate identical mixing stations. There is one gas supply of argon and CO$_{2}$ for both mixing stations. A limiting opening in the supply
 lines provide over-pressure protection to the gas system and filters in the gas lines provide protection against potential
-pollution of the gas from the supply. Both gasses are mixed together using mass flow controllers (MFC) that can be 
+pollution of the gas from the supply. Both gases are mixed together using mass flow controllers (MFC) that can be 
 configured
 to provide the desired mixing ratio of argon and CO$_{2}$.  The MFC as well as the related control electronics is from
 BROOKS Instruments~\cite{BrooksInst}.
@@ -132,19 +140,12 @@ There is an additional tab in the exhaust line that can be used to divert some g
 to an oxygen sensor to test the amount of oxygen in the gas. Too much oxygen in the gas will degrade the gain of
 the chambers and reduce the tracking efficiency. The oxygen levels found in the chamber are below 100~ppm. 
 
-\subsection{Calibration and monitoring \label{sec:dccalib}}
-The CDC gain calibration procedure entails matching the position of the minimum ionizing peak for each of the 3522 straws, and then matching the dE/dx at 1.5~GeV/c to the calculated value of 2.0~ keV/cm. 
-This takes place during the early stages of data analysis.
-Gain calibration for the individual wires is performed each time the HV is switched on and whenever any electronics modules are replaced. 
-Gain calibration for the chamber as a whole is performed for each session of data-taking; these are limited to two hours as the gain is very sensitive to the atmospheric pressure.
-The time calibrations involve finding the time offset needed to place the earliest possible arrival time of pulse signals at 0, and fitting the parameters used to describe the relationship between the pulse arrival time and the closest distance between the track and the anode wire. This is also performed for each session of data-taking. 
-Online monitoring software enables the shift-takers to check that the number of straws recording data, the distribution of signal arrival times and the dE/dx are as expected. 
+\subsection{Calibration, performance and monitoring \label{sec:dccalib}}
+Time calibrations for the drift chambers are used to remove the time offset due to the electronics, so that after calibration the earliest possible arrival time of the pulse signals is at 0~ns. These offsets and the function parameters used to describe the relationship between the pulse arrival time and the closest distance between the track and the anode wire are obtained for each session of data-taking. 
 
-\subsection{Performance\label{sec:dcperformance}}
-The detection efficiency and resolution of the CDC have been  reported separately~\cite{GlueXCDCNIM}. 
+The CDC gain calibration procedure entails matching the position of the minimum ionizing peak for each of the 3522 straws, and then matching the dE/dx at 1.5~GeV/c to the calculated value of 2.0~ keV/cm. This takes place during the early stages of data analysis. Gain calibration for the individual wires is performed each time the HV is switched on and whenever any electronics modules are replaced. Gain calibration for the chamber as a whole is performed for each session of data-taking; these are limited to two hours as the gain is very sensitive to the atmospheric pressure. Position calibrations were necessary to describe the small deflection of the straw tubes midway along their length; these were performed in 2016 and repeated in 2017, with no significant difference found between the two sets of results.  Position resolution from the CDC is of the order of 130~$\mu$m and its detection efficiency per straw is over 98\% for tracks up to 4~mm from the wire. The efficiency decreases as the distance between the track and the wire increases, but the close-packing arrangement of the straw tubes and the large number of straws traversed by each track compensate for this. 
 
-
-\subsection{FDC Performance\label{sec:fdcperformance}}
+For the FDC system, an internal per chamber calibration process is first performed to optimize the track position information obtained.  
 In the FDC the avalanche created around the wire is seen in three projections: on the two cathodes and on the wires.
 The drift time information from the wires is used to reconstruct the hit position perpendicular to the wire.
 The strip charges from the two cathodes are used to reconstruct the avalanche position along the wire. 
@@ -161,6 +162,13 @@ At the same time the residuals of the reconstructed wire positions are an estima
 The resolutions of the detector were reported earlier \cite{FDC_NIM}. 
 The strip resolution along the wires estimated from the wire position reconstruction, varies between $180$ and $80$~$\mu$m depending on the total charge induced on the strips. The drift distance is reconstructed from the drift time with a resolution between $240$ and $140$~$\mu$m
 depending on the distance of the hit to the wire in the $0.5-4.5$~mm range.  
+
+Position offsets and package rotations were determined for both drift chamber systems, first independently, and then together, using the alignment software MILLEPEDE\cite{millepede} in a process described in \cite{GlueXCDCNIM} and in \cite{MikeStaib_thesis}.
+
+Online monitoring software enables the shift-takers to check that the number of channels recording data, the distribution of signal arrival times and the dE/dx are as expected. 
+
+
+
 
 \subsection{Summary \label{sec:dcsummary}}
  
