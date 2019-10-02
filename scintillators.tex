@@ -65,7 +65,15 @@ counters (MPPCs). Each MPPC consists of 3,600
 $50 \times 50$ $\mu$m$^2$ avalanche photo-diode pixel counters
 operating in Geiger mode. The signals from all pixels are summed. [no
   more mention of SiPM?] The scintillator is optically coupled to the
-MPPCs through a 250 $\mu$m air gap.
+MPPCs through a 250 $\mu$m air gap. A schematic of the ST read-out electronics is shown in Fig.~\ref{fig:st-electronics}.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1.0\columnwidth]{figures/st_electronics_diagram}
+  \caption{Start Counter readout electronics diagram.  Numbers in 
+    parenthesis indicate the total for the system.}
+  \label{fig:st-electronics}
+\end{figure}
 
 The read-out electronics are deployed on three separate board designs,
 ``ST1,'' ``ST2,'' and ``ST3.'' The ST1 and ST2 boards are located
@@ -87,11 +95,26 @@ paddles (twelve MPPCs per ST1 board). There are ten ST1 boards altogether. An ST
   \label{fig:st-ST1}
 \end{figure}
 
-For each ST1 board there is a corresponding ST2 board that services all
-three electronic channels. For each channel there is a
+For each ST1 board there is a corresponding ST2 board that services
+all three electronic channels. For each channel there is a
 pre-amplifier whose output is split. One side of the signal goes to a
-buffer and then to a Flash ADC, the other goes to a
+buffer and then to a Flash ADC (FADC), the other goes to a
 5$\times$~amplifier and is sent from there to a discriminator and TDC.
+
+There is one ST3 provides an interface for distribution of low-voltage
+power for the electronics and bias voltages for the MPPCs. It also
+serves as a patch panel for the FADC, discriminator, and thermocouple
+signal output cables.
+
+\subsubsection{Calibration}
+
+Calibrations are performed to correct measurements for the effects of
+time-walk, light propagation time, and light attenuation
+
+{\bf Time-Walk Correction}
+
+Since the detector signal is sent to both a Flash ADC and a TDC, the time from the the FADC, which is largely independent of pulse amplitude, is used to measure the time walk seen by the TDC as a function of pulse amplitude as measured by the FADC. The resulting curve is fit to an empirical function to apply the correction and the procedure is done on a channel-by-channel basis.
+
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
