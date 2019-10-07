@@ -67,7 +67,8 @@ counters (MPPCs). Each MPPC consists of 3,600
 $50 \times 50$ $\mu$m$^2$ avalanche photo-diode pixel counters
 operating in Geiger mode. The signals from all pixels are summed. [no
   more mention of SiPM?] The scintillator is optically coupled to the
-MPPCs through a 250 $\mu$m air gap. A schematic of the ST read-out electronics is shown in Fig.~\ref{fig:st-electronics}.
+MPPCs through a 250 $\mu$m air gap. A schematic of the ST read-out electronics
+is shown in Fig.~\ref{fig:st-electronics}.
 
 \begin{figure}[!htb]
   \centering
@@ -85,7 +86,8 @@ the beam pipe.
 
 The ST1 board houses the MPPCs themselves as well as a thermocouple for
 temperature monitoring. Each ST1 board services three scintillator
-paddles (twelve MPPCs per ST1 board). There are ten ST1 boards altogether. An ST1 board is shown in Fig.~\ref{fig:st-ST1}.
+paddles (twelve MPPCs per ST1 board). There are ten ST1 boards altogether.
+An ST1 board is shown in Fig.~\ref{fig:st-ST1}.
 
 \begin{figure}[!htb]
   \centering
@@ -113,10 +115,17 @@ signal output cables.
 Calibrations are performed to correct measurements for the effects of
 time-walk, light propagation time, and light attenuation
 
-{\bf Time-Walk Correction}
-
-Since the detector signal is sent to both a Flash ADC and a TDC, the time from the the FADC, which is largely independent of pulse amplitude, is used to measure the time walk seen by the TDC as a function of pulse amplitude as measured by the FADC. The resulting curve is fit to an empirical function to apply the correction and the procedure is done on a channel-by-channel basis.
-
+\begin{description}
+\item{\bf Time-Walk Correction}. Since the detector signal is sent to
+both a Flash ADC and a TDC, the
+time from the the FADC, which is largely independent of pulse
+amplitude, is used to measure the time walk seen by the TDC as a
+function of pulse amplitude as measured by the FADC. The resulting
+curve is fit to an empirical function to apply the correction and the
+procedure is done on a channel-by-channel basis.
+\item{\bf Light Propagation Time Correction}.
+\item{\bf Light Attenuation Correction}.
+\end{description}
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
