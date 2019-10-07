@@ -100,10 +100,7 @@ Signal filtering and interpolation is used to obtain the arrival time to the nea
 The firmware performs these calculations for the CDC and FDC alike, and uses different readout modes to provide the data with the precision required by the separate detectors. 
 For example, the CDC electronics read out only one pulse but requires both pulse height and integral, while the FDC electronics read out up to 4 pulses and do not require pulse integral.  
 
-
 The FDC anode wires are read out using the GlueX f1TDC\cite{JLAB2002}. 
-
-
 
 \subsection[Gas system (Beni)]{Gas system \label{sec:gas}}
 Both tracking chambers the CDC and FDC operate with the same type of gases, argon and CO$_{2}$. Since the relative mixture of
@@ -112,9 +109,10 @@ lines provide over-pressure protection to the gas system and filters in the gas 
 pollution of the gas from the supply. Both gases are mixed together using mass flow controllers (MFC) that can be 
 configured
 to provide the desired mixing ratio of argon and CO$_{2}$.  The MFC as well as the related control electronics is from
-BROOKS Instruments~\cite{BrooksInst}.
+BROOKS Instruments.\footnote{BROOKS Instruments, https://www.brooksinstrument.com/en/products/mass-flow-controllers.}
+
 The mixed gas is filled into storage tanks one for the CDC one for the FDC. Their pressure is
-regulated by controlling the operation of the MFCs with a logic circuit based on Allen-Bradley control logics~\cite{AllenBradley} 
+regulated by controlling the operation of the MFCs with a logic circuit based on Allen-Bradley control logics\footnote{Allen-Bradley, https://ab.rockwellautomation.com/}
 that are used throughout the experimental hall and keeps
 the pressure in the tank between 10 and 12~psi. The tank serves as a reservoir and buffer.
 A safety relieve valve on each tank

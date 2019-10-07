@@ -34,8 +34,25 @@ In the BCAL, a relative photon efficiency determination has been performed using
 
 \subsection{Kinematic fitting \label{sec:perffitting}}
 
+Kinematic fitting is a powerful tool to improve the resolution of measured particles and to distinguish between different reactions.  In GlueX, this method leverages the fact that the initial state is very well known, with the target proton essentially at rest, and the incident photon energy is measured with very high precision ($<0.1\%$).  The most common kinematic fits that are performed are those that impose energy-momentum conservation between the initial and final state particles.  Additional optional constraints in these fits are for the four-momenta of the daughters of an intermediate particle to add up to a fixed invariant mass, and for all the particles to come from a common vertex (or multiple vertices, in the case of reactions containing long-lived, decaying particles).
 
+To illustrate the performance of the kinematic fit, we show the improvement in the invariant mass resolution in the reaction $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ in Fig.~X, and the pull distributions from the fit are illustrated in Fig.~X2.
 
 \subsection{Particle identification \label{sec:perfpid}}
+
+Particle identification in GlueX uses information from both energy loss in different detector systems and time-of-flight measurements.  This information can be used for identification in several ways.  The simplest method is to apply selections directly on the relevant PID variables.  To include detector resolution information, one can create a $\chi^2$ variable comparing a measured value to the expected value for a particular hypothesis, that is
+\begin{equation}
+    \chi^2(p) = \left(  \frac{ X(\mathrm{measured}) - X(\mathrm{expected})_p}{\sigma_X} \right)
+\end{equation}
+where $X$ is the given PID variable, $p$ is the particle hypothesis, and $\sigma_X$ is the resolution of this variable.  Finally, multiple PID variables can be combined into one probability, or other figure-of-merit (FOM).
+
+At sufficiently large $\theta$, the energy loss ($dE/dx$) for charged particles in the central drift chamber can be used.   Fig.~X illustrates these distributions for positive and negative charged particles, along with the standard selection used to separate pions and protons.
+
+The primary means of particle identification is through time of flight measurements, and information from several sources are combined to make the most accurate determination.  The RF reference signal from the accelerator is used to time when each photon bunch enters the target.  The reconstructed final state particles are used to determine which photon bunch most likely generated the detected reaction, with the primary determination being the signals from the Start Counter associated with the charged particle tracks.  This photon bunch determination has a resolution of around 15~ps?. Each charged particle is associated with additional timing information based on the hit in the highest resolution detector that it is associated with, for example the BCAL or TOF.  The time of flight to this measured hit ($t_\mathrm{meas.}$) from the time of the photon bunch that generated the event ($t_\mathrm{RF})$ can be used to distinguish between differently massed particles.  Two common variables that are used are the velocity ($\beta$) determined using the measured time-of-flight and the momentum of the particle, and $\Delta t_\mathrm{RF}$, the difference between the measured and RF times described above after they both have been extrapolated back to the center of the target, assuming some particle hypothesis.
+Some illustrations are given in the associated figures.
+
+Electrons are primarily identified using the ratio of their energy loss in the electromagnetic calorimeters ($E$) to the momentum reconstructed in the drift chambers ($p$).  This $E/p$ ratio should be approximately 1 for electrons and generally less for hadrons.  This is illustrated in some sample of particles for Fig.~X.
+
+Particle identification and mis-identification rates are summarized in Fig.~X.
 
 \subsection{Systematic uncertainties \label{sec:systematics}}
