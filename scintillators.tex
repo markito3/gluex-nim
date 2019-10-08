@@ -117,15 +117,32 @@ time-walk, light propagation time, and light attenuation
 
 \begin{description}
 \item{\bf Time-Walk Correction}. Since the detector signal is sent to
-both a Flash ADC and a TDC, the
-time from the the FADC, which is largely independent of pulse
-amplitude, is used to measure the time walk seen by the TDC as a
-function of pulse amplitude as measured by the FADC. The resulting
-curve is fit to an empirical function to apply the correction and the
-procedure is done on a channel-by-channel basis.
-\item{\bf Light Propagation Time Correction}.
-\item{\bf Light Attenuation Correction}.
+  both a Flash ADC and a TDC, the time from the the FADC, which is
+  largely independent of pulse amplitude, is used to measure the time
+  walk seen by the TDC as a function of pulse amplitude as measured by
+  the FADC. The resulting curve is fit to an empirical function to
+  apply the correction and the procedure is done on a
+  channel-by-channel basis.
+\item{\bf Light Propagation Time Correction}. The propagation time is
+  measured as a function of the hit position in a paddle as determined
+  by well-reconstructed charged particle tracks. The propagation
+  velocity is measured in three regions of the counter (``straight,''
+  ``bend,'' and ``nose'') and is not assumed to be a single value for
+  all hits. The parameters for the correction are obtained
+  independently for each paddle.
+\item{\bf Light Attenuation Correction}. Light attenuation is measured
+  at several positions along the counter using charged particle tracks
+  again. The energy per unit path length in the paddle as a function
+  of distance from the MPPCs is fit to a modified exponential, with
+  different parameters allowed for the straight section versus the
+  nose with continuity enforced at the section boundary.
 \end{description}
+
+\subsubsection{Performance}
+
+{\it Timing Resolution}
+
+{\it Particle Identification via dE/dx}
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
