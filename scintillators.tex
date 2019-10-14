@@ -117,15 +117,77 @@ time-walk, light propagation time, and light attenuation
 
 \begin{description}
 \item{\bf Time-Walk Correction}. Since the detector signal is sent to
-both a Flash ADC and a TDC, the
-time from the the FADC, which is largely independent of pulse
-amplitude, is used to measure the time walk seen by the TDC as a
-function of pulse amplitude as measured by the FADC. The resulting
-curve is fit to an empirical function to apply the correction and the
-procedure is done on a channel-by-channel basis.
-\item{\bf Light Propagation Time Correction}.
-\item{\bf Light Attenuation Correction}.
+  both a Flash ADC and a TDC, the time from the the FADC, which is
+  largely independent of pulse amplitude, is used to measure the time
+  walk seen by the TDC as a function of pulse amplitude as measured by
+  the FADC. The resulting curve is fit to an empirical function to
+  apply the correction and the procedure is done on a
+  channel-by-channel basis.
+\item{\bf Light Propagation Time Correction}. The propagation time is
+  measured as a function of the hit position in a paddle as determined
+  by well-reconstructed charged particle tracks. The propagation
+  velocity is measured in three regions of the counter (``straight,''
+  ``bend,'' and ``nose'') and is not assumed to be a single value for
+  all hits. The parameters for the correction are obtained
+  independently for each paddle.
+\item{\bf Light Attenuation Correction}. Light attenuation is measured
+  at several positions along the counter using charged particle tracks
+  again. The energy per unit path length in the paddle as a function
+  of distance from the MPPCs is fit to a modified exponential, with
+  different parameters allowed for the straight section versus the
+  nose with continuity enforced at the section boundary.
 \end{description}
+
+\subsubsection{Performance}
+
+\smallskip
+
+{\it Timing Resolution}
+
+\smallskip
+
+Timing performance can be measured by comparing the event time in the
+target as measured by the start counter and the time derived from a
+signal from the CEBAF accelerator which is synched to the RF time
+structure of the machine. The start counter time must be corrected for
+the flight path of the charged particle emerging from the event and
+all instrumental corrections mentioned in the previous section are
+applied. Fig.~\ref{fig:st-time-resolution} shows the distribution of
+this time difference. The time from the RF does not contribute
+significantly to the width of the
+distribution. Table~\ref{table:st-time-resolution} gives the measured
+time resolution for the various sections as well as for all sections,
+with all paddles combined. Also shown is the fraction of tracks kept
+by a $\pm 1.0$~ns cut around the central value.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1.0\linewidth]{figures/st_tr_fit.pdf}
+  \caption{Time resolution for one paddle with its full width half
+    maximum value indicated in ns.  The x-axis is the time difference
+    between $T^{\rm ST}_{\rm vertex}$ and $T^{\rm BB}_{\rm vertex}$.
+    The vertical lines indicate the cuts used to identify a 500~MHz beam bunch.}
+                \label{fig:st-time-resolution}
+\end{figure}  
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{@{} l *4c @{}}
+    \hline
+    \multicolumn{1}{c}{\textbf{Section}}    & \textbf{All}  & \textbf{Straight}  & \textbf{Bend}  & \textbf{Nose}  \\ 
+    \hline
+    $\mathbf{FWHM}$ & 550~ps & 690~ps & 700~ps & 450~ps \\ 
+    \textbf{Fraction} & 93\% & 92\% & 91\% & 94\% \\\hline
+  \end{tabular}
+  \caption{Average time resolutions (FWHM) and event fractions within a $\pm$ 1~ns window for all 30 ST sectors by independent geometrical regions.}
+  \label{table:st-time-resolution}
+\end{table}  
+
+\smallskip
+
+{\it Particle Identification via dE/dx}
+
+\smallskip
 
 \subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
