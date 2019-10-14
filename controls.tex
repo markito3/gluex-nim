@@ -3,7 +3,11 @@
 %=================================================
 
 \section[Slow controls (Hovanes)]{Slow controls \label{sec:controls}}
-\subsection{Architechture \label{sec:controlsarchitechture}}
-\subsection{User interface and monitoring \label{sec:controlsinterface}}
-\subsection{Archiver \label{sec:archiver}}
-\subsection{Alarm handler \label{sec:alarms}}
+\subsection{Architecture \label{sec:controlsarchitechture}}
+As any modern sophisticated particle detector system \gx{} requires being able to monitor 
+and control tens of thousands of different variables that define the state of the experimental hardware. Different variable values need to be acquired, displayed, archived, used as inputs to control loops continually with a high degree of reliability. The GlueX slow control system consists of three layers. The first layer consists of the remote units such as high voltage or low voltage power chassis, magnet power supplies, temperature controller, LabView applications, Programmable Logic Controller or PLC-based applications, which directly interact with the hardware and contain almost all of the controls loops. The second layer is the Supervisory Control and Data Acquisition (SCADA) layer which is implemented in the form of EPICS\footnote{https://epics.anl.gov} Input/Output Controllers or (IOC). This layer provides the the interface between the low level application and the higher level applications using EPICS ChannelAccess protocol. The highest level, referred as Experiment Control System (ECS), contains the application such as Human-Machine Interface (HMI), the alarm system and data archiving. 
+
+\subsection{Remote Units \label{sec:controlsinterface}}
+\gx{} uses a large number of over-the-counter units that provide us with controls over the hardware used in the experiment. For instance most of the detector high voltages are provided by boards CAEN SYx527 voltage chassis\footnote{https://www.caen.it/subfamilies/mainframes/} while the low and bias voltages are provided by boards residing in Wiener MPOD chassis\footnote{http://www.wiener-d.com/sc/power-supplies/mpod--lvhv/mpod-crate.html}. 
+\subsection{SCADA layer \label{sec:archiver}}
+\subsection{Experiment Control System \label{sec:alarms}}
