@@ -436,8 +436,8 @@ void Draw_beamline()
     Dxdash = 100;
     arrow->DrawLine(7955-zorigin,813,8306-zorigin,115);
     dash->DrawLine(7955-zorigin,813,7955-zorigin-Dzdash,813);
-    string.Form("triple polarimeter");
-    t3->DrawLatex(7955-zorigin-22*Dzdash,813-Dxdash,string);
+    string.Form("triplet polarimeter");
+    t3->DrawLatex(7955-zorigin-22.5*Dzdash,813-Dxdash,string);
     
     Dzdash = 125;
     Dxdash = 100;
@@ -493,7 +493,7 @@ void Draw_beamline()
     
     Dzdash = 125;
     Dxdash = 100;
-    arrow->DrawLine(-1160-zorigin,-668,-570-zorigin,-79);
+    arrow->DrawLine(-1160-zorigin,-668,-570-zorigin,-69);
     dash->DrawLine(-1160-zorigin,-668,-1160-zorigin+Dzdash,-668);
     string.Form("5C11B");
     TLatex *t4 = new TLatex(-1160-zorigin+2*Dzdash,-668-Dxdash,string);
@@ -509,7 +509,7 @@ void Draw_beamline()
     Dxdash = 100;
     arrow->DrawLine(-6817,-1291,-7697,-492);
     dash->DrawLine(-6817,-1291,-6817+Dzdash,-1291);
-    string.Form("AD00");
+    string.Form("AD00C");
     t4->DrawLatex(-6817+1*Dzdash,-1291-Dxdash,string);
     
     

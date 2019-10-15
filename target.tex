@@ -1,121 +1,121 @@
-\section[Target (TCR/C. Keith)]{Target \label{sec:target} (TCR/Alexander D.)}
-The Hall D cryotarget is a small kapton target cell containing liquid
-hydrogen (LH$_2$) or liquid deuterium (LD$_2$) at a temperature and pressure
-of about 18~$^\circ$K and 18~psia. The cell, which is closely modeled on those
-utilized in Hall B for more than a decade, is a horizontal, tapered
-cylinder about 400~mm long with a mean diameter of 20~mm.  Liquid
-hydrogen is introduced into the cell using a pair of 1.5~m long
-stainless steel tubes (fill and return) connected to a small, copper
-vessel where hydrogen gas is condensed.  This condenser is cooled by a
-pulse tube refrigerator%
-\footnote{Cryomech Model PT415.}
-(PTR) with a base temperature of 3~$^\circ$K and
-cooling power of about 20~W at 20~$^\circ$K.  
-A 100~W temperature controller%
-\footnote{Lake Shore Model 336.}
-regulates the condenser's temperature.
-
-The entire target assembly is contained in an ``L''-shaped,
-stainless steel and aluminum vacuum chamber with a Rohacell extension
-surrounding the target cell.  The vacuum chamber, along with the
-hydrogen storage tanks, gas handling system, and control electronics,
-is mounted on a custom-built beamline cart for insertion into the Hall
-D solenoid.  A Programmable Logic Controller (PLC) monitors and
-controls the performance of the target, while hardware interlocks on
-the target temperature and pressure and on the chamber vacuum ensure
-the system's safety and integrity.
-
-A simplified schematic drawing of the target system is shown in 
-Fig.~\ref{fig:tgt:scheme}, and a scale drawing of the target, 
-with the insertion cart, is shown in Fig.~\ref{fig:tgt:pict}.
-
-
-% ======================================================================================
-
-\begin{figure}[h]
+\section[Target (C. Keith)]{Target \label{sec:target} }
+A schematic diagram of the GlueX cryotarget is shown in Fig.~\ref{fig:Target}.  
+The major components of the system are a pulse tube cryocooler,\footnote{Cryomech model PT415.}
+a condenser, and a target cell.  These items are contained within
+an aluminum and stainless steel `L'-shaped vacuum chamber
+with an extension of closed-cell foam\footnote{Rohacell 110XT, Evonik Industries AG.}
+surrounding the target cell.
+In turn, the GlueX start counter (Sec.~\ref{sec:st}) surrounds the
+foam chamber and is supported by the horizontal portion of the vacuum chamber.
+Polyimide foils, 100$\mu$m thick, are used at the upstream and downstream ends of the
+chamber as beam entrance and exit windows.
+The entire system, including the control electronics, vacuum pumps,
+gas-handling system, and tanks for hydrogen
+storage, are mounted on a small cart that is attached to a set of rails for
+insertion into the GlueX solenoid.  To satisfy the laboratory's flammable gas safety requirements,
+the system is connected at multiple points to a nitrogen-purged ventilation pipe that
+extends outside Hall D. 
+\begin{figure*}
 \begin{center}
-    %\includegraphics[angle=0,width=0.90\linewidth]{figs/cryo_target_schematics_1}
+\includegraphics[width=5in]{figures/TargetSchematic2.pdf}
 \end{center}
-\caption{
-Highly simplified schematic of the target system.  Not to scale.  The
-Rohacell vacuum chamber extension is indicated in green.  The photon
-beam travels from left to right in this figure.
-\label{fig:tgt:scheme}}
+\caption{Simplified process and instrumentation diagram for the GlueX liquid hydrogen target (not to scale).
+In the real system, the P-trap is above the level of the target cell and is used to
+promote convective cooling of the target cell from room temperature.}
+\label{fig:Target}
+\end{figure*}
+
+Hydrogen gas is stored inside two 200~l tanks and
+is cooled and condensed into a small copper and stainless steel container,
+the condenser, that is thermally anchored to the second cooling stage of the cryocooler. 
+The first stage of the cryocooler is used to
+cool the H$_2$ gas to about 50~K before it enters the condenser.
+It also cools a copper thermal shield that surrounds all
+lower temperature components of the system except for the
+target cell itself, which is wrapped in a few layers of aluminized-mylar/cerex insulation.
+
+The condenser is comprised of a copper C101 base
+sealed to a stainless steel can with an indium o-ring.  Numerous vertical 
+fins are cut into the copper base, giving a large surface area for condensing hydrogen gas.
+A heater and a pair of calibrated cernox thermometers\footnote{Lake Shore Cryotronics.}
+are attached outside the condenser and are used to regulate its temperature when the
+system is filled with liquid hydrogen.
+
+The target cell, shown in Fig.~\ref{fig:TargetCell}, is similar to
+designs utilized in Hall B at Jefferson Lab for many years~\cite{HAKOBYAN2008218}.  
+The cell walls are made from 100~$\mu$m thick aluminized
+polyimide sheet that is wrapped in a conical shape and glued along the edge,
+overlapping in a 2~mm wide scarf joint.  
+The conical shape prevents bubbles from collecting inside the cell, while the
+scarf joint reduces the stress riser at the glue joint.  This conical
+tube is glued to an aluminum base 
+along with stainless steel fill and return tubes leading to the condenser, a feed-thru for two
+calibrated cernox thermometers inside the cell, and a
+polyamide-imide support for the reentrant, upstream beam window.  
+Both the upstream and downstream beam
+windows are made of non-aluminized,
+100~$\mu$m thick polyimide films that have been extruded into the
+shapes indicated in Fig.~\ref{fig:TargetCell}. All items are glued together using
+a two-part epoxy\footnote{3M Scotch-Weld epoxy adhesive DP190 Gray.}
+that has been in reliable use at cryogenic temperatures at
+Jefferson Lab for many years. 
+A second  heater is attached to the aluminum base and
+is used to boil the liquid from the cell for empty target measurements.
+The base is attached to a kinematic mount which is in turn
+supported inside the vacuum chamber using a system of carbon fiber rods.    
+The mount is used to correct the pitch and yaw
+of the cell, while $x$, $y$, and $z$ adjustment 
+is accomplished using positioning screws on the target cart. 
+
+
+During normal operation sufficient hydrogen gas is condensed from the storage tanks
+until the target cell, condenser, and interconnecting piping are filled with liquid hydrogen
+and an equilibrium pressure of about 20~psia is achieved.  
+The condenser temperature is regulated at 18~K, while the
+liquid in the cell cools to about 19.8~K.  This is 1.5~K below the saturation
+temperature of H$_2$ and eliminates boiling within the cell, thus permitting a more
+accurate determination of the fluid density.  
+The system can be cooled from room temperature and filled with liquid hydrogen in
+about six hours.
+For empty target runs, the liquid in the system is boiled back into the storage tanks using the heater
+attached to the cell's aluminum base, which takes about five minutes.  During this
+mode of operation, H$_2$ gas continues to condense and drain towards the target cell, where it
+is evaporated by the cell heater.  In this way, the cell does not warm above 40~K, and
+it can be re-filled with liquid hydrogen in about twenty minutes.
+
+\begin{figure}
+\includegraphics[width=3.5in]{figures/GluexCell_mm.pdf}
+\caption{Target cell for the liquid hydrogen target.  Dimensions are in mm.  The photon beam
+tranverses the target right to left in this drawing.}
+\label{fig:TargetCell}
 \end{figure}
 
-% ======================================================================================
+The cryotarget is controlled using a
+National Instruments CompactRIO 9030, which is an industrial embedded controller 
+capable of running LabVIEW programs on top of an AMD64 Linux environment. 
+Control logic and equipment interface is handled by a LabVIEW program, 
+while a standard EPICS softIOC running in Linux provides a
+bridge between the controller and JLab's EPICS enviroment. The LabVIEW program interacts
+with the softIOC using National Instrument's DSC module.    
+Temperature read back and control of the condenser and target cell thermometers
+are managed by a four-input temperature
+controller with PID control loops of 50 and 100~W\footnote{Lake Shore Model 336.}.
+Strain gauge pressure sensors measure the fill and return pressures with 0.25\% 
+accuracy.  
 
-\begin{figure}[h]
-\begin{center}
-      %\includegraphics[angle=0,width=0.90\linewidth]{figs/cryo_target_pict}
-\end{center}
-\caption{
-Scale drawing of the target assembly.  The Rohacell extension is
-removed and the Kapton target cell is visible on the far left.  The
-hydrogen storage tanks are yellow, and the pulse tube refrigerator is
-blue.
-\label{fig:tgt:pict}}
-\end{figure}
+Operation of the cryotarget is highly automated and requires minimal user intervention.
+Most tasks can be performed by pressing one of two main buttons on
+the Graphical User Interface: {\bf Fill Target} and {\bf Empty Target}.
+Each button checks the status of the cryocooler, hydrogen gas pressure, insulating vacuum, etc.\
+and loads appropriate settings for alarm values and temperature-control set points.  
+When the expected equilibrium readings for a full (or empty) target are achieved, the
+GUI informs the user that the target is stable and ready for beam.  A third button, {\bf Target Off},
+simply turns off the cryocooler and allows the system to warm over the course of a few days.
 
-% ======================================================================================
-
-\subsection[Target Cell]{Target Cell \label{sec:tgt:cell}}
-
-A detailed drawing of the target cell is shown in
-Fig.~\ref{fig:tgt:cell}.  The cell is 5~mil (0.13~mm), alum-inized
-polyimide (Kapton) foil wrapped into a tapered cylinder and glued
-along one edge.  An extruded Kapton exit window is glued to the
-downstream end, and the upstream end is glued into an aluminum base.
-A polyimide-amide (torlon) tube is glued into the aluminum base and
-acts as a re-entrant window frame for a Kapton beam-entrance window.
-Stainless steel tubes for liquid hydrogen (fill and return) are also
-glued into the base.  The epoxy%
-\footnote{3M Scotch-Weld DP-190 (gray).}
-used for all
-glued joints has a long and successful track record for cryogenic use
-at Jefferson Lab.  Two calibrated Cernox4 thermometers will be
-inserted into the cell to determine the temperature with better than
-0.5\% accuracy.
-
-Prototypes for these cells have been constructed and pressurized to
-failure at room temperature.  The burst pressure is typically around
-200~psia. Based on the results of pull tests performed at 77~$^\circ$K, the
-burst pressure of the cell at 18~$^\circ$K will be significantly higher than
-at room temperature.  However we do take credit for this in our
-pressure relief analysis.  The operational pressure of the cell is
-about 35~psia at room temperature and about 18~psia when filled with
-LH$_2$. Redundant pressure relief valves, along with properly sized
-system plumbing, ensure that the cell pressure never exceeds 45~psia.
-All relief paths, including one on the vacuum chamber as well as all
-pump exhausts are directed to a dedicated hydrogen vent line installed
-in Hall D.  This line terminates outside the hall and is continuously
-purged with an inert gas (nitrogen) to ensure that a flammable
-hydrogen/oxygen mixture does not exist inside the line.
-
-% ======================================================================================
-
-\begin{figure}[h]
-\begin{center}
-      %\includegraphics[angle=0,width=0.98\linewidth]{figs/cryo_target_cell}
-\end{center}
-\caption{
-Hall D liquid hydrogen target cell.
-\label{fig:tgt:cell}}
-\end{figure}
-
-% ======================================================================================
- 
-\subsection[Condensation of Hydrogen Gas]{Condensation of Hydrogen Gas 
-\label{sec:tgt:condens}}
-
-Room temperature hydrogen gas is introduced to the target from a pair
-of 55-gallon (208~$\ell$) storage tanks located on the insertion cart
-and charged with an initial H$_2$ pressure of approximately 35~psia (2.3
-atm).  The gas is first cooled to approximately 80~$^\circ$K by a copper heat
-exchanger in thermal contact with the first stage of the pulse tube
-refrigerator (PTR).  The first stage of the PTR is also used to cool a
-copper heat shield that surrounds the condenser and the fill and
-return tubes to the target cell.  The shield does not extend to the
-cell itself, which is instead wrapped with ten layers of
-superinsulation.
-
+The GlueX cryotarget has operated in a very reliable and predictable manner throughout the
+experiment.  When filled with subcooled liquid, its long-term temperature ($\pm 0.2$~K) and
+and pressure ($\pm 0.1$~psi) stability enable a determination of the liquid density to better than 0.5\%.
+It has also demonstrated the capability to condense helium
+in the target cell and operate in a stable manner at 4.2~K.  However, this requires extending the
+thermal shield to surround the target cell. A thin (1~mm) aluminum shell, clamped to the end
+of the existing copper shield is sufficient for this purpose.
