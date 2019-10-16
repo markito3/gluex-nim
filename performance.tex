@@ -8,27 +8,89 @@ The performance of the GlueX detector has been studied in data and simulation us
 
 \subsection{Charged particles \label{sec:perfcharged}}
 
-\subsubsection{Efficiency \label{sec:perfchargedeff}}
+%\subsubsection{Efficiency \label{sec:perfchargedeff}}
 
-The reconstruction efficiency for different hadron species has been studied using the method described in Sec.~\ref{sec:trackeff}.   Charged pion reconstruction efficiency was studied with a sample of $\gamma p \to p \omega$, $\omega \to \pi^+\pi^-\pi^0$ events.  Charged kaon reconstruction efficiency was studied with samples of $\gamma p \to \phi p$, $\phi \to K^+K^-$ and $\gamma p \to \Lambda(1520) K^+$, $\Lambda(1520) \to p K^-$ events.  Proton reconstruction efficiency was studied with a sample of $\gamma p \to K^+ \Sigma^0$, $\Sigma^0 \to \gamma \Lambda^0$, $\Lambda^0 \to p \pi^-$ events.  
-The results are illustrated in Fig.~X. The efficiencies determined by data and simulation generally agree to within a few percent.
+%The reconstruction efficiency for different hadron species has been studied using the method described in Sec.~\ref{sec:trackeff}.   Charged pion reconstruction efficiency was studied with a sample of $\gamma p \to p \omega$, $\omega \to \pi^+\pi^-\pi^0$ events.  Charged kaon reconstruction efficiency was studied with samples of $\gamma p \to \phi p$, $\phi \to K^+K^-$ and $\gamma p \to \Lambda(1520) K^+$, $\Lambda(1520) \to p K^-$ events.  Proton reconstruction efficiency was studied with a sample of $\gamma p \to K^+ \Sigma^0$, $\Sigma^0 \to \gamma \Lambda^0$, $\Lambda^0 \to p \pi^-$ events.  
+%The results are illustrated in Fig.~X. The efficiencies determined by data and simulation generally agree to within a few percent.
 
-\subsubsection{Resolution \label{sec:perfchargedresol}}
+\subsection{Track reconstruction efficiency  \label{sec:trackeff}}
 
-The invariant mass resolution for resonances decaying into charged particles has been studied using several different channels:  $K_S\to\pi^+\pi^-$ from $\gamma p \to K_S K+ \pi^- p$, $\Xi^- \to \pi^- \Lambda^0$, $\Lambda^0 \to p \pi^-$ from $\gamma p \to K^+ K^+ \Xi^-$, and $J/\psi \to e^+ e^-$ from $\gamma p \to J/\psi p$.  The results are illustrated in Fig.~X.  In each case, the invariant mass resolution was in the range $10-20?$~MeV, after applying a kinematic fit to the full reaction.
+We estimated the track reconstruction efficiency by analyzing $\gamma p \rightarrow p \omega$, $\omega\rightarrow\pi^+\pi^-\pi^0$ events where we used the proton, the $\pi^0$ and one of the charged pions to predict the three-momentum of the other charged pion. We used two methods to calculate this efficiency, $\varepsilon=N_{found}/(N_{found}+N_{missing})$.  Events for which no track is reconstructed in the predicted region of 
+phase space contribute to $N_{missing}$, while events where the expected track was found to be reconstructed contribute to $N_{found}$.  For the first method, the $\omega$ yields for $N_{found}$ and $N_{missing}$ was estimated from the missing mass off the 
+proton; for the second method, the invariant mass of the $\pi^+\pi^-\pi^0$ system was used to find $N_{found}$.  This analysis was performed individually in bins of track momentum, $\theta$, and $\phi$.
+Examples of mass histograms for a particular bin in $\phi$ are shown in Fig.~\ref{fig:omega mass}.  The exercise was repeated for a sample of $\omega$ Monte Carlo events.   A comparison of the efficiency for pion reconstruction derived from the 
+two methods for both Monte Carlo and experimental data is shown in Fig.~\ref{fig:tracking efficiency}.  The efficiencies for Monte Carlo and experimental data 
+agree within 5\%.
 
-\subsection{Neutral particles \label{sec:perfneutral}}
+While this reaction only allows the determination of track reconstruction efficiencies for $\theta < 30^\circ$, this covers the majority of charged particles produced in GlueX due to its fixed-target geometry.  Other reactions are being studied to determine the efficiency at larger angles.
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/MissingOmegaFit.pdf}
+\includegraphics[width=0.45\textwidth]{figures/ThreePiFit.pdf}
+\caption{\label{fig:omega mass}
+Reconstructed mass distributions for the reaction $\gamma p \to p\pi^0\pi^{\pm}(\pi^\mp)$ for a bin in $\phi$.
+  (Left) Distribution of the missing mass off the proton.
+(Right) Invariant mass distribution for the $\pi^+\pi^-\pi^0$ system.  The black
+curves show the results of fits to the distributions.
+ (Color online)}
+\end{center}
+\end{figure}
+
+\begin{figure}[tpb]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/PiPlusEfficiency.pdf}
+\includegraphics[width=\textwidth]{figures/PiMinusEfficiency.pdf}
+\caption{\label{fig:tracking efficiency}
+(Top row) Tracking efficiency for $\pi^+$ tracks. (Bottom row) Tracking efficiency for $\pi^-$ tracks.  (Color online)}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Invariant Mass Resolution \label{sec:perfchargedresol}}
+
+The invariant mass resolution for resonances decaying into charged particles depends on the momenta and angles of the various decay products.  This resolution has been studied using several different channels:  $K_S\to\pi^+\pi^-$ from $\gamma p \to K_S K^+ \pi^- p$, $\Xi^- \to \pi^- \Lambda^0$, $\Lambda^0 \to p \pi^-$ from $\gamma p \to K^+ K^+ \Xi^-$, and $J/\psi \to e^+ e^-$ from $\gamma p \to J/\psi p$.  The results are illustrated in Figs.~X and Y.  In each case, the invariant mass resolution was in the range $10-20?$~MeV, after applying a kinematic fit to the full reaction.
+
+\begin{figure}[tpb]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{figures/XimMass_2017-ver30.pdf}
+%\includegraphics[width=\textwidth]{figures/PiMinusEfficiency.pdf}
+\caption{\label{fig:invmass1}
+(Left) $\Lambda^0\pi^-$ invariant mass distribution from $\gamma p \to K^+ K^+ \pi^- \pi^- p$ events, illustrating the peak due to $\Xi^- \to \pi^- \Lambda^0$, $\Lambda^0 \to p \pi^-$ events.  The $\Xi^-$ peak resolution is 7.3~MeV using just the reconstructed charged particle 4-vectors, and is 4.6~MeV after a kinematic fit imposing energy and momentum conservation and an additional constraint that the mass of the $p \pi^-$ pairs be that of the $\Lambda^0$ mass,   (Right) ...  (Color online)}
+\end{center}
+\end{figure}
+
+\subsection{Neutral Particle Efficiency\label{sec:perfneutral}}
 
 %\subsubsection{Resolution \label{sec:perfneutralresol}}
 
 %The invariant mass resolution of the decay $\eta \to \gamma \gamma$ has been found to primarily depend on the energy resolution of the calorimeters at GlueX.  Therefore, in Fig.~X we show the resolution for these reconstructed decays for three classes of events: where both photons from the  $\eta \to \gamma \gamma$ are reconstructed in the BCAL, were both are reconstructed in the FCAL, and where one photon is reconstructed in the BCAL and one in the FCAL.
 
-\subsubsection{Efficiency \label{sec:perfneutraleff}}
+%\subsubsection{Efficiency \label{sec:perfneutraleff}}
 
-Photon reconstruction efficiency has been studied using different methods for the FCAL and BCAL.  In the FCAL, absolute photon reconstruction efficiencies have been determined using the ``tag-and-probe'' method with a sample of photons from the reaction $\gamma p \to \omega p$, $\omega \to \pi^+\pi^-\pi^0$, $\pi^0 \to \gamma (\gamma)$, where the final photon is allowed but not required to be reconstructed.  The yields with and without the reconstructed photon are determined using two methods.  In the first method, the $\omega$ meson yield is determined by a fit to the $M(\pi^+\pi^-\pi^0)$ spectrum before and after a cut on the $M(\gamma\gamma)$ requiring a fully-reconstructed $\pi^0$.  In the second method, if the desired photon is found to be reconstructed, the  $\omega$ meson yield is determined as above.  If the photon is not reconstructed, the $\omega$ yield is determined by a fit to the distribution of the missing mass off of the proton.
-Both methods yield consistent results, with a reconstruction efficiency generally above 90\%, and agree with the efficiencies determined from simulation within less than 5\%.
+Photon reconstruction efficiency has been studied using different methods for the FCAL and BCAL.  In the FCAL, absolute photon reconstruction efficiencies have been determined using the ``tag-and-probe'' method with a sample of photons from the reaction $\gamma p \to \omega p$, $\omega \to \pi^+\pi^-\pi^0$, $\pi^0 \to \gamma (\gamma)$, where the final photon is allowed but not required to be reconstructed.  The yields with and without the reconstructed photon are determined using two methods.  In the first method, the $\omega$ meson yield is determined by a fit to the $M(\pi^+\pi^-\pi^0)$ spectrum before and after a cut on the $M(\gamma\gamma)$ requiring a fully-reconstructed $\pi^0$.  In the second method, if the desired photon is found to be reconstructed, the  $\omega$ meson yield is determined as above.  If the photon is not reconstructed, the $\omega$ yield is determined by a fit to the distribution of the missing mass off of the proton.  Both methods yield consistent results, with a reconstruction efficiency generally above 90\%, and agree with the efficiencies determined from simulation better than 5\%.
 
-In the BCAL, a relative photon efficiency determination has been performed using $\pi^0\to\gamma\gamma$ decays.  We look at a sample of fully reconstructed $\gamma p \to  \pi^+\pi^-\pi^0 p$ events, and use the fact that the $\pi^0\to\gamma\gamma$ decay is isotropic in the center of mass frame.  Therefore, any anisotropy reflects an inefficiency in the detector. Results from this analysis are illustrated in Fig.~X. Generally, this relative efficiency is above 90\%, and agrees with that determined from simulation within 5\%.
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/OmegaCompareE.pdf}
+\includegraphics[width=0.45\textwidth]{figures/OmegaCompareTheta.pdf}
+\caption{\label{fig:fcalphotoneff}
+Photon reconstruction efficiency in FCAL determined from $\gamma p \to \omega p$, $\omega \to \pi^+\pi^-\pi^0$, $\pi^0 \to \gamma (\gamma)$ as a function of (left) photon energy and (right) photon polar angle.  Good agreement between data and simulation is observed in the fiducial region $\theta = 2^\circ - 10.6^\circ$.
+ (Color online)}
+\end{center}
+\end{figure}
+
+A relative photon efficiency determination has been performed using $\pi^0\to\gamma\gamma$ decays which spans the full angular range detected in GlueX.  We look at a sample of fully reconstructed $\gamma p \to  \pi^+\pi^-\pi^0 p$ events, and use the fact that the $\pi^0\to\gamma\gamma$ decay is isotropic in the center of mass frame.  Therefore, any anisotropy reflects an inefficiency in the detector. Results from this analysis are illustrated in Fig.~\ref{fig:bcalpi0photoneff}. Generally, this relative efficiency is above 90\%, and agrees with that determined from simulation better than 5\%.
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=\textwidth]{figures/plot_CostheEff_NIM_jun19.pdf}
+\caption{\label{fig:bcalpi0photoneff}
+Ratios of relative photon reconstruction efficiency between data dna simulation determined from $\pi^0\to\gamma \gamma$ decays in $\gamma p \to  \pi^+\pi^-\pi^0 p$ events.  The efficiency ratios are shown for the cases where (left) both photons were measured in the BCAL, (middle) both photons were measured in the FCAL, and (right) one photon was measured in the BCAL and the other in the FCAL.
+ (Color online)}
+\end{center}
+\end{figure}
+
 
 Detailed studies of detector performance determined the standard fiducial region most analyses to be $\theta = 2^\circ - 10.6^\circ$ and $\theta > 11.3^\circ$ to avoid the region dominated by beam-related backgrounds at small $\theta$ and the transition region between the BCAL and FCAL, where shower reconstruction is difficult.
 

@@ -206,55 +206,44 @@ with a layer of a highly reflective material DF2000MA from 3M followed by a laye
 The main purpose of the detector is to provide fast timing for charged particles passing through the detector thereby providing information for particle identification and to the determine the event RF beam bunch of the photon that initiated the event.
 
 \subsection{Electronics \label{sec:scelectronics}}
-The full length scintillator paddles are read out on both ends using photo multiplier tubes (PMT) from Hamamatsu~\footnote{Hamamatsu Photonics "https://www.hamamatsu.com/us/en/index.html"}. These tubes of type H10534 have 10-stages and are complete assemblies with high voltage base, casing and $\mu$-metal shielding. Due to the significant stray field from the spectrometer solenoid magnet additional external
+The scintillator paddles are read out using 
+photomultiplier tubes (PMT) from Hamamatsu~\footnote{Hamamatsu Photonics "https://www.hamamatsu.com/us/en/index.html"}. Full-length paddles
+have a PMT at both ends, while the short paddles have a single PMT
+at the outer edge of the detector. These tubes of type H10534 have 10-stages and are complete assemblies with high voltage base, casing and $\mu$-metal shielding. Due to the significant stray field from the spectrometer solenoid magnet, additional external
 shielding based on soft iron is necessary to protect the PMTs from the magnetic field.
-The high voltage (HV) to the PMTs is provided by CAEN HV modules of type A1535SN initially controlled by a CAEN SY1527 main frame
+The high voltage (HV) to the PMTs is provided by CAEN HV modules of type A1535SN initially controlled by a CAEN SY1527 main frame and
 later upgraded to a SY4527.
 The PMT output is connected to a splitter by a 50' long cables (WHAT TYPES?). The signal is split by
-an passive splitter into two equal amplituded signals. One signals is directly connected to a flash ADC250~\cite{Dong:2007}
-analog to digital converter (fADC) while the second signal passes first through a leading edge discriminator (LED) before connecting to 
-a high resolution TDC VX1290A form CAEN~\footnote{CAEN "https://www.caen.it/"}. The digitizer electronics (fADC250 and TDC) are mounted
-in VXS crates controlled by custom electronics as described in Section~\ref{sec:online}.
+a passive splitter into two equal-amplitude signals. One signals is directly connected to a flash ADC250
+analog to digital converter (fADC)~\cite{Dong:2007}, while the second signal passes first through a leading edge discriminator (LED) and then used as an input to a high resolution TDC VX1290A from CAEN~\footnote{CAEN "https://www.caen.it/"}. The digitizer electronics (fADC250 and TDC) are mounted in VXS crates as described in Section~\ref{sec:trigdaq}.
 The threshold of the leading edge discriminator is controlled for each channel separately and has an intrinsic
 dead time of about 25~ns.
-The readout threshold for
-the fADC250 is one single value for all channels on a single 16 channel board and is set to the same value for
-all ADC modules in the TOF. The data from the fADC250 is provided by the FPGA algorithm and consists
+The sparcification threshold for the fADC250 is set to 105???? counts, with the nominal pedestal set at 100. The data from the fADC250 is provided by the FPGA algorithm and consists
 of two words per channel with information about pedestal, signal amplitude, signal integral and timing.
-The VX1290A TDC is a multi hit high resolution TDC with a buffer of 
-up to 8 words per channel. The intrinsic dead time of a TDC channel is XX~ns. The timing resolution is about 25~ps per TDC count.
+The VX1290A TDC is a multi-hit high-resolution TDC with a buffer of 
+up to 8 words per channel. The intrinsic dead time of a TDC channel is ???~ns. One TDC count is approximately 25~ps.
 Since these TDCs provide the best time measurements in the GlueX detector the timing of the accelerator RF signal is also
 digitized using this electronics.
 
 \subsection{Calibration and monitoring \label{sec:sccalib}}
-A detailed description of the TOF detector can be found in~\cite{GlueXTOFNIM}. Since the TOF detector consists of two
+A detailed description of the TOF detector can be found in Ref.\,\cite{GlueXTOFNIM}. Since the TOF detector consists of two
 planes of narrow paddles oriented orthogonal to each other it is possible to calibrate the full detector independent
-of any other external detector information. The overlap region of two full length paddles from the two planes define
-a 6~cm by 6~cm area for most paddles with a few 3~cm by 3~cm areas close to the beam hole. The separation between
+of any other external detector information. The overlap region of two full-length paddles from the two planes define
+a 6$\times$6~cm$^2$ area for most paddles with a few 3$\times$3~cm$^2$ areas close to the beam hole. The separation between
 the two detector planes is minimal as they are mounted on top of each other and as such are only separated by their wrapping
 material. While the time-difference TD between the two ends of a paddle is related to the hit position along the paddle
 the mean-time MT is related to the flight time of a particle from the vertex to the paddle. Therefor the MT for two overlapping
-paddles must be the same when they are hit by the same particle passing through both of them while the hit position in the horizontal (x) and vertical (y) dimensions are defined by TD of the two paddles. This relationship between paddles can be
-explored to calibrate all paddles with respect to each other in a complete internally consistent way.
+paddles must be the same when they are hit by the same particle passing through both of them while the hit position in the horizontal (x) and vertical (y) dimensions are defined by TD of the two paddles. This relationship results in an internally consistent calibration of all paddles with respect to every other paddle.
 
-In a first step, however, all times have to be corrected for time-walk because of the use of LED discriminators which
-introduces a time shift that depends on the signal amplitude. Because the signal amplitude together with its timing
-in the fADC250 has been recorded as well this relation between time at threshold and signal amplitude can be parametrized and corrected for.
+Prior to finding timing offsets, all times must be corrected for time-walk because of the use of LED discriminators, which
+introduce a time shift that depends on the signal amplitude. The relation between time at threshold and signal amplitude is parameterized and used to correct for time slewing.
 
-After all full length paddles with readout on both ends have been calibrated they can be used to as reference counters
-the calibrate the remaining 8 paddles that do have only single-ended readout as they have to accommodate for the photon
-beam to pass through the detector at zero degree. Again the fact that in any overlap region of two paddles from different
-planes the flight time of the particle from the vertex to the detector is identical the MT of the full length paddle is used
-as reference time for the time from the single ended paddle. This relation will result in a peaking distribution with the peak
-location representing the timing offset of these single-ended readout paddles. Ensuring that the distribution of all offset
-parameters together will have a distribution with a mean of zero will result in a timing calibration of TOF that is neutral
-in time with respect to the time of any other detector in the GlueX spectrometer.
+After all full-length paddles have been calibrated, they can be used themselves as references to
+calibrate the remaining 8 short paddles that only have single-ended readout.  Again we use the fact that any overlap region of two paddles from different
+planes has the same particle flight time from the vertex. This coincidence produces peaks in the time difference distributions that can be used to determine the timing offsets of these single-ended readout paddles. 
 
-To test the calibration the time difference between the mean time of a reference paddle of choice with respect to 
-all other long paddles from the other plane is calculated for hits associated with reconstructed charged tracks that hit
-the reference paddle. The resulting distribution of these differences is shown in Fig.~\ref{fig:mt_diff}. Assuming that
-all paddles have the same timing resolution an average time resolution for the reference counter can be determined 
-and is found to be  96~ps$=\frac{136}{\sqrt{2}}$~ps, assuming a Gaussian distribution.
+To test the calibration, we take tracks that are incident on a paddle in one plane and compute the time difference between the MT of that paddle and the MT of every other full-length paddle in the other plane. The resulting distribution of these differences is shown in Fig.~\ref{fig:mt_diff}. Assuming that all paddles have the same timing resolution, we can compute the
+average time resolution to be $\sigma$ = 96~ps$=\frac{136}{\sqrt{2}}$~ps, assuming a Gaussian distribution.
 \begin{figure}[tbp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{figures/mt_diff_fullTOF.pdf}
@@ -264,19 +253,15 @@ of the other plane. (Color online)}
 \end{figure}
 \subsection{Performance \label{sec:scperformance}}
 To investigate the performance of the TOF detector for its PID capability it is important to include the relative number of
-particle types within the event sample. Here events are selected that do have at least three fully reconstructed charged tracks in the final state with at least one of these tracks intersecting with the TOF detector. The number of pions in such samples will
-be much larger than for kaons. The number of protons will be certainly larger than kaons since the data is taken with a hydrogen 
-target. Looking at the distribution of $beta$ of these tracks as a function of momentum it is easy to identify the bands
-from protons, kaons and pions (see Fig.~\ref{fig:betavsp}). 
+particle types within the event sample. We select events that have at least three fully reconstructed positively charged tracks with at least one of these tracks intersecting the TOF detector. We expect more pions than protons, and more protons than kaons. Looking at the distribution of velocity ($\beta$) of these tracks as a function of momentum it is easy to identify the bands from protons, kaons and pions (see Fig.~\ref{fig:betavsp}). 
 
-Looking at $\beta$ at two specific track momenta of 2~GeV/c and 4~GeV/c, respectively (see Fig.~\ref{fig:betaproj}) is very illustrative to see the limitations
-of the TOF detector in terms of PID. At 2~GeV/c particle momentum the TOF detector provides about a 4$\sigma$ separation between
-the pion,lepton peak and the kaon peak. This is sufficient to identify tracks with a $\beta$ of 0.97 or lower as kaons with a very
+The distributions of $\beta$ at two specific track momenta, 2~GeV/c and 4~GeV/c (see Fig.~\ref{fig:betaproj}), are very illustrative of the PID capability of the TOF detector. At 2~GeV/c particle momentum the TOF detector provides about a 4$\sigma$ separation between
+the pion/positron peak and the kaon peak. This is sufficient to identify tracks with a $\beta$ of 0.97 or lower as kaons with a very
 high certainty. However, at a $\beta$ of 0.98 the probability of the track begin a kaon is less than 50\% mainly due to the fact
-that the abundance of pions is close to an order of magnitude larger than kaons. The protons on the other hand are very well
+that the abundance of pions is close to an order of magnitude larger than kaons. The protons, on the other hand, are very well
 separated from the other particle types and can be identified as such with high confidence over the full range in $\beta$.
-At a track momentum of 4~GeV/c this has changed and represents the limit at which the TOF can identify protons with high confidence. Again the separation between the large peak containing now pions, kaons and leptons is separated from the proton
-peak by about 4$\sigma$, while the relative abundance in this case is about a factor of 4. As a consequence a 4~GeV/c momentum
+At a track momentum of 4~GeV/c, this has changed and represents the limit at which the TOF can identify protons with high confidence. Again the separation between the large peak containing pions, kaons and positrons is separated from the proton
+peak by about 4$\sigma$, while the relative abundance in this case is about a factor of 4. As a consequence, a 4~GeV/c momentum
 track with a $\beta$ of 0.975 is most likely a proton with a small probability of being a pion. At a $\beta$ of 0.98 such
 a track has a similar probability for being a proton or a pion.
 \begin{figure}[tbp]
@@ -298,6 +283,6 @@ is in logarithmic scale.(Color online)}
 \subsection{Summary \label{sec:scsummary}}
 The TOF detector in the forward region of the GlueX spectrometer provides high resolution timing information that contributes
 to the identification of the RF beam bucket of the beam photon that initiated the event. In combination with the charged
-track reconstruction TOF hits can be matched to such tracks to determine $\beta$ and as such give access to the particle
+track reconstruction, TOF hits can be matched to such tracks to determine $\beta$ and give access to the particle
 mass of the track. Protons can be identified with reasonable confidence up to momenta of 4~GeV/c while kaons can be
 identified up to momenta of 2~GeV/c.
