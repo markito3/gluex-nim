@@ -70,6 +70,8 @@ The expected degree of linear polarization in the energy range of 8.4--9.0~GeV i
 The beam polarization is directly measured by the triplet polarimeter upstream of the pair spectrometer. The polarization can also be tracked using various physics channels, such as $\rho$ 
 production, even if they cannot determine the absolute value of the polarization. 
 {\color{red} Comment by Elton: Somewhere we should add a (typical) plot of the measured convergence of the beam onto the collimator. Do we want add a figure with our harp scan? Perhaps here or maybe in a section below.} 
+
+{\color{red} Comment by Stuart: Some of the detail here, e.g.~the specific naming of the beam position monitors, may be more suited to a dedicated beamline paper, rather than the intended overview provided by this document}
   
  \begin{figure}[t]
 \begin{center}
@@ -195,12 +197,13 @@ This detector provides fine segmentation along the direction of electrons' sprea
 
 \subsubsection{Broadband Tagging Hodoscope (TAGH)}\label{sec:TAGHIntro}
 The Tagger Hodoscope is a device consisting of $\sim$220 scintillator counters distributed over a length of 9.25 m and mounted just behind the focal plane of the tagger magnet.
-Its function is to provide coarse sampling of the full photon energy range from 25\% to 97\% of incident electron energy (3.0 GeV to 11.7 GeV at an electron beam energy of 12 GeV).
-The broad coverage aids in alignment of the diamond radiator and expands the \GX{} physics program reach beyond just the coherent peak.
-The gap in the coverage of the hodoscope scintillators is filled by the higher-resolution tagger microscope.
+Its function is to provide coarse sampling of the full photon energy range from 25\% to 97\% of incident electron energy (3.0 GeV to 11.7 GeV at an electron beam energy of 12 GeV), with a gap in coverage filled by the higher-resolution tagger microscope.
+This broad coverage aids in alignment of the diamond radiator and expands the \GX{} physics program reach to photon energies beyond the coherent peak alone.
 
 Each counter in the hodoscope comprises a 6 mm thick and 40 mm high EJ-228 scintillator, of varying widths between 3 and 21 millimetres, coupled to a $\mu$-metal shielded Hamamatsu R9800 PMT via a cylindrical acrylic\footnote{UVT-PMMA} light guide 22.2 mm in diameter and 120 mm long.
-The counter assemblies also have 2-stage preamplifiers mounted on them, with have high voltage input, and TDC and fADC signal outputs.
+The counter assemblies also have 2-stage preamplifiers mounted on them, providing high voltage input, and TDC and fADC signal outputs.
+The counters are mounted with their faces normal to the path of the scattered electrons, in two rows, either 8 cm or 13 cm from the focal plane.
+This allows the counters to be positioned without horizontal gaps in the electron beam direction, enabling complete coverage of the entire tagged photon energy range.
 
 The construction of the hodoscope allows for later addition of counters to fully cover the energy range above the coherent peak for other microscope positions by filling the gaps between sampling scintillators. The mounting frame of the hodoscope is suspended from the Tagger-Hall ceiling to provide full flexibility of microscope positioning.
 {\color{red} Comments by Elton: Need more information on geometry (e.g. three rows of counters), description of scintillators and pmts. What is the rate capability of the system? What were typical rates during production running? What is the timing resolution? What is the energy granularity? What is the energy resolution (e.g. compared to PS)?}
@@ -242,12 +245,17 @@ Information of the degree of polarization of the photon beam can be obtained by 
 
 The Pair Spectrometer \cite{BARBOSA2015376} is located at the entrance to Hall D.
 %(Fig.~\ref{fig:beam:hall-d}).
-The spectrometer reconstructs the
-energy of a beam photon by detecting the $e^\pm$ pair produced by the
-photon in a thin converter. 
+The spectrometer reconstructs the energy of a beam photon by detecting the $e^\pm$ pair produced by the photon in a thin converter. 
 Electrons and positrons are registered in two layers of scintillator
 detectors: a high-granularity hodoscope and a set of coarse counters,
 referred to as PS and PSC, respectively.
+The detectors are organized into two arms positioned symmetrically with
+respect to the photon beam line.  Each detector arm covers a momentum
+range of $e^\pm$ between 3.0 GeV/c and 6.2 GeV/c, corresponding to
+reconstructed photon energies between 6~GeV and 12.4~GeV. The relatively
+large acceptance of the hodoscope allows one to reconstruct photons
+with energies in the coherent peak energy region and also in the range
+near the beam end-point energy of 12~GeV.
 
 The main purpose of the spectrometer is to measure the spectrum of the
 collimated photon beam and determine the fraction of linearly polarized
@@ -256,7 +264,6 @@ It is also used to monitor the photon beam flux and can be used for
 energy calibration of the tagging hodoscope and microscope detectors.
 {\color{red} Comments by Elton: Need to add a short description of the setup (high granularity and coarse array); What range of energies is covered? (Can refer back to Fig with photon flux and polarization) What is the timing resolution? Rate of PS triggers? What is the energy resolution? Stability of the system?}
 
-{\color{red} Comment by Stuart: Some of this information is contained in a commented out section of the tex file, from the TCR. I'll look at restoring some of this descriptive text}
 
 %\subsubsection[Spectrometer]{Spectrometer\label{sec:beamline:ps-spetrometer}}
 
