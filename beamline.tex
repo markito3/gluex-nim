@@ -3,10 +3,11 @@
 %=================================================
 
 \section[The beam line and coherent photon source (Stuart)]{The beam line and coherent photon source \label{sec:beamline}}
+{\color{red}General comment: As we haggle in the beamline group over the level of detail required for this section, it is worth bearing in mind that a longer-form paper dedicated to the beamline is also on our to-do list.  Material and detail felt to be excessive for this document can spill over into that paper}
+
 The Hall D complex has been described in Section \ref{sec:gluexexperiment:complex} and is shown schematically in Fig.~\ref{fig:beam:Draw_beamline}, which shows the Tagger Hall, the collimator cave and Hall D itself. The CEBAF electron beam enters the Tagger Hall with properties listed in Table\,\ref{tab:elecprop}. The position at the radiator is monitored and
-controlled using the 5C11 and 5C11B beam position monitors located at the end of the accelerator tunnel just upstream of the Tagger Hall. The position of the beam on the collimator
-is initially set by adjusting small corrector magnets at 5C11B. The electron spot size at the radiator is relatively large and converging to a virtual focus located at the collimator 75\,m away. The virtual spot size ($\sim$ 0.5\,mm) is small compared to the intrinsic size of the photon beam on the face of the collimator. The position on the collimator is monitored using the response of 
-the active collimator to the incident photon beam. The stability of the beam is maintained during production by a feedback system that fixes the position of the beam at 5C11B and at the active collimator. The energy and stability of the electron beam can be monitored using the AD00 beam position monitor, which is located immediately upstream of the electron dump.
+controlled using beam position monitors\footnote{Named 5C11 and 5C11B} located at the end of the accelerator tunnel just upstream of the Tagger Hall. The position of the beam on the collimator
+is initially set by adjusting small corrector magnets at this location. The electron spot size at the radiator is relatively large and converges to a virtual focus located at the collimator 75\,m away. The virtual spot size ($\sim$ 0.5\,mm) is small compared to the intrinsic size of the photon beam on the face of the collimator. The position on the collimator is monitored using the response of the active collimator to the incident photon beam. The stability of the beam is maintained during production by a feedback system that fixes the position of the beam at the monitor and at the active collimator. The energy and stability of the electron beam can be monitored using an additional beam position monitor, located immediately upstream of the electron dump.
 
 \begin{table}[tbp]
 \begin{center}
@@ -53,27 +54,26 @@ image position stability at collimator & $\pm$200~$\mu$m \\
 %   \includegraphics[clip=true,width=0.98\linewidth]{figures/gx_beamline_0}
  \includegraphics[clip=true,width=0.98\linewidth]{figures/Draw_beamline.png}
 \end{center}
-\caption{Schematic layout of the Hall D complex.
+\caption{Schematic layout of the Hall D complex, showing the Tagger Hall, Hall D, and several of the key beamline devices. Also indicated are the locations of the 5C11B and AD00 beam position monitors.
         }
 \label{fig:beam:Draw_beamline} 
 \end{figure}
 
 The photon beam is produced in the Tagger Hall, which is described in more detail in Section\,\ref{sec:tag}.
-A properly aligned thin diamond crystal radiator produces linearly polarized photons via coherent bremsstrahlung \cite{timm1969} in addition to photons due to incoherent scattering.
+A properly aligned thin diamond crystal radiator produces linearly polarized photons via coherent bremsstrahlung \cite{timm1969,LIVINGSTON2009205} in addition to photons due to incoherent scattering.
 The coherent radiation is peaked at certain energies and is linearly polarized, depending on the crystal orientation with respect to the beam.
 The degree of linear polarization in the coherent peak is higher at lower peak photon energies.
-In the Collimator Cave, about 75~m downstream of the radiator, the photon beam is collimated in order to increase the ratio of the polarized to unpolarized photons.  In the nominal \GX{} configuration, we produce the main coherent peak
-with maximum energy of 9~GeV and use a 5.0\,mm  collimator.\footnote{We also have a 3.4~mm collimator, which has been used for some physics production runs.}
+In order to increase the ratio of the polarized to unpolarized photons, the photon beam is collimated.  In the nominal \GX{} configuration, we produce the main coherent peak
+with maximum energy of 9\,GeV and use a 5.0\,mm collimator.\footnote{A 3.4~mm collimator is also available, and has been used for some physics production runs.}
 The beam energy spectrum after collimation and the photon flux are measured by the Pair
 Spectrometer, located in Hall D. The photon spectrum and its polarization with a 12\,GeV electron beam are shown in Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}.
 The expected degree of linear polarization in the energy range of 8.4--9.0~GeV is $\sim$40\% after collimation. 
 The beam polarization is directly measured by the triplet polarimeter upstream of the pair spectrometer. The polarization can also be tracked using various physics channels, such as $\rho$ 
-production, even if they cannot determine the absolute value of the polarization. 
+production {\color{red}(Stuart: We should have a reference for this technique)}, even if they cannot determine the absolute value of the polarization. 
 {\color{red} Comment by Elton: Somewhere we should add a (typical) plot of the measured convergence of the beam onto the collimator. Do we want add a figure with our harp scan? Perhaps here or maybe in a section below.} 
 
-{\color{red} Comment by Stuart: Some of the detail here, e.g.~the specific naming of the beam position monitors, may be more suited to a dedicated beamline paper, rather than the intended overview provided by this document}
   
- \begin{figure}[t]
+\begin{figure}[t]
 \begin{center}
  \includegraphics[clip=true,width=0.5\linewidth]{figures/gx3102_pi0etaAsym2016_fig0_beam.pdf}
 \end{center}
@@ -141,18 +141,18 @@ Hadronic rate in the peak range & 3 kHz \\
 The goniometer\footnote{Manufactured by Newport Corporation} is a device which can position and precisely move horizontally, vertically and rotationally about the x, y and z axes.
 The Hall D goniometer holds several radiators, each used depending on the requirements of the experiment.
 
-For the linearly polarized photon beams typically used in \GX{} production running, diamond radiators are used in the coherent bremsstrahlung technique.
-The properties of diamond make it suitable for use as the radiator in coherent bremsstrahlung; its small lattice constant and high Debye temperature result in small thermal motion of the atoms in the lattice, and its lattice structure suffers minimal thermal effects.
-
-An important consideration when choosing a radiator is its thickness. The thickness of the radiator affects the angular divergence of the resulting photon beam, due to multiple scattering effects of the electron beam, and crystal defects in the radiator.
-Minimising this divergence enhances the coherent bremsstrahlung spectrum, so the diamond used should be as thin as the considerations of manufacturing and
-positioning of the radiator allow.
-Hall D diamonds are typically 50 $\mu m$ thick.
-
-%Coherent bremsstrahlung requires precise alignment of a diamond radiator, in order to produce a highly polarised beam by scattering off the appropriate crystal planes associated with a particular reciprocal lattice vector.
-
+For the linearly polarized photon beams typically used in \GX{} production running, diamond radiators, typically 50 $\mu m$ thick, are used in the coherent bremsstrahlung technique.
+This technique requires precise alignment of a diamond radiator, in order to produce a highly polarized beam by scattering off the appropriate crystal planes associated with a particular reciprocal lattice vector.
 
 Several thin aluminium radiators, of varying thickness, are also available for collecting data to normalise the incoherent bremsstrahlung component from the linearly polarized beam data.
+
+\subsection{Diamond Selection and Quality Control \label{sec:diamonds}}
+The properties of diamond make it suitable for use as the radiator in coherent bremsstrahlung; its small lattice constant and high Debye temperature result in small thermal motion of the atoms in the lattice, and its lattice structure suffers minimal thermal effects.
+
+Important considerations when choosing a diamond radiator are its thickness and its purity. The thickness of the radiator affects the angular divergence of the resulting photon beam, due to multiple scattering effects of the electron beam., as can impurities, which can cause defects in the crystal lattice structure \cite{YANG2010719,YANG2012}.
+Minimising this divergence enhances the coherent bremsstrahlung spectrum, so the diamond used should be as thin as the considerations of manufacturing and positioning of the radiator allow.
+
+{\color{red}Some further notes on diamond selection and performance (Richard?)}
 
 \begin{figure}[ht]
 \begin{center}
@@ -163,6 +163,7 @@ Several thin aluminium radiators, of varying thickness, are also available for c
         }
 \label{fig:beam:tagger-hall} 
 \end{figure}
+
 
 \subsection{Photon Tagging System \label{sec:tag}}
 After passing through a radiator, the mixed photon-electron beam produced enters the photon tagging system (``tagger''), where the electrons are swept out of the beamline by a dipole magnet and detected by one of two systems in the tagger focal plane; the broadband hodoscope (TAGH) or the high resolution microscope (TAGM).
@@ -191,9 +192,20 @@ The Tagger Microscope is a high-resolution hodoscope that counts post-bremsstrah
 For a 12 GeV incident electron beam, the microscope is used to tag photons between 8.4 and 9.0 GeV.
 This energy changes depending on the primary electron beam energy, and the device is also designed to be movable to center on other energy ranges as demanded by experiment.
 
-Scintillating fibre bundles are oriented towards the incoming electron axis in the tagger focal plane, and read out by silicon photomultipliers at the other end.
+Scintillating fibre bundles are oriented towards the incoming electron axis in the tagger focal plane (Fig.~\ref{fig:TAGM_conceptual}), and read out by silicon photomultipliers (SiPMs) at the other end.
 This detector provides fine segmentation along the direction of electrons' spread, increasing the energy resolution, as well as allowing selective readout to match the photon collimator acceptance through segmentation in the y-direction.
-{\color{red} Comments by Elton: Need to describe the system: Arrangement and number of fibers? Type of fibers with references, references to SiPMs, short description of electronics, energy granularity, energy resolution (e.g. relative to PS), timing resolution, rate capability, summary of operational experience (size of signals in detector, etc.}
+
+The TAGM comprises a total of 510, 2$\times$2$\times$20 mm$^3$, multi-clad Saint-Gobain BCF-20 fibers, arranged into 17 bundles of 30 fibers, with each bundle having a 5 row $\times$ 6 column formation. These bundles are spliced to BCF-98 clear fiber light guides, read out by Hamamatsu SiPMs\footnote{Model S10931-050P} mounted on a custom built preamplifier board.
+{\color{red} Comments by Elton/Stuart: Further description the system: short description of electronics, energy granularity, energy resolution (e.g. relative to PS), timing resolution, rate capability, summary of operational experience (size of signals in detector, etc.}
+
+\begin{figure}[ht]
+\begin{center}
+ \includegraphics[clip=true,width=0.8\linewidth]{figures/TAGM_conceptual.pdf}
+\end{center}
+\caption{Conceptual overview of the Tagger Microscope design, showing the fiber bundles and light guides (left), and the orientation of these bundles normal to the incoming electron beam direction in the tagger focal plane (right)
+        }
+\label{fig:TAGM_conceptual} 
+\end{figure}
 
 \subsubsection{Broadband Tagging Hodoscope (TAGH)}\label{sec:TAGHIntro}
 The Tagger Hodoscope is a device consisting of $\sim$220 scintillator counters distributed over a length of 9.25 m and mounted just behind the focal plane of the tagger magnet.
@@ -201,12 +213,15 @@ Its function is to provide coarse sampling of the full photon energy range from 
 This broad coverage aids in alignment of the diamond radiator and expands the \GX{} physics program reach to photon energies beyond the coherent peak alone.
 
 Each counter in the hodoscope comprises a 6 mm thick and 40 mm high EJ-228 scintillator, of varying widths between 3 and 21 millimetres, coupled to a $\mu$-metal shielded Hamamatsu R9800 PMT via a cylindrical acrylic\footnote{UVT-PMMA} light guide 22.2 mm in diameter and 120 mm long.
-The counter assemblies also have 2-stage preamplifiers mounted on them, providing high voltage input, and TDC and fADC signal outputs.
+
+The PMTs are instrumented with an active base designed at Jefferson Lab~\cite{tagh:base}. The base consists of a high-voltage divider and an amplifier powered by current flowing through the divider and provides two signal outputs for flash ADC and TDC.
+The amplifier with a gain factor of 8.5 allows to operate the PMT at  a smaller voltage of 900 V and reduce the PMT anode current, therefore improving the rate capability. The maximum rate of the counter is about 4 MHz.
+
 The counters are mounted with their faces normal to the path of the scattered electrons, in two rows, either 8 cm or 13 cm from the focal plane.
 This allows the counters to be positioned without horizontal gaps in the electron beam direction, enabling complete coverage of the entire tagged photon energy range.
 
 The construction of the hodoscope allows for later addition of counters to fully cover the energy range above the coherent peak for other microscope positions by filling the gaps between sampling scintillators. The mounting frame of the hodoscope is suspended from the Tagger-Hall ceiling to provide full flexibility of microscope positioning.
-{\color{red} Comments by Elton: Need more information on geometry (e.g. three rows of counters), description of scintillators and pmts. What is the rate capability of the system? What were typical rates during production running? What is the timing resolution? What is the energy granularity? What is the energy resolution (e.g. compared to PS)?}
+{\color{red} Comments by Elton: What were typical rates during production running? What is the timing resolution? What is the energy granularity? What is the energy resolution (e.g. compared to PS)?}
 
 \subsection{Beam profiler}
 The beam profiler is located immediately upstream of the collimator and is used to measure photon beam profiles.
@@ -229,9 +244,8 @@ In the region of the coherent peak, where photon polarization is at its maximum,
 The coherent radiation is concentrated at small angles $<$25~$\mu$rad with respect to the beam direction, while the incoherent radiation has a broader angular distribution.
 To maximise the degree of linear polarization in the photon beam, it is tightly collimated.
 
-The Hall D primary collimator provides apertures of 3.4 mm and 5.0 mm in a tungsten plate mounted on an X-Y table.
+The Hall D primary collimator provides apertures of 3.4 mm and 5.0 mm in a tungsten plate mounted on an X-Y table, the latter of which is typically used in normal \GX{} running conditions.
 The entire collimator is surrounded by lead shielding.
-In normal \GX{} running conditions, the 5.0 mm collimator is used.
 The device may also be positioned to block the beam to prevent high current beam, occasionally delivered by CEBAF for the purposes of beam tuning, from entering the experimental hall. Following this primary collimator, there is a sweeping magnet and a secondary cleanup collimator, magnet and 
 lead shielding to remove unwanted charged particles from the photon beam. The photon beam exiting the collimation system is delivered to the systems downstream for monitoring and use in physics experiments.
 
@@ -241,28 +255,28 @@ The polarimeter uses the process of pair production on atomic electrons in a ber
 Information of the degree of polarization of the photon beam can be obtained by analysing the azimuthal distribution of the scattered atomic electrons measured by this device.
 {\color{red} Comments by Elton: Useful to add a little information on how data are taken and how much statistics is needed to determine the polarization}.
 
-\subsection{Pair spectrometer \label{sec:ps}}
+\subsection{Pair spectrometer         (Sasha) \label{sec:ps}}
 
 The Pair Spectrometer \cite{BARBOSA2015376} is located at the entrance to Hall D.
 %(Fig.~\ref{fig:beam:hall-d}).
 The spectrometer reconstructs the energy of a beam photon by detecting the $e^\pm$ pair produced by the photon in a thin converter. 
 Electrons and positrons are registered in two layers of scintillator
 detectors: a high-granularity hodoscope and a set of coarse counters,
-referred to as PS and PSC, respectively.
-The detectors are organized into two arms positioned symmetrically with
-respect to the photon beam line.  Each detector arm covers a momentum
-range of $e^\pm$ between 3.0 GeV/c and 6.2 GeV/c, corresponding to
-reconstructed photon energies between 6~GeV and 12.4~GeV. The relatively
+referred to as PS and PSC, respectively. The detectors are organized into two arms positioned symmetrically with respect to the photon beam line. The PSC consists of sixteen scintillator counters, eight in each detector arm. Each counter is 4.4 cm wide, 2 cm thick in the direction along the lepton trajectory and 6 cm heigh. The pair spectrometer hodoscope consists of 145 rectangular 
+tiles (1 mm and 2 mm wide) stacked together. Light from the PSC counters is detected using Hamamatsu R6427-01 PMTs. Hamamatsu silicon photomultipliers were chosen for the instrumentation of the PS hodoscope~\cite{Barbosa:2017zzw,Somov:2017kif,Tolstukhin:2014zsa}.
+
+Each detector arm covers a momentum range of $e^\pm$ between 3.0 GeV/c and 6.2 GeV/c, 
+corresponding to reconstructed photon energies between 6~GeV and 12.4~GeV. The relatively
 large acceptance of the hodoscope allows one to reconstruct photons
 with energies in the coherent peak energy region and also in the range
-near the beam end-point energy of 12~GeV.
+near the beam end-point energy of 12~GeV. Some details about the performance of the spectrometer are given in~\cite{Somov:2017vhp,Somov:2016bgb}.
 
 The main purpose of the spectrometer is to measure the spectrum of the
 collimated photon beam and determine the fraction of linearly polarized
 photons in the coherent peak energy region.
 It is also used to monitor the photon beam flux and can be used for 
 energy calibration of the tagging hodoscope and microscope detectors.
-{\color{red} Comments by Elton: Need to add a short description of the setup (high granularity and coarse array); What range of energies is covered? (Can refer back to Fig with photon flux and polarization) What is the timing resolution? Rate of PS triggers? What is the energy resolution? Stability of the system?}
+{\color{red} Comments by Elton: Further description (Can refer back to Fig with photon flux and polarization) What is the timing resolution? Rate of PS triggers? What is the energy resolution? Stability of the system?}
 
 
 %\subsubsection[Spectrometer]{Spectrometer\label{sec:beamline:ps-spetrometer}}
@@ -512,7 +526,7 @@ Finally, the photon beam travels through the \GX{} detector, and
 ultimately goes to the photon beam dump just outside the downstream
 end of the experimental hall.
 The main parameters and properties of the Photon Beam are given in and \ref{tab:operates}.
-
+{\color{red} Comment by Stuart: Hasn't this already been stated at the beginning of this section?}
 
 
 

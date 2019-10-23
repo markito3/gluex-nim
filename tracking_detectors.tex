@@ -103,36 +103,36 @@ For example, the CDC electronics read out only one pulse but requires both pulse
 The FDC anode wires are read out using the GlueX f1TDC\cite{JLAB2002}. 
 
 \subsection[Gas system (Beni)]{Gas system \label{sec:gas}}
-Both tracking chambers the CDC and FDC operate with the same type of gases, argon and CO$_{2}$. Since the relative mixture of
+Both tracking chambers, the CDC and FDC, operate with the same gases, argon and CO$_{2}$. Since the relative mixture of
 the two gases are slightly different for the two tracking chambers the gas system has two separate identical mixing stations. There is one gas supply of argon and CO$_{2}$ for both mixing stations. A limiting opening in the supply
-lines provide over-pressure protection to the gas system and filters in the gas lines provide protection against potential
+lines provides over-pressure protection to the gas system and filters in the gas lines provide protection against potential
 pollution of the gas from the supply. Both gases are mixed together using mass flow controllers (MFC) that can be 
 configured
 to provide the desired mixing ratio of argon and CO$_{2}$.  The MFC as well as the related control electronics is from
 BROOKS Instruments.\footnote{BROOKS Instruments, https://www.brooksinstrument.com/en/products/mass-flow-controllers.}
 
-The mixed gas is filled into storage tanks one for the CDC one for the FDC. Their pressure is
-regulated by controlling the operation of the MFCs with a logic circuit based on Allen-Bradley control logics\footnote{Allen-Bradley, https://ab.rockwellautomation.com/}
-that are used throughout the experimental hall and keeps
-the pressure in the tank between 10 and 12~psi. The tank serves as a reservoir and buffer.
-A safety relieve valve on each tank
-provides additional protection against over pressure. While the input pressure to the MFC is at 40~psi the pressure after
-the MFC is designed to be always below 14~psi above atmospheric pressure. After the mixing tank there is a provision
+The mixed gas is filled into storage tanks, one for the CDC and another for the FDC. Their pressure is
+regulated by controlling the operation of the MFCs with a logic circuit based on Allen-Bradley ControlLogix\footnote{Allen-Bradley, https://ab.rockwellautomation.com/}
+ (these are used throughout the experimental hall) that keeps
+the pressure in the tank between 10 and 12~psi. The tank serves as a reservoir and a buffer.
+A safety relief valve on each tank
+provides additional protection against over-pressure. While the input pressure to the MFC is at 40~psi the pressure after
+the MFC is designed to be always less than 14~psi above atmospheric pressure. After the mixing tank there is a provision
 built into the system to let the gas pass through an alcohol bath to add a small amount to the gas mixture.
 This small admixture of alcohol will protect the wire chambers from aging effects caused by radiation exposure from the beam.
 This part of the gas system is located above ground in a separate gas shed before the gas mixture is transported
 to the experimental hall via polyethylene pipes.
 
-Down in the hall additional MFC allow to specify the exact amount of gas to be provided to the chambers. One for the CDC
-and four for the individual FDC packages. The CDC is operated with a flow of 1~l/m while each FDC package is operated with
+Down in the hall additional MFCs allow the exact amount of gas provided to the chambers to be specified. There is one for the CDC and another 
+four for the individual FDC packages. The CDC is operated with a flow of 1~l/m while each FDC package is operated with
 a flow of 0.1~l/m. To protect the chambers from over-pressure there is a bypass line at the input to the detectors that
-is open to atmosphere after a bath of mineral oil. The height of the oil level determines the maximum possible gas pressure at
+is open to the atmosphere after a bath of mineral oil. The height of the oil level determines the maximum possible gas pressure at
 the input to the chambers. There is a second mineral oil bath at the output to protect against possible air back-flow into
-the chamber. Its height of oil above the exhaust line determines the operating pressure inside the chambers.
+the chamber. The height of its oil above the exhaust line determines the operating pressure inside the chambers.
 
 Pressure tabs are mounted at many places in the gas system to monitor the pressure during operation. Among these are
 6 pressure tabs for each FDC chamber to monitor the pressure in each individual plane. The CDC gas pressure is monitored
-at the input, the down stream gas plenum and at the exhaust.
+at the input, the downstream gas plenum, and at the exhaust.
 
 There is an additional tab in the exhaust line that can be used to divert some gas from the chamber exhaust to be connected
 to an oxygen sensor to test the amount of oxygen in the gas. Too much oxygen in the gas will degrade the gain of
@@ -141,8 +141,8 @@ the chambers and reduce the tracking efficiency. The oxygen levels found in the 
 \subsection{Calibration, performance and monitoring \label{sec:dccalib}}
 Time calibrations for the drift chambers are used to remove the time offset due to the electronics, so that after calibration the earliest possible arrival time of the pulse signals is at 0~ns. These offsets and the function parameters used to describe the relationship between the pulse arrival time and the closest distance between the track and the anode wire are obtained for each session of data-taking. 
 
-The CDC is used to measure dE/dx of tracks over a wide range of polar angles, including recoiling target protons as well as more forward going tracks. Gain calibrations are made to ensure that the dE/dx is consistent between tracking paths through different straws and stable over time. 
-The procedure entails matching the position of the minimum ionizing peak for each of the 3522 straws, and then matching the dE/dx at 1.5~GeV/c to the calculated value of 2.0~ keV/cm. This takes place during the early stages of data analysis. Gain calibration for the individual wires is performed each time the HV is switched on and whenever any electronics modules are replaced. Gain calibration for the chamber as a whole is performed for each session of data-taking; these are limited to two hours as the gain is very sensitive to the atmospheric pressure. Position calibrations were necessary to describe the small deflection of the straw tubes midway along their length; these were performed in 2016 and repeated in 2017, with no significant difference found between the two sets of results.  Position resolution from the CDC is of the order of 130~$\mu$m and its detection efficiency per straw is over 98\% for tracks up to 4~mm from the wire. The efficiency decreases as the distance between the track and the wire increases, but the close-packing arrangement of the straw tubes and the large number of straws traversed by each track compensate for this. 
+The CDC is used to measure $dE/dx$ of tracks over a wide range of polar angles, including recoiling target protons as well as more forward going tracks. Gain calibrations are made to ensure that the $dE/dx$ is consistent between tracking paths through different straws and stable over time. 
+The procedure entails matching the position of the minimum ionizing peak for each of the 3522 straws, and then matching the $dE/dx$ at 1.5~GeV/c to the calculated value of 2.0~ keV/cm. This takes place during the early stages of data analysis. Gain calibration for the individual wires is performed each time the HV is switched on and whenever any electronics modules are replaced. Gain calibration for the chamber as a whole is performed for each session of data-taking; these are limited to two hours as the gain is very sensitive to the atmospheric pressure. Position calibrations were necessary to describe the small deflection of the straw tubes midway along their length; these were performed in 2016 and repeated in 2017, with no significant difference found between the two sets of results.  Position resolution from the CDC is of the order of 130~$\mu$m and its detection efficiency per straw is over 98\% for tracks up to 4~mm from the wire. The efficiency decreases as the distance between the track and the wire increases, but the close-packing arrangement of the straw tubes and the large number of straws traversed by each track compensate for this. 
 
 For the FDC system, an internal per chamber calibration process is first performed to optimize the track position information obtained.  
 In the FDC the avalanche created around the wire is seen in three projections: on the two cathodes and on the wires.
@@ -164,7 +164,7 @@ depending on the distance of the hit to the wire in the $0.5-4.5$~mm range.
 
 Position offsets and package rotations were determined for both drift chamber systems, first independently, and then together, using the alignment software MILLEPEDE\cite{millepede} in a process described in \cite{GlueXCDCNIM} and in \cite{MikeStaib_thesis}.
 
-Online monitoring software enables the shift-takers to check that the number of channels recording data, the distribution of signal arrival times and the dE/dx are as expected. 
+Online monitoring software enables the shift-takers to check that the number of channels recording data, the distribution of signal arrival times and the $dE/dx$ are as expected. 
 
 
 

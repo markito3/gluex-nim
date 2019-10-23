@@ -1,0 +1,38 @@
+%=======================+=========================
+%==============  DAQ   ================
+%=================================================\
+
+\section{Data acquisition (Serguei) \label{sec:daq}}
+
+\subsection{Architecture \label{sec:daqarchitecture}}
+
+\subsection{Performance \label{sec:daqperformance}}
+
+The GlueX data acquisition uses the CEBAF Data Acquisition (CODA) framework. CODA is a software toolkit of applications and libraries that allows one to build customized data acquisition systems based on distributed commercial networks. The detailed description of CODA software and hardware can be found in Ref.\,\cite{CLASS12_DAQ}. 
+Electronics in VME/VXS crate can produce data up to 200 MB/s per crate.
+The number of crates producing data is about 50.
+Data from electronics is read via VME back-plane (2eSST, parallel bus) by crate controller (ROC): single board computer running Linux.
+GlueX network layout and data flow are shown on Fig.~\ref{fig:CODA}.
+Typical data rates from single crate are in the range of 10 MB/s to 70 MB/s, depending on the detector type and trigger rate.
+The ROC transfers data over 1 Gbit Ethernet link to Data Concentrators (DC).
+Data Concentrator is a program, which build partial event received from 10-12 crates, and runs on a dedicated computer node.
+DC output traffic of 200-600 MB/s is routed to Event Builder (EB) to build a complete event.
+The Event Recorder (ER), which is typically running on the same node as an event builder, write data to the local data storage.
+To date, GlueX data has collected at a rate of 500 MB/s - 900 MB/s, which allows the ER to write out to a single output stream. The system is expandable to handle higher luminosity with rates of 1.5 - 2.5 GB/s. In this case ER must write output data to several files in parallel (multi-stream).
+All DAQ nodes {\color{red} Elton: nodes same as CPUs / ROCs? } are connected to both a 40 Gb Ethernet switch and a 56 Gb Infiniband switch.
+The ethernet network is used exclusively for DAQ purposes: receiving data from detectors, building events, writing data to disk, 
+while the Infiniband network is used to transfers events for online data quality monitoring. 
+This allows one to decouple DAQ and monitoring network traffic.
+The live time of the DAQ is in the range of 92-100\%. Dead time is coming from readout electronics and depend on the trigger rate.  
+The software part of DAQ has no dead time during the run, but it appears during stop and start the run, at the level of 2-8 minutes. All DAQ nodes are connected to both a 40 Gb Ethernet switch and a 56 Gb Infiniband switch.
+
+
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/DAQ_coda.pdf}  
+\caption{ \label{fig:CODA}
+DAQ layout}
+
+\end{center}
+\end{figure}
