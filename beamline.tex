@@ -6,7 +6,7 @@
 {\color{red}General comment: As we haggle in the beamline group over the level of detail required for this section, it is worth bearing in mind that a longer-form paper dedicated to the beamline is also on our to-do list.  Material and detail felt to be excessive for this document can spill over into that paper}
 
 The Hall D complex has been described in Section \ref{sec:gluexexperiment:complex} and is shown schematically in Fig.~\ref{fig:beam:Draw_beamline}, which shows the Tagger Hall, the collimator cave and Hall D itself. The CEBAF electron beam enters the Tagger Hall with properties listed in Table\,\ref{tab:elecprop}. The position at the radiator is monitored and
-controlled using beam position monitors\footnote{Named 5C11 and 5C11B} located at the end of the accelerator tunnel just upstream of the Tagger Hall. The position of the beam on the collimator
+controlled using beam position monitors\footnote{Named 5C11 and 5C11B, positions indicated in Figure \ref{fig:beam:Draw_beamline}} located at the end of the accelerator tunnel just upstream of the Tagger Hall. The position of the beam on the collimator
 is initially set by adjusting small corrector magnets at this location. The electron spot size at the radiator is relatively large and converges to a virtual focus located at the collimator 75\,m away. The virtual spot size ($\sim$ 0.5\,mm) is small compared to the intrinsic size of the photon beam on the face of the collimator. The position on the collimator is monitored using the response of the active collimator to the incident photon beam. The stability of the beam is maintained during production by a feedback system that fixes the position of the beam at the monitor and at the active collimator. The energy and stability of the electron beam can be monitored using an additional beam position monitor, located immediately upstream of the electron dump.
 
 \begin{table}[tbp]
@@ -68,8 +68,7 @@ with maximum energy of 9\,GeV and use a 5.0\,mm collimator.\footnote{A 3.4~mm co
 The beam energy spectrum after collimation and the photon flux are measured by the Pair
 Spectrometer, located in Hall D. The photon spectrum and its polarization with a 12\,GeV electron beam are shown in Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}.
 The expected degree of linear polarization in the energy range of 8.4--9.0~GeV is $\sim$40\% after collimation. 
-The beam polarization is directly measured by the triplet polarimeter upstream of the pair spectrometer. The polarization can also be tracked using various physics channels, such as $\rho$ 
-production {\color{red}(Stuart: We should have a reference for this technique)}, even if they cannot determine the absolute value of the polarization. 
+The beam polarization is directly measured by the triplet polarimeter upstream of the pair spectrometer. The polarization can also be tracked using various physics channels, such as $\rho$ production {\color{red}(Stuart: We should have a reference for this technique, or a short write-up as a subsection of \ref{sec:polarization}.  What about Analytic Bremsstrahlung fitting? Was this technique ever used in Gluex, even only for polarization monitoring?)}, even if they cannot determine the absolute value of the polarization. 
 {\color{red} Comment by Elton: Somewhere we should add a (typical) plot of the measured convergence of the beam onto the collimator. Do we want add a figure with our harp scan? Perhaps here or maybe in a section below.} 
 
   
@@ -82,9 +81,8 @@ production {\color{red}(Stuart: We should have a reference for this technique)},
 \label{fig:beam:gx3102_pi0etaAsym2016_fig0_beam} 
 \end{figure}
 
-In the sections that follow, we describe how the linearly polarized photon beam is produced,  how it is tagged using the tagger spectrometer, how its polarization is determined in the
-triplet polarimeter, how the flux is monitored with the pair spectrometer, and how the flux is calibrated using the total absorption counter. The photon is dumped in the photon beam dump
-just outside the downstream end of the experimental hall.
+In the sections that follow, we describe how the linearly polarized photon beam is produced, how its energy is determined using the tagging spectrometer, how its polarization is determined in the triplet polarimeter, how the flux is monitored with the pair spectrometer, and how the flux is calibrated using the total absorption counter.
+The photon is dumped in the photon beam dump just outside the downstream end of the experimental hall.
 The main parameters and properties of the photon beam are given in Table\,\ref{tab:operates}.
   
 
@@ -141,12 +139,13 @@ Hadronic rate in the peak range & 3 kHz \\
 The goniometer\footnote{Manufactured by Newport Corporation} is a device which can position and precisely move horizontally, vertically and rotationally about the x, y and z axes.
 The Hall D goniometer holds several radiators, each used depending on the requirements of the experiment.
 
-For the linearly polarized photon beams typically used in \GX{} production running, diamond radiators, typically 50 $\mu m$ thick, are used in the coherent bremsstrahlung technique.
+For the linearly polarized photon beams normally used in \GX{} production running, diamond radiators, typically 50 $\mu m$ thick, are used in the coherent bremsstrahlung technique.
 This technique requires precise alignment of a diamond radiator, in order to produce a highly polarized beam by scattering off the appropriate crystal planes associated with a particular reciprocal lattice vector.
 
-Several thin aluminium radiators, of varying thickness, are also available for collecting data to normalise the incoherent bremsstrahlung component from the linearly polarized beam data.
+Several thin aluminium radiators, of varying thickness between 1.5 $\mu m$ and 30 $\mu m$\footnote{$2\times10^{-5}$ to $3\times10^{-4}$ radiation lengths}, are installed on the goniometer and a separate rail for amorphous radiators, 615 mm downstream of the goniometer.
+Data collected using these radiators are used to normalize the incoherent bremsstrahlung component from the linearly polarized beam data.
 
-\subsection{Diamond Selection and Quality Control \label{sec:diamonds}}
+\subsubsection{Diamond Selection and Quality Control \label{sec:diamonds}}
 The properties of diamond make it suitable for use as the radiator in coherent bremsstrahlung; its small lattice constant and high Debye temperature result in small thermal motion of the atoms in the lattice, and its lattice structure suffers minimal thermal effects.
 
 Important considerations when choosing a diamond radiator are its thickness and its purity. The thickness of the radiator affects the angular divergence of the resulting photon beam, due to multiple scattering effects of the electron beam., as can impurities, which can cause defects in the crystal lattice structure \cite{YANG2010719,YANG2012}.
@@ -189,14 +188,16 @@ It has a normal operating field of 1.5 Tesla, with a maximum field of 1.75 T, an
 
 \subsubsection{Tagger Microscope (TAGM)}\label{sec:TAGM}
 The Tagger Microscope is a high-resolution hodoscope that counts post-bremsstrahlung electrons corresponding to the photon energy band of interest to the experiment in Hall D.
-For a 12 GeV incident electron beam, the microscope is used to tag photons between 8.4 and 9.0 GeV.
-This energy changes depending on the primary electron beam energy, and the device is also designed to be movable to center on other energy ranges as demanded by experiment.
+For a 12 GeV incident electron beam in the \GX{} experiment, the microscope is used to tag photons between 8.4 and 9.0 GeV, with 0.1\% energy resolution, and timing resolution of 200 ps.
+This energy range changes depending on the primary electron beam energy, and the device is also designed to be movable to center on other energy ranges as demanded by experiment.
 
 Scintillating fibre bundles are oriented towards the incoming electron axis in the tagger focal plane (Fig.~\ref{fig:TAGM_conceptual}), and read out by silicon photomultipliers (SiPMs) at the other end.
-This detector provides fine segmentation along the direction of electrons' spread, increasing the energy resolution, as well as allowing selective readout to match the photon collimator acceptance through segmentation in the y-direction.
+This detector provides fine segmentation along the direction of the electrons' spread, increasing the energy resolution, as well as allowing selective readout to match the photon collimator acceptance through segmentation in the y-direction.
 
-The TAGM comprises a total of 510, 2$\times$2$\times$20 mm$^3$, multi-clad Saint-Gobain BCF-20 fibers, arranged into 17 bundles of 30 fibers, with each bundle having a 5 row $\times$ 6 column formation. These bundles are spliced to BCF-98 clear fiber light guides, read out by Hamamatsu SiPMs\footnote{Model S10931-050P} mounted on a custom built preamplifier board.
-{\color{red} Comments by Elton/Stuart: Further description the system: short description of electronics, energy granularity, energy resolution (e.g. relative to PS), timing resolution, rate capability, summary of operational experience (size of signals in detector, etc.}
+The TAGM comprises a total of 510, 2$\times$2$\times$20 mm$^3$, multi-clad Saint-Gobain BCF-20 fibers, arranged into 17 bundles of 30 fibers, with each bundle having a 5 row $\times$ 6 column formation. These bundles are spliced to BCF-98 clear fiber light guides, and read out by Hamamatsu SiPMs\footnote{Model S10931-050P} mounted on a custom built two stage preamplifier board, with flash ADC output.
+The board is capable of providing readout from the individual SiPMs, as well as summing the signals over a column to provide one output for each energy bin.
+To reduce the burden of cabling in the tagger hall, only four columns in the TAGH are cabled for individual readout.
+These are sufficient for monitoring the alignment of the electron beam along the focal plane.
 
 \begin{figure}[ht]
 \begin{center}
@@ -522,11 +523,10 @@ From this measurement, the fraction of bremsstrahlung produced photons reaching 
 
 {\color{red} Comment by Stuart: TAC runs have also been performed using v-wires during GlueX phase I, and the CompCal (although the latter may count as PrimEx commissioning). Should we mention either of these?}
 
-Finally, the photon beam travels through the \GX{} detector, and
-ultimately goes to the photon beam dump just outside the downstream
-end of the experimental hall.
-The main parameters and properties of the Photon Beam are given in and \ref{tab:operates}.
-{\color{red} Comment by Stuart: Hasn't this already been stated at the beginning of this section?}
+%Finally, the photon beam travels through the \GX{} detector, and
+%ultimately goes to the photon beam dump just outside the downstream end of the experimental hall.
+%The main parameters and properties of the Photon Beam are given in and \ref{tab:operates}.
+%{\color{red} Comment by Stuart: Hasn't this already been stated at the beginning of this section?}
 
 
 
