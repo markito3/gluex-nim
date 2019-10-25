@@ -23,23 +23,25 @@ can be used in the Level 1 trigger.
 
 \subsubsection{Detector Description}
 
-The ST consist of 30 scintillator paddles arranged in a cylinder for most of
-its length with a ``nose'' section that bends towards the beam line at
-the downstream end. EJ-200 scintillator from Eljen
-Technology\footnote{Eljen Technology, https://eljentechnology.com/products/plastic-scintillators}
-was selected. EJ-200 has a decay time
-of 2.1~ns and an attenuation length of 380~cm. Silicon
-photomultiplier (SiPM) detectors were use as light sensors [specs?]. These were
-not affected by the 2 T[?] magnetic field produced by the GlueX
-solenoid. The SiPMs were placed as close as possible to the upstream
-end of each scintillator element to maximize light collection.
+The ST consist of 30 scintillator paddles arranged in a cylinder for
+most of its length with a ``nose'' section that bends towards the beam
+line at the downstream end. EJ-200 scintillator from Eljen
+Technology\footnote{Eljen Technology,
+  https://eljentechnology.com/products/plastic-scintillators} was
+selected. EJ-200 has a decay time of 2.1~ns and an attenuation length
+of 380~cm. Silicon photomultiplier (SiPM) detectors were used as light
+sensors. These are not affected by the magnetic field produced by the
+GlueX solenoid, an important feature since the start counter is located
+near the geometric center of the field region. The SiPMs were placed
+as close as possible to the upstream end of each scintillator element
+to maximize light collection.
 
 Each scintillator paddle started from stock 3~mm thick and 600 mm in
 length. The paddles were bent at Eljen to create the nose section, and
-then machined at McNeal Enterprises
-Inc.\footnote{McNeal Enterprises Inc., http://www.mcnealplasticmachining.com} to
-their final shape, including edges beveled at $6^\circ$ to minimize
-loss of acceptance.
+then machined at McNeal Enterprises Inc.\footnote{McNeal
+  Enterprises~Inc., http://www.mcnealplasticmachining.com} to their
+final shape, including edges beveled at $6^\circ$ to minimize loss of
+acceptance.
 
 The scintillabor paddles are supported by a Rohacell closed-cell foam
 structure. The Rohacell is 11~mm thick and is rigidly attached to an
@@ -54,32 +56,30 @@ end.
 
 Each scintillator bar is read out with an array of four
 magnetic-field-insensitive Hamamatsu S109031-050P multi-pixel photon
-counters (MPPCs). Each MPPC consists of 3,600
-$50 \times 50$ $\mu$m$^2$ avalanche photo-diode pixel counters
-operating in Geiger mode. The signals from all pixels are summed. [no
-  more mention of SiPM?] The scintillator is optically coupled to the
-MPPCs through a 250 $\mu$m air gap.
+counters (the SiPMs). Each SiPM consists of 3,600 $50 \times 50$
+$\mu$m$^2$ avalanche photo-diode pixel counters operating in Geiger
+mode. The signals from all pixels are summed. The scintillator is
+optically coupled to the SiPMs through a 250 $\mu$m air gap.
 
-The read-out electronics are deployed on three separate board designs,
-``ST1,'' ``ST2,'' and ``ST3.'' The ST1 and ST2 boards are located
-directly upstream of the end of the scintillator array, ST3 is located
-further upstream, outside the bore of the solenoid magnet, adjacent to
-the beam pipe.
+The read-out electronics are deployed on three separate board
+designs. The first board houses the SiPMs themselves as well as a
+thermocouple for temperature monitoring. Each of these boards services
+three scintillator paddles (twelve SiPMs per board). There are ten
+boards altogether.
 
-The ST1 board houses the MPPCs themselves as well as a thermocouple for
-temperature monitoring. Each ST1 board services three scintillator
-paddles (twelve MPPCs per ST1 board). There are ten ST1 boards altogether.
+The second board provides a pre-amplifier for each channel whose
+output is split. One side of the signal goes to a buffer and then to a
+Flash ADC (FADC), the other goes to a 5$\times$~amplifier and is sent
+from there to a discriminator and TDC. Low-voltage power and the bias
+voltage for the SiPMs are routed. All four SiPMs for one scintillator
+receive a single bias voltage, but that voltage is set separately for
+each set of four.
 
-For each ST1 board there is a corresponding ST2 board that services
-all three electronic channels. For each channel there is a
-pre-amplifier whose output is split. One side of the signal goes to a
-buffer and then to a Flash ADC (FADC), the other goes to a
-5$\times$~amplifier and is sent from there to a discriminator and TDC.
-
-There is one ST3 provides an interface for distribution of low-voltage
-power for the electronics and bias voltages for the MPPCs. It also
-serves as a patch panel for the FADC, discriminator, and thermocouple
-signal output cables.
+The third board provides an interface for distribution of the
+low-voltage power for the electronics from the external power supply,
+as well as for the bias voltages for the SiPMs. It also serves as a
+patch panel for the FADC, discriminator, and thermocouple signal
+output cables.
 
 \subsubsection{Calibration}
 
@@ -104,7 +104,7 @@ time-walk, light propagation time, and light attenuation
 \item{\bf Light Attenuation Correction}. Light attenuation is measured
   at several positions along the counter using charged particle tracks
   again. The energy per unit path length in the paddle as a function
-  of distance from the MPPCs is fit to a modified exponential, with
+  of distance from the SiPMs is fit to a modified exponential, with
   different parameters allowed for the straight section versus the
   nose with continuity enforced at the section boundary.
 \end{description}
