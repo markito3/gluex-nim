@@ -1,17 +1,15 @@
-\section[Scintillation detectors (Mark I./Beni)]{Scintillation detectors \label{sec:scintillators}}
+\section[Scintillation detectors]{Scintillation detectors \label{sec:scintillators}}
 \subsection{Start counter \label{sec:st}}
 
-The Start Counter (ST) detector, shown in Fig.~\ref{fig:st-overview-drawing}
+The Start Counter (ST) detector, shown in Fig.~\ref{fig:st-overview-drawing},
 surrounds the target
 region and covers about 90\% of the solid angle for particles
 originating from the center of the target. It is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
 in the coherent peak. It has a high degree of segmentation to limit
-the the per-paddle rates. The time resolution is less than 350 ps
-RMS. The Start Counter provides a timing signal that is releatively
-independent of particle type and trajectory (because of its proximity
-to the target), can provide particle identification via $dE/dx$, and
-can be used in the Level 1 trigger.
+the the per-paddle rates. The time resolution must be sufficient to identify the electron RF bunch that generated the event
+(see Section\,\ref{sec:ebeam}). The ST provides a timing signal that is relatively independent of particle type and trajectory (because of its proximity to the target), can provide particle identification via $dE/dx$, and can be used in the Level 1 trigger. Details of the design, construction and performance of the ST system can be found in 
+Ref.\,\cite{Pooser:2019rhu}.
 
 \begin{figure}[!htb]
 \centering
@@ -21,13 +19,10 @@ can be used in the Level 1 trigger.
   axis.\label{fig:st-overview-drawing}}
 \end{figure}
 
-\subsubsection{Detector Description}
-
 The ST consist of 30 scintillator paddles arranged in a cylinder for
 most of its length with a ``nose'' section that bends towards the beam
 line at the downstream end. EJ-200 scintillator from Eljen
-Technology\footnote{Eljen Technology,
-  https://eljentechnology.com/products/plastic-scintillators} was
+Technology\footnote{Eljen Technology, https://eljentechnology.com/products/plastic-scintillators.} was
 selected. EJ-200 has a decay time of 2.1~ns and an attenuation length
 of 380~cm. Silicon photomultiplier (SiPM) detectors were used as light
 sensors. These are not affected by the magnetic field produced by the
@@ -37,8 +32,7 @@ as close as possible to the upstream end of each scintillator element
 to maximize light collection.
 
 Each scintillator paddle started from stock 3~mm thick and 600 mm in
-length. The paddles were bent at Eljen to create the nose section, and
-then machined at McNeal Enterprises Inc.\footnote{McNeal
+length. The paddles were bent at Eljen to create the nose section, and then machined at McNeal Enterprises Inc.\footnote{McNeal
   Enterprises~Inc., http://www.mcnealplasticmachining.com} to their
 final shape, including edges beveled at $6^\circ$ to minimize loss of
 acceptance.
@@ -46,136 +40,13 @@ acceptance.
 The scintillabor paddles are supported by a Rohacell closed-cell foam
 structure. The Rohacell is 11~mm thick and is rigidly attached to an
 aluminum support hub at its upstream end. The downstream support
-extends partially into the nose section. The cylindrical length of the
-Rohacell is further reinforced with three layers of carbon fiber, each
-layer 650~$\mu$m thick. The assembly is made light-tight with a Tedlar
-wrapping. The Tedlar is attached to a plastic collar at the upstream
-end.
+extends partially into the nose section. The cylindrical length of the Rohacell is further reinforced with three layers of carbon fiber, each layer 650~$\mu$m thick. The assembly is made light-tight with a Tedlar wrapping. The Tedlar is attached to a plastic collar at the upstream end.
 
-\subsubsection{Read-Out Electronics}
+The scintillators are optically coupled to SiPM light sensors through a 250~$\mu$m air gap. Each paddle is read out with an array of four 
+magnetic-field-insensitive SiPMs (Hamamatsu S109031-050P multi-pixel photon counters), whose signals are summed. 
+The on-board electronics provides two signals per paddle, one delivered to a Flash ADC (FADC), the other to a 5$\times$~amplifier that is sent to a discriminator and then to an F1 TDC. 
 
-Each scintillator bar is read out with an array of four
-magnetic-field-insensitive Hamamatsu S109031-050P multi-pixel photon
-counters (the SiPMs). Each SiPM consists of 3,600 $50 \times 50$
-$\mu$m$^2$ avalanche photo-diode pixel counters operating in Geiger
-mode. The signals from all pixels are summed. The scintillator is
-optically coupled to the SiPMs through a 250 $\mu$m air gap.
-
-The read-out electronics are deployed on three separate board
-designs. The first board houses the SiPMs themselves as well as a
-thermocouple for temperature monitoring. Each of these boards services
-three scintillator paddles (twelve SiPMs per board). There are ten
-boards altogether.
-
-The second board provides a pre-amplifier for each channel whose
-output is split. One side of the signal goes to a buffer and then to a
-Flash ADC (FADC), the other goes to a 5$\times$~amplifier and is sent
-from there to a discriminator and TDC. Low-voltage power and the bias
-voltage for the SiPMs are routed. All four SiPMs for one scintillator
-receive a single bias voltage, but that voltage is set separately for
-each set of four.
-
-The third board provides an interface for distribution of the
-low-voltage power for the electronics from the external power supply,
-as well as for the bias voltages for the SiPMs. It also serves as a
-patch panel for the FADC, discriminator, and thermocouple signal
-output cables.
-
-\subsubsection{Calibration}
-
-Calibrations are performed to correct measurements for the effects of
-time-walk, light propagation time, and light attenuation
-
-\begin{description}
-\item{\bf Time-Walk Correction}. Since the detector signal is sent to
-  both a Flash ADC and a TDC, the time from the the FADC, which is
-  largely independent of pulse amplitude, is used to measure the time
-  walk seen by the TDC as a function of pulse amplitude as measured by
-  the FADC. The resulting curve is fit to an empirical function to
-  apply the correction and the procedure is done on a
-  channel-by-channel basis.
-\item{\bf Light Propagation Time Correction}. The propagation time is
-  measured as a function of the hit position in a paddle as determined
-  by well-reconstructed charged particle tracks. The propagation
-  velocity is measured in three regions of the counter (``straight,''
-  ``bend,'' and ``nose'') and is not assumed to be a single value for
-  all hits. The parameters for the correction are obtained
-  independently for each paddle.
-\item{\bf Light Attenuation Correction}. Light attenuation is measured
-  at several positions along the counter using charged particle tracks
-  again. The energy per unit path length in the paddle as a function
-  of distance from the SiPMs is fit to a modified exponential, with
-  different parameters allowed for the straight section versus the
-  nose with continuity enforced at the section boundary.
-\end{description}
-
-\subsubsection{Performance}
-
-\smallskip
-
-{\it Timing Resolution}
-
-\smallskip
-
-Timing performance can be measured by comparing the event time in the
-target as measured by the start counter and the time derived from a
-signal from the CEBAF accelerator which is synched to the RF time
-structure of the machine. The start counter time must be corrected for
-the flight path of the charged particle emerging from the event and
-all instrumental corrections mentioned in the previous section are
-applied. Fig.~\ref{fig:st-time-resolution} shows the distribution of
-this time difference. The time from the RF does not contribute
-significantly to the width of the
-distribution. Table~\ref{table:st-time-resolution} gives the measured
-time resolution for the various sections as well as for all sections,
-with all paddles combined. Also shown is the fraction of tracks kept
-by a $\pm 1.0$~ns cut around the central value.
-
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[width=1.0\linewidth]{figures/st_tr_fit.pdf}
-  \caption{Time resolution for one paddle with its full width half
-    maximum value indicated in ns.  The x-axis is the time difference
-    between $T^{\rm ST}_{\rm vertex}$ and $T^{\rm BB}_{\rm vertex}$.
-    The vertical lines indicate the cuts used to identify a 500~MHz beam bunch.}
-                \label{fig:st-time-resolution}
-\end{figure}  
-
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{@{} l *4c @{}}
-    \hline
-    \multicolumn{1}{c}{\textbf{Section}}    & \textbf{All}  & \textbf{Straight}  & \textbf{Bend}  & \textbf{Nose}  \\ 
-    \hline
-    $\mathbf{FWHM}$ & 550~ps & 690~ps & 700~ps & 450~ps \\ 
-    \textbf{Fraction} & 93\% & 92\% & 91\% & 94\% \\\hline
-  \end{tabular}
-  \caption{Average time resolutions (FWHM) and event fractions within a $\pm$ 1~ns window for all 30 ST sectors by independent geometrical regions.}
-  \label{table:st-time-resolution}
-\end{table}  
-
-\smallskip
-
-{\it Particle Identification via dE/dx}
-
-\smallskip
-
-Energy loss per unit path length ($dE/dx$) measured in the start
-counter can be used for particle
-identification. Fig.~\ref{fig:ST_dEdx_vs_p} shows $dE/dx$ vs. momentum
-for a charged particles matched to the Start Counter. Protons can be
-separated from pions up to 0.9 GeV/$c$ in momentum.
-
-\begin{figure*}[!htb]
-  \centering
-  \includegraphics[width=\textwidth]{figures/st_dedx_vs_p.pdf}
-  \caption{$dE/dx$ vs.\ $p$ for the Start Counter.  The curved band
-    corresponds to protons while the horizontal band corresponds to
-    electrons, pions, and kaons. Pion/proton separation is achievable
-    for tracks with $p < 0.9$~GeV/$c$.}\label{fig:ST_dEdx_vs_p}
-\end{figure*}
-
-\subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
+\subsection[Time-of-flight counters]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
 an angular region from 0.6$^{\circ}$ to 13$^{\circ}$ in polar angle. The detector has two planes of
 scintillator paddles stacked in the horizontal and vertical direction, respectively. Most paddles are 252~cm long and 2.54~cm
@@ -189,34 +60,42 @@ count rate of the paddles well below 2~MHz the two inner most full-length paddle
 Light guides from UV transmitting plastic provide the coupling space between the scintillator and the PMT and allow the 
 magnetic shielding to protect the photo cathode by extending about 5~cm past the PMT entrance window. All paddles are wrapped
 with a layer of a highly reflective material DF2000MA from 3M followed by a layer of strong black Tedlar film for light tightness. 
-The main purpose of the detector is to provide fast timing for charged particles passing through the detector thereby providing information for particle identification and to the determine the event RF beam bunch of the photon that initiated the event.
+The main purpose of the detector is to provide a fast timing for charged particles passing through the detector thereby providing information for particle identification. A detailed description of the TOF detector can be found in Ref.\,\cite{GlueXTOFNIM}. 
 
-\subsection{Electronics \label{sec:scelectronics}}
 The scintillator paddles are read out using 
 photomultiplier tubes (PMT) from Hamamatsu~\footnote{Hamamatsu Photonics, https://www.hamamatsu.com/us/en/index.html.}. Full-length paddles
 have a PMT at both ends, while the short paddles have a single PMT
 at the outer edge of the detector. These tubes of type H10534 have 10-stages and are complete assemblies with high voltage base, casing and $\mu$-metal shielding. Due to the significant stray field from the spectrometer solenoid magnet, additional external
 shielding based on soft iron is necessary to protect the PMTs from the magnetic field.
-The high voltage (HV) to the PMTs is provided by CAEN HV modules of type A1535SN initially controlled by a CAEN SY1527 main frame and
+
+
+\subsection{Electronics \label{sec:scelectronics}}
+The high voltage (HV) to the TOF PMTs is provided by CAEN HV modules of type A1535SN initially controlled by a CAEN SY1527 main frame and
 later upgraded to a SY4527.
-The PMT output is connected to a splitter by a 50' long cables (WHAT TYPES?). The signal is split by
+The PMT output is connected to a splitter by a 55' long cables RG-58 coaxial cables. The signal is split by
 a passive splitter into two equal-amplitude signals. One signals is directly connected to a flash ADC250
-analog to digital converter (fADC)~\cite{Dong:2007}, while the second signal passes first through a leading edge discriminator (LED) and then used as an input to a high resolution TDC VX1290A from CAEN~\footnote{CAEN "https://www.caen.it/"}. The digitizer electronics (fADC250 and TDC) are mounted in VXS crates as described in Section~\ref{sec:trigdaq}.
+analog to digital converter (fADC)~\cite{Dong:2007}, while the second signal passes first through a leading edge discriminator (LED) and then used as an input to a high resolution TDC VX1290A from CAEN~\footnote{CAEN "https://www.caen.it/"}. The digitizer electronics (fADC250s and TDCs) are mounted in VXS crates as described in Section~\ref{sec:trig}.
 The threshold of the leading edge discriminator is controlled for each channel separately and has an intrinsic
 dead time of about 25~ns.
-The sparcification threshold for the fADC250 is set to 105???? counts, with the nominal pedestal set at 100. The data from the fADC250 is provided by the FPGA algorithm and consists
+
+The sparcification threshold for the fADC250 is set to 120 (160) counts for the ST (TOF), with the nominal pedestal set at 100. The data from the fADC250 is provided by the FPGA algorithm and consists
 of two words per channel with information about pedestal, signal amplitude, signal integral and timing.
-The VX1290A TDC is a multi-hit high-resolution TDC with a buffer of 
-up to 8 words per channel. The intrinsic dead time of a TDC channel is ???~ns. One TDC count is approximately 25~ps.
-Since these TDCs provide the best time measurements in the GlueX detector the timing of the accelerator RF signal is also
+
+The times of the ST system are registered using the JLab F1 TDCs, which have a nominal least count of 58~ps. In order to take advantage of the higher intrinsic resolution of the TOF counters, this system uses the VX1290A TDCs, which are multi-hit high-resolution TDCs with a buffer of up to 8 words per channel and a nominal least count of 25~ps. Since these TDCs provide the best time measurements in the GlueX detector, the timing of the accelerator RF signal is also
 digitized using this electronics.
 
 \subsection{Calibration and monitoring \label{sec:sccalib}}
-A detailed description of the TOF detector can be found in Ref.\,\cite{GlueXTOFNIM}. Since the TOF detector consists of two
-planes of narrow paddles oriented orthogonal to each other it is possible to calibrate the full detector independent
+The combined ST and TOF systems are used to determine the flight times of particles, the ST providing a precise start time in combination with the accelerator RF, and the TOF providing the stop time. Both systems may also be used to provide information on particle energy loss. Therefore, they must be 
+calibrated to determine corrections for the effects of
+time-walk, light propagation time offsets, and light attenuation. The procedures are slightly different for the two detectors because of their different geometries, intrinsic resolutions and the advantages of the TOF system of having two adjacent perpendicular planes. 
+
+We start by describing the calibration procedures for the ST, which are performed for each scintillator separately.
+For the time-walk correction, we use the fact that the detector signal is sent to both a Flash ADC and a TDC and the time from the the FADC is largely independent of pulse amplitude. This is used to measure the time walk seen by the TDC as a function of pulse amplitude as measured by the FADC; the resulting curve is fit to an empirical function for use in the correction. The propagation time is measured as a function of the hit position in a paddle as determined by well-reconstructed charged particle tracks. The propagation velocity is measured in three regions of the counter (``straight,'' ``bend,'' and ``nose'') and is not assumed to be a single value for all hits. The light attenuation is measured at several positions along the counter using charged particle tracks again. The energy per unit path length in the paddle as a function of distance from the SiPMs is fit to a modified exponential, with different parameters allowed for the straight section versus the nose with continuity enforced at the section boundary.
+
+The calibration procedures for the TOF system take advantage of the fact that the detector consists of two
+planes of narrow paddles oriented orthogonal to each other, which makes it possible to calibrate the full detector independent
 of any other external detector information. The overlap region of two full-length paddles from the two planes define
-a 6$\times$6~cm$^2$ area for most paddles with a few 3$\times$3~cm$^2$ areas close to the beam hole. The separation between
-the two detector planes is minimal as they are mounted on top of each other and as such are only separated by their wrapping
+a 6$\times$6~cm$^2$ area for most paddles with a few 3$\times$3~cm$^2$ areas close to the beam hole. The separation between the two detector planes is minimal as they are mounted on top of each other and as such are only separated by their wrapping
 material. While the time-difference TD between the two ends of a paddle is related to the hit position along the paddle
 the mean-time MT is related to the flight time of a particle from the vertex to the paddle. Therefor the MT for two overlapping
 paddles must be the same when they are hit by the same particle passing through both of them while the hit position in the horizontal (x) and vertical (y) dimensions are defined by TD of the two paddles. This relationship results in an internally consistent calibration of all paddles with respect to every other paddle.
@@ -232,13 +111,54 @@ To test the calibration, we take tracks that are incident on a paddle in one pla
 average time resolution to be $\sigma$ = 96~ps$=\frac{136}{\sqrt{2}}$~ps, assuming a Gaussian distribution.
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{figures/mt_diff_fullTOF.pdf}
-\caption{\label{fig:mt_diff} Mean time difference between one long paddle of one plane with all other long paddles
+\includegraphics[width=0.6\textwidth]{figures/mt_diff_fullTOF.pdf}
+\caption{\label{fig:mt_diff} Mean time difference between one TOF long paddle of one plane with all other long paddles
 of the other plane. (Color online)}
 \end{center}
 \end{figure}
+
 \subsection{Performance \label{sec:scperformance}}
-To investigate the performance of the TOF detector for its PID capability it is important to include the relative number of
+We begin by considering the time resolution of the ST. We note that the purpose of this system is to select the correct beam bunch that generated an interaction in the target, which will be used to determine the event start time using the accelerator RF time. Therefore, the ST resolution does not contribute to the resolution of the flight time as long it is sufficient to pick out the correct beam bunch with high probability.
+
+The ST timing performance can be measured by comparing the event time in the target as measured by the start counter and the time derived from a signal from the CEBAF accelerator which is synchronized with the RF time structure of the machine. The start counter time must be corrected for the flight path of the charged particle emerging from the event and all instrumental corrections mentioned in the previous section are applied. Fig.~\ref{fig:st-time-resolution} shows the distribution of this time difference. The average time resolution is $\sigma$=234~ps, although it varies depending on the position of the hit along the counter. 
+
+%Table~\ref{table:st-time-resolution} gives the measured time resolution for the various sections as well as for all sections, with all paddles combined. Also shown is the fraction of tracks kept by a $\pm 1.0$~ns cut around the central value.
+
+\begin{figure}[tbh]
+  \centering
+  \includegraphics[width=0.6\linewidth]{figures/st_tr_fit.pdf}
+  \caption{Time difference distribution between the vertex time computed from the start counter and the accelerator RF. The time from the RF does not contribute significantly to the width of the distribution. The vertical lines indicate the cuts used to identify a 250~MHz beam bunch.}
+                \label{fig:st-time-resolution}
+\end{figure}  
+
+%\begin{table}[htbp]
+%  \centering
+%  \begin{tabular}{@{} l *4c @{}}
+%    \hline
+%    \multicolumn{1}{c}{\textbf{Section}}    & \textbf{All}  & %\textbf{Straight}  & \textbf{Bend}  & \textbf{Nose}  \\ 
+%    \hline
+%    $\mathbf{FWHM}$ & 550~ps & 690~ps & 700~ps & 450~ps \\ 
+%    \textbf{Fraction} & 93\% & 92\% & 91\% & 94\% \\\hline
+%  \end{tabular}
+% \caption{Average time resolutions (FWHM) and event fractions within a 
+% $\pm$ 1~ns window for all 30 ST sectors by independent geometrical regions.}
+%  \label{table:st-time-resolution}
+%\end{table}  
+
+The ST can also be used to identify particles using its measurements of differential energy loss per unit path length ($dE/dx$). Fig.~\ref{fig:ST_dEdx_vs_p} shows $dE/dx$ vs. momentum
+for a charged particles matched to the Start Counter. Protons can be
+separated from pions up to 0.9 GeV/$c$ in momentum.
+
+\begin{figure*}[!htb]
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/st_dedx_vs_p.pdf}
+  \caption{$dE/dx$ vs.\ $p$ for the Start Counter.  The curved band
+    corresponds to protons while the horizontal band corresponds to
+    electrons, pions, and kaons. Pion/proton separation is achievable
+    for tracks with $p < 0.9$~GeV/$c$.}\label{fig:ST_dEdx_vs_p}
+\end{figure*}
+
+To investigate the performance of the TOF detector for its PID capability it is important to consider the relative number of
 particle types within the event sample. We select events that have at least three fully reconstructed positively charged tracks with at least one of these tracks intersecting the TOF detector. We expect more pions than protons, and more protons than kaons. Looking at the distribution of velocity ($\beta$) of these tracks as a function of momentum it is easy to identify the bands from protons, kaons and pions (see Fig.~\ref{fig:betavsp}). 
 
 The distributions of $\beta$ at two specific track momenta, 2~GeV/c and 4~GeV/c (see Fig.~\ref{fig:betaproj}), are very illustrative of the PID capability of the TOF detector. At 2~GeV/c particle momentum the TOF detector provides about a 4$\sigma$ separation between
@@ -252,7 +172,7 @@ track with a $\beta$ of 0.975 is most likely a proton with a small probability o
 a track has a similar probability for being a proton or a pion.
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.8\textwidth]{figures/beta_vs_p_positivetracks.pdf}
+\includegraphics[width=0.6\textwidth]{figures/beta_vs_p_positivetracks.pdf}
 \caption{\label{fig:betavsp}$\beta$ of positive charged track vs track momentum. The color coding of the third dimension
 is in logarithmic scale.(Color online)}
 \end{center}

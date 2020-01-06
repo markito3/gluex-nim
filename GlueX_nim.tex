@@ -46,21 +46,20 @@
 
 % Title, authors and addresses   
 
-\title{The GlueX Beam Line and Detector}
+\title{The \gx~ Beam Line and Detector}
 
 \input{authors.tex}
 
 
 
 \begin{abstract}
-***DRAFT place holder***\\
-The GlueX experiment was designed to study photoproduction reactions with a 9-GeV linearly polarized beam. The energy and time of beam photons are tagged using a scintillator
-hodoscope and scintillating fiber array. The flux is determined using a pair spectrometer and its polarization is determined using a triplet polarimeter. 
-Charged particle tracks are analyzed in solenoidal field using a central straw tube
+The \gx~ experiment was designed to study photoproduction reactions with a 9-GeV linearly polarized beam. The energy and time of beam photons are tagged using a scintillator
+hodoscope and a scintillating fiber array. The photon flux is determined using a pair spectrometer and its polarization is determined using a triplet polarimeter. 
+Charged-particle tracks are analyzed in a solenoidal field using a central straw tube
 drift chamber and six packages planar chambers with cathode strips and drift wires. Electromagnetic showers are reconstructed in a cylindrical scintillating fiber calorimeter inside the magnet and
 a lead glass array downstream. Charged particle identification is achieved by measuring energy loss in the wire chambers and using the flight time of particles between the target and outside 
-detectors. The signals from all detectors are recorded with flash ADCs or pipeline TDCs into memories allowing trigger decisions with a latency of 4 $\mu$s. The detector operates routinely at
-trigger rates of 50 kHz. We describe the photon beam, the GlueX detector components, electronics, data-acquisition and monitoring, and the performance of the system during the first three 
+detectors. The signals from all detectors are recorded with flash ADCs or pipeline TDCs into memories allowing trigger decisions with a latency of 3.1\,$\mu$s. The detector operates routinely at
+trigger rates of 40 kHz. We describe the photon beam, the \gx~ detector components, electronics, data-acquisition and monitoring, and the performance of the system during the first three 
 years of operation.
 \end{abstract}   
 
@@ -81,26 +80,27 @@ years of operation.
 %============    Project Background  and Detector Requirements =============
 %================================================================
 
-\newpage 
+% \newpage 
 
 \tableofcontents
 
 \input{gluex_experiment}
 \input{beamline}
 \input{solenoid}
-\clearpage   % avoid formatting problems with empty sections
+% \clearpage   % avoid formatting problems with empty sections
 % \input{detector_overview}
 \input{target}
 \input{tracking_detectors}
+% \clearpage    % avoid formatting problems with empty sections
 \input{tracking_performance}
 \input{calorimeters}
-\clearpage    % avoid formatting problems with empty sections
+% \clearpage    % avoid formatting problems with empty sections
 \input{scintillators}
 \input{trigger}
 \input{daq}
 \input{controls}  
 \input{online}
-\clearpage   % avoid formatting problems with empty sections
+% \clearpage   % avoid formatting problems with empty sections
 \input{reconstruction}
 \input{simulation}
 \input{performance}
@@ -110,10 +110,10 @@ years of operation.
 %========  Acknowledgments  =========
 %====================================
 
-\section{Acknowledgments}   
+\section{Acknowledgments}  
 ***DRAFT modified from eta eta' paper***\\
 We would like to acknowledge the outstanding efforts of technical support at all the collaborating institutions and the support groups at Jefferson Lab that completed the assembly, installation
-and assist with the maintenance of the detector. This work was  supported by the Natural Sciences and Engineering Research Council of Canada grant SAPPJ-2018-00021 and by the U.S. Department of Energy, Office of Science, Office of Nuclear Physics under contract DOE Grant No. DE-FG02-87ER40315.  This work was also supported in part by the U.S. Department of Energy, the U.S. National Science Foundation, the German Research Foundation, GSI Helmholtzzentrum f\"{u}r Schwerionenforschung GmbH, the Russian Foundation for Basic Research, the UK Science and Technology Facilities Council, the Chilean Comisi\'{o}n Nacional de Investigaci\'{o}n Cient\'{i}fica y Tecnol\'{o}gica, the National Natural Science Foundation of China, and the China Scholarship Council. This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Nuclear Physics under contract DE-AC05-06OR23177. 
+and assist with the maintenance of the detector.  This work was supported in part by the U.S. Department of Energy, the U.S. National Science Foundation, the German Research Foundation, GSI Helmholtzzentrum f\"{u}r Schwerionenforschung GmbH, the Russian Foundation for Basic Research, the UK Science and Technology Facilities Council, the Chilean Comisi\'{o}n Nacional de Investigaci\'{o}n Cient\'{i}fica y Tecnol\'{o}gica, the National Natural Science Foundation of China, and the China Scholarship Council. This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Nuclear Physics under contract DE-AC05-06OR23177. 
 
 \newpage
 
@@ -121,7 +121,8 @@ and assist with the maintenance of the detector. This work was  supported by the
    
 %\nocite{*}
 \bibliography{GlueX_nim}
-\bibliographystyle{unsrt}
+%\bibliographystyle{unsrt}
 %\bibliographystyle{elsarticle-num}
+\bibliographystyle{elsarticle-num-modified}
 
 \end{document}
