@@ -1,4 +1,4 @@
-\section[The beam line and coherent photon source]{The beam line and coherent photon source \label{sec:beamline}}
+\section[The coherent photon source and beamline]{The coherent photon source and beamline \label{sec:beamline}}
 %{\color{red}General comment: As we haggle in the beamline group over the level of detail required for this section, it is worth bearing in mind that a longer-form paper dedicated to the beamline is also on our to-do list.  Material and detail felt to be excessive for this document can spill over into that paper}
 
 \begin{table}[tbp]
@@ -13,8 +13,8 @@ the accelerator to the Hall D radiator.
 The dimensions of the beam spot at the position of 
 the radiator are directly measured, and vary about the
 stated values by $\pm 30\%$
-depending on beam conditions. Values
-denoted as {\em image size at collimator},
+depending on beam conditions. 
+Values for image size at collimator,
 obtained by projection of the electron beam
 spot convergence forward to the position of
 the primary photon collimator, have relative
@@ -41,18 +41,23 @@ distance radiator to collimator & 75.3~m \\
 \end{table}
 
 \subsection{CEBAF electron beam \label{sec:ebeam}}
-The Continuous Electron Beam Accelerator Facility (CEBAF) has a race track configuration with two parallel linear accelerators based on superconducting radio frequency (RF) technology \cite{Leemann:2001dg}. The machine operates at 1497 MHz and delivers beam to Hall D at 249.5~MHz.\footnote{Hall D beam at 499 MHz is possible, but not usual.} Precise timing signals for the accelerator bunches are available to the experiment and are used to determine the time of individual beam bunches passing through the target. The CEBAF electron beam enters the Tagger Hall with nominal properties listed in Table\,\ref{tab:elecprop}.
+The Continuous Electron Beam Accelerator Facility (CEBAF) has a race track configuration with two parallel linear accelerators based on superconducting radio frequency (RF) technology \cite{Leemann:2001dg}. The machine operates at 1.497 GHz and delivers beam to Hall D at 0.249.5~GHz.\footnote{Hall D beam at 499 MHz is possible, but not usual.} Precise timing signals for the accelerator beam bunches are available to the experiment and are used to determine the time of individual bunches passing through the target. The nominal properties for the CEBAF electron beam to the Tagger Hall are listed in Table\,\ref{tab:elecprop}.
 
 \subsection{Hall D photon beam \label{sec:gbeam}}
-The Hall D complex has been described in Section \ref{sec:gluexexperiment:complex} and is shown schematically in Fig.~\ref{fig:beam:Draw_beamline}, including the Tagger Hall, the collimator cave and Hall D itself. The photon beam is created using the process of coherent bremsstrahlung \cite{timm1969,LIVINGSTON2009205} when the electron beam passes through the diamond radiator at the upstream end of the Tagger Hall.
-The electron beam position at the radiator is monitored and controlled using beam position monitors\footnote{Named 5C11 and 5C11B, the position of the latter is indicated in Figure \ref{fig:beam:Draw_beamline}.} located at the end of the accelerator tunnel just upstream of the Tagger Hall.
+The Hall D complex, described in Section \ref{sec:gluexexperiment:complex} and shown schematically in Fig.~\ref{fig:beam:Draw_beamline}, includes a dedicated Tagger Hall, an associated collimator cave, and Experimental Hall D itself. A linearly-polarized photon beam is created using the process of coherent bremsstrahlung \cite{timm1969,LIVINGSTON2009205} when the electron beam passes through an oriented diamond radiator at the upstream end of the Tagger Hall.
+The electron beam position at the radiator is monitored and controlled using beam position monitors, named 5C11 and 5C11B, which are located at the end of the accelerator tunnel just upstream of the Tagger Hall. (The position of 5C11B is indicated in Figure \ref{fig:beam:Draw_beamline}.)
 %The position of the beam on the collimator is initially set by adjusting small corrector magnets at this location.
-The electron beam is converging when it passes through the radiator, ideally
-so that it forms a virtual focus at the collimator located 75\,m downstream.
-There, the virtual spot size ($\sim$ 0.5\,mm) is small compared to the cm-scale size of the photon beam on the face of the collimator,
-such that a cut on photon position at the collimator is effectively a cut on photon emission angle at the radiator. The convergence
-properties of the electron beam are measured independently in x [y] by scanning vertical [horizontal] wires known as ``harps''
-through the beam and measuring the induced current on the wire (or the scattered beam intensity) as a function of position.
+The CEBAF electron beam is tuned 
+so as to be converging as it passes through the radiator, ideally
+so that the electron beam forms a virtual focus at the collimator 
+located 75\,m downstream of the radiator.
+At the collimator, the virtual spot size ($\sim$ 0.5\,mm) is small compared to the cm-scale size of the photon beam on the face of the collimator,
+such that a cut on photon position at the collimator is effectively a cut on photon emission angle at the radiator. 
+The convergence
+properties of the electron beam are measured independently 
+in X (vertical) and Y (horizontal) 
+by scanning vertical (horizontal) wires 
+through the beam and measuring the induced current on the wire (or the scattered beam intensity) as a function of position; the wire scanners are referred to as ``harps".
 Examples of the horizontal and vertical convergence of the electron beam envelope (undeflected by the tagger magnet)
 measured using harp scans and projected downstream along the beamline are shown in Fig.\,\ref{fig:beam:convergence}.
 
@@ -61,7 +66,8 @@ measured using harp scans and projected downstream along the beamline are shown 
  \includegraphics[clip=true,width=0.49\linewidth]{figures/harp-x-767755.pdf}
  \includegraphics[clip=true,width=0.49\linewidth]{figures/harp-y-767755.pdf}
 \end{center}
-\caption{(Color online) Measurements of the electron beam RMS width in horizontal (left)
+\caption{(Color online) Measurements of the root-mean-square width of the electron beam 
+in horizontal (left)
 and vertical (right) projections as a function of position along the beamline, based on
 harps scans (data points) of the electron beam. The radiator position is just upstream
 of the third data point. The primary collimator position is marked by the vertical line
@@ -71,13 +77,15 @@ the measured data points, with extrapolation uncertainty indicated by the shaded
 \label{fig:beam:convergence} 
 \end{figure}
 
-The photon beam position on the collimator is monitored using a device known as
+The photon beam position on the collimator is monitored using an
 the active collimator positioned just upstream of the primary photon beam collimator
-(section \ref{sec:coll}). The stability of the beam is maintained during normal
+(described below in section \ref{sec:coll}). 
+The stability of the beam is maintained during normal
 operation of the beamline by a feedback system that locks the position of the electron
-beam at 5C11B and the photon beam at the active collimator. The stability of the electron
-beam current and position is monitored using an independent beam position monitor,
-AD00C, located immediately upstream of the electron dump.
+beam at the 5C11B beam profile monitor and, consequently, the photon beam at the active collimator. The stability of the electron
+beam current and position is monitored using an independent beam position monitor
+(named AD00C and shown in Fig.\,\ref{fig:beam:Draw_beamline}) 
+located immediately upstream of the electron dump.
 
 %\begin{figure}[t]
 %\begin{center}
@@ -100,17 +108,18 @@ Also indicated are the locations of the 5C11B and AD00C beam position monitors.
 \label{fig:beam:Draw_beamline} 
 \end{figure}
 
-The photon beam is produced in a radiator placed in the electron beam just upstream of the
+The linearly-polarized photon beam is produced in a radiator placed in the electron beam just upstream of the
 tagger (section \ref{sec:tag}). A properly aligned 20--60\,$\mu m$ thick diamond crystal
 radiator produces
-linearly polarized photons via coherent brems\-strah\-lung \cite{timm1969,LIVINGSTON2009205},
-which appear as peaks at certain energies in the brems\-strah\-lung intensity spectrum (Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}), superimposed upon the ordinary brems\-strah\-lung
+linearly-polarized photons via coherent brems\-strah\-lung in enhancements that \cite{timm1969,LIVINGSTON2009205},
+appear as peaks at certain energies in the brems\-strah\-lung intensity spectrum (Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}), superimposed upon the ordinary brems\-strah\-lung
 continuum spectrum.
-Both the peak energy and the polarization depend on the crystal orientation with respect to the beam.
-Adjustment of this angle permits essentially any peak energy up to that of the electron beam, and any
-degree of linear polarization, albeit with a maximum in one corresponding to a minimum in the other.
+The energies of the coherent photon peaks and the degree of polarization in each of those peaks depend on the crystal orientation with respect to the incident electron beam.
+Adjustment of the orientation of the diamond crystal with respect to the incoming
+electron beam permits production of essentially any coherent photon peak energy up to that of the energy of the incident electron beam, as well as the
+degree or direction of linear polarization.
 A choice of 9 GeV for the primary peak energy, corresponding to 40\% peak linear polarization,
-was found to be optimum for the \GX{} experiment with a 12 GeV electron beam.
+was found to be optimum for the \GX{} experiment with a 12 GeV incident electron beam.
 
 \begin{figure}[tbp]
 \begin{center}
@@ -125,40 +134,43 @@ planes that are parallel and perpendicular to the horizontal, respectively.
 \label{fig:beam:gx3102_pi0etaAsym2016_fig0_beam} 
 \end{figure}
 
-The polarization of a coherent bremsstrahlung beam is greatest for photons emitted at small
+The degree of polarization of a coherent bremsstrahlung beam is greatest for photons emitted at small
 angles with respect to the incident electron direction. Collimation of the photon beam to a fraction
 of the characteristic brems\-strah\-lung angle exploits this correlation to significantly enhance
 the average polarization of the beam. 
-In the nominal \GX{} beamline configuration, a 5.0\,mm diameter collimator
+In the nominal \GX{} beamline configuration, a 5.0-mm-diameter collimator
 \footnote{A 3.4\,mm collimator is also available, and has been used for some physics production runs
 with the thinnest (20 $\mu m$) diamond.}
 positioned 75\,m downstream of the radiator is used, corresponding to a cut at approximately
-1/2 $m/E$ in characteristic angle. The beam energy spectrum and flux after collimation are measured
-by the pair spectrometer (section \ref{sec:ps}), located downstream of the collimator in Hall D. The
-measured photon spectrum and polarization with a 12\,GeV electron beam are
-shown in Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}. The spectrum labeled Aluminum in 
+1/2 $m/E$ in characteristic angle, where $m$ is the electron rest mass and
+$E$ is the energy of the incident electron. 
+The photon beam energy spectrum and photon flux after collimation are measured
+by the pair spectrometer (section \ref{sec:ps}), located downstream of the collimator in Hall D. 
+
+An example of the
+measured photon spectrum and polarization with a 12\,GeV electron beam is
+shown in Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}. The spectrum labeled ``Aluminum" in 
 Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}(a) is shown to indicate the shape of the 
 pair spectrometer acceptance folded with the spectrum of ordinary (incoherent) brems\-strah\-lung,
 normalized to the approximate thickness of the diamond radiator in terms of radiation lengths.
 The expected degree of linear polarization in the energy range of 8.4--9.0~GeV is $\sim$40\% after
-collimation.  The beam polarization is directly measured by the triplet polarimeter (section \ref{sec:tpol})
+collimation.  The photon beam polarization is directly measured by the triplet polarimeter (section \ref{sec:tpol})
 located just upstream of the pair spectrometer. The stability of the beam polarization is independently
-monitored via the observed azimuthal asymmetry in various photoproduction reactions, in particular
-$\rho$ production \cite{gx3076}.
+monitored via the observed azimuthal asymmetry in various photoproduction reactions, particularly that for $\rho$ photoproduction \cite{gx3076}.
 
-The main parameters and properties of the photon beam are given in Table\,\ref{tab:operates}.
-In the sections that follow, we describe in more detail how the linearly polarized photon beam
-is produced, how its energy is determined using the tagging spectrometer, how its polarization
-spectrum and flux is measured with the pair spectrometer and triplet polarimeter, and how the 
+Typical values for parameters and properties of the photon beam are given in Table\,\ref{tab:operates}.
+In the sections that follow, we describe in more detail how the linearly-polarized photon beam
+is produced, how photon energy is determined using the tagging spectrometer, how the photon beam polarization
+spectrum and flux is measured with the pair spectrometer and triplet polarimeter, and how the photon
 flux is calibrated using the total absorption counter.
 
 \begin{table}[btp]
 \begin{center}
-\caption[Typical operating parameters for the \GX{} photon beam]{\label{tab:operates}
-Typical operating parameters for the \GX{} photon beam,
+\caption[Typical parameters for the \GX{} photon beam]{\label{tab:operates}
+Typical parameters for the \GX{} photon beam,
 consistent with the electron beam properties listed in Table \ref{tab:elecprop},
 a diamond radiator of thickness 50~$\mu$m, and the standard primary collimator of diameter 5.0~mm
-located at its nominal position. The electron beam current is taken to  be $150$~nA.
+located at the nominal position. The electron beam current incident on the radiator is taken to  be $150$~nA.
 The hadronic rates are calculated for the \GX{} 30~cm liquid hydrogen target.}
 %\begin{tabular}{|l|c|c|c|c|}
 %\hline\hline
@@ -197,53 +209,58 @@ Hadronic rate in the peak range & 3.7 kHz \\
 
 
 \subsection{Goniometer and radiators \label{sec:radiators}}
-The goniometer\footnote{Manufactured by Newport Corporation.} is a device which can position the
-diamond radiator and precisely move it horizontally, vertically and rotationally about the x, y and z axes.
-The Hall D goniometer holds several radiators, any of which may be moved into the beam for use at any time
-according to the requirements of the experiment.
-For the linearly polarized photon beam normally used in \GX{} production running, diamond radiators 
+For the linearly-polarized photon beam normally used in \GX{} production running, diamond radiators 
 are used to produce a coherent bremsstrahlung beam. This requires precise alignment of the diamond
 radiator, in order to produce a single dominant coherent peak with the desired energy and polarization
 by scattering the beam electrons from the crystal planes associated with a particular reciprocal lattice
-vector. In addition to the diamonds, several aluminium radiators of thicknesses ranging from 1.5 $\mu$m
-to 30 $\mu$m are installed in the goniometer, and also on a separate rail for amorphous radiators
-positioned 615 mm downstream of the goniometer. Data collected using these aluminum radiators are used
-to normalize the rate spectra measured in the pair spectrometer, correcting for its acceptance.
+vector.
+A multi-axis goniometer, manufactured by Newport Corporation, precisely
+adjusts the relative orientation of the
+diamond radiator with respect to the incident electron beam horizontally, vertically and rotationally about the $X$, $Y$ and $Z$ axes, respectively.
+The Hall D goniometer holds several radiators, any of which may be moved into the beam for use at any time
+according to the requirements of the experiment.
+
+In addition to the diamond radiators, several aluminium radiators of thicknesses ranging from 1.5 $\mu$m are used to normalize the rate spectra measured in the pair spectrometer, correcting for its acceptance.
+A separate rail for these amorphous radiators is 
+positioned 615 mm downstream of the goniometer. 
+
 
 \subsubsection{Diamond selection and quality control \label{sec:diamonds}}
-The properties of diamond make it uniquely suited for use as a coherent brems\-strah\-lung radiator.
-Its small lattice constant and high Debye temperature result in an exceptionally high probability
+The properties of diamond are uniquely suited for coherent brems\-strah\-lung radiators.
+The small lattice constant and high Debye temperature of diamond result in an exceptionally high probability
 for coherent scattering in the brems\-strah\-lung process \cite{Bilokon:1983}.
-This is also a consequence of its small
-atomic number, which results in minimal screening of its charge by inner shell electrons at the
+This high coherent scattering probability is also a consequence of the small
+atomic number for carbon ($Z=6$), which results in minimal screening of 
+the nuclear charge by inner shell electrons at the
 dominant crystal momentum (9.8 keV) corresponding to the leading (2,2,0) reciprocal lattice vector.
-Not only is diamond the best known material in terms of its coherent radiation
-fraction, but its unparalleled thermal conductivity and radiation hardness make it
-well-suited for use in a high-intensity beam environment.
+Diamond is the best known material in terms of its coherent radiation
+fraction, and its unparalleled thermal conductivity and radiation hardness make it
+well-suited for use in a high-intensity electron beam environment.
 
 The position of the coherent edge in the photon beam intensity spectrum is a simple monotonic
-function of the angle between the incident electron direction and the normal to the (2,2,0)
-crystal planes. The 12 GeV electron beam entering the radiator has a divergence less than
-10 microradians, corresponding to a broadening of the coherent edge in
-Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam} by just 7~MeV. However, if the beam has 
-to travel through 100~$\mu$m of diamond material prior to radiating, its emittance will have
-grown larger by a factor 10 due to multiple scattering, resulting in a proportional increase
-in the width of the coherent edge. Broadening the coherent peak diminishes both the peak
-peak polarization and the collimation efficiency in the forward direction.
-Hence it is desirable that the diamond radiators for \GX{} be significantly
+function of the angle between the incident electron beam direction and the normal to the (2,2,0)
+crystal plane. The 12 GeV-electron beam entering the radiator has a divergence less than
+10 $\mu$rad, corresponding to a broadening of the coherent edge in
+Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam} by just 7~MeV. However, if the 
+incident electron beam has 
+to travel through 100~$\mu$m of diamond material prior to radiating, the
+resulting electron beam emittance will have
+grown larger by about a factor of 10 due to multiple Coulomb scattering, resulting in a proportional increase
+in the width of the coherent edge. Such broadening of the coherent peak diminishes both the degree of polarization in the coherent peak as well as the collimation efficiency in the forward direction.
+Hence, diamond radiators for \GX{} must be significantly
 thinner than 100 microns. 
 
-To be of use as radiators, a diamond target must have a cross-sectional area large enough to
+To be useful as a radiator, the cross-sectional area of a diamond target also must be large enough in the plane orthogonal to the incident beam so as to
 completely contain the electron beam, so that the beam does not overlap with the material of
-the target holder. Translated to the beam spot dimensions from Table\,\ref{tab:elecprop}, this
+the target holder. Translated to the beam spot dimensions from Table\,\ref{tab:elecprop}, this size constraint
 requires a target with transverse size 5~mm or greater. Uniform single-crystal diamonds of
 this size are now available as slices cut from natural gems, HPHT (high-pressure, 
 high-temperature) synthetics, and CVD (chemical vapor deposition) single crystals. Of the
-three, natural gems can be ruled out due to cost. At one time, HPHT crystals were considered
+three, natural gems are ruled out due to cost. At one time, HPHT crystals were thought
 to be far superior to CVD single crystals in terms of their diffraction widths, but our
 experience did not bear this out. \GX{} measurements of the
-X-ray rocking curves of CVD crystals obtained from commercial vendor Element Six routinely
-showed widths that are within a factor 2 of the theoretical Darwin width for perfect diamond,
+x-ray rocking curves of CVD crystals obtained from commercial vendor Element Six routinely
+showed widths that were within a factor 2 of the theoretical Darwin width for perfect diamond,
 similar to the results we found for the best HPHT diamonds that were available to us
 \cite{YANG2010719,YANG2012}.
 
@@ -261,71 +278,73 @@ outward from the seed crystal used in the CVD growth process.
 \end{figure}
 
 Fig.~\ref{fig:diamond_rocking_curve_rms} shows a rocking curve topograph of a diamond
-radiator taken with 15~keV X-rays at the CHESS synchrotron light source. The instrumental
+radiator taken with 15~keV x-rays at the 
+Cornell High Energy Synchrotron Source (CHESS) synchrotron light source. The instrumental
 resolution of this measurement is on the same order as the Darwin width for this
-diffraction peak, approximately 5 microradians. The electron beam spot would
+diffraction peak, approximately 5 $\mu$rad. During operation, the electron beam spot would
 be confined to the relatively uniform central region. Any region in
-this figure with a rocking curve RMS width of 20~microradians or less is indistinguishable
+this figure with a rocking curve root-mean-square width of 20~$\mu$rad or less is indistinguishable
 from a perfect crystal for the purposes of \GX{}.
 Regardless of whether or not better HPHT diamonds exist, the fact that these Element Six
 CVD diamonds have sufficiently narrow diffraction widths for our application, coupled with
-their low cost -- in contrast to HPHT material -- made them the
+their lower cost relative to HPHT material, made them the
 obvious choice for the Hall D photon source.
 
-The diamond radiator fabrication procedure begins with procurement of the raw
+The diamond radiator fabrication procedure began with procurement of the raw
 material in the form of $7\times 7\times 1.2$~mm$^3$ CVD single-crystal plates from the
-vendor. X-ray rocking curve scans of the raw material are taken to verify that their crystal
-quality, then they are shipped to a second vendor, Delaware Diamond Knives. At DDK, the
-1.2~mm thick samples are sliced into three samples of 250 microns thickness each, then
-each one is polished on both sides down to a final thickness close to 50 microns. The
-samples, now of dimensions $7\times 7\times 0.05$~mm$^3$ are fixed to a small aluminum
-mounting tab using a tiny dot of conductive epoxy placed in one corner, and taken once
-again to a synchrotron light source for X-ray rocking curve measurements prior to final
+vendor. After x-ray rocking curve scans of the raw material were taken to verify crystal
+quality, the acceptable diamonds were shipped to a second vendor, Delaware Diamond Knives (DDK). At DDK, the
+1.2-mm-thick samples were sliced into three samples of 250 $\mu$m thickness each, then
+each one was polished on both sides down to a final thickness close to 50 $\mu$m. The
+samples, now of dimensions $7\times 7\times 0.05$~mm$^3$ were fixed to a small aluminum
+mounting tab using a tiny dot of conductive epoxy placed in one corner.
+These crystals were then returned to the synchrotron light source
+for final x-ray rocking curve measurements prior to final
 approval for use in the \GX{} photon source.
 
 The useful lifetime of a diamond radiator in the \GX{} beamline is limited by the 
 degradation in the sharpness of the coherent edge due to accumulation of radiation damage.
-Experience during the early phase of \GX{} running showed that after
-about 0.5 Coulombs of integrated beam, the width of the coherent edge has
-increased enough that the entire coherent peak is no longer contained within the energy
-window of the tagger microscope. When this happens, our practice has been to consider that
-radiator as spent and move to a new one.
+Experience during the early phase of \GX{} running showed that after exposure to
+about 0.5 C of integrated electron beam charge, the width of the coherent edge 
+increased enough that the entire coherent peak was no longer contained within the energy
+window of the tagger microscope. When a crystal reached that degree of degradation, that
+radiator was regarded as no longer usable, and a new crystal was installed.
 
-During Phase 1 of \GX{}, this has happened 3
-times, twice with 50~micron radiators and once with a 20~micron. The 20-micron
-diamond was introduced to test if the reduced multiple scattering might result in an
+During Phase 1 of \GX{}, radiator crystals were replaced three times due
+to degradation, twice with 50~$\mu$m radiators and once with a 20~$\mu$m. The 20-$\mu$m
+diamond was introduced to test if the reduced multiple Coulomb scattering 
+might result in an
 observable increase in peak polarization. This turned out not to be the case, for
 two reasons. The first is that, to take full advantage of the reduced multiple
 scattering in the radiator for increased peak polarization, the collimator size 
-should be reduced proportionally. A 3.4~mm diameter collimator was available for
-this purpose, but variability observed in the convergence properties of the
+must be reduced proportionally. A 3.4-mm-diameter collimator was available for
+this purpose, but variability observed in the convergence properties of the electron
 beam at the radiator overruled running with any collimator smaller than 5~mm,
 even when a thinner radiator was in use.
 
 The second reason is that any improvements
 from reduced multiple scattering that came with the smaller radiator thickness
-were more than offset by signatures of radiation
-damage that appeared not long after this crystal was put into production.
-This was partly due to the larger beam current (factor 2.5) that was needed to
-produce the same photon flux as with a 50 micron crystal, but that factor alone
+were more than offset by strong indications of radiation
+damage that appeared not long after the 20~$\mu$m crystal was put into production.
+The rapid appearance of radiation damage 
+was partly due to the larger beam current (factor 2.5) that was needed to
+produce the same photon flux as with a 50~$\mu$m crystal, but that factor alone
 did not fully
-explain what was seen. X-ray measurements later showed that a large buckling of
-the 20 micron crystal had occurred in the region of the beam spot, evidently
-due to  local differential expansion of the diamond lattice arising from
-radiation damage. Once it buckled, the energy of the coherent
+explain what was seen. Subsequent x-ray measurements showed that a large buckling of
+the 20~$\mu$m crystal had occurred in the region of the incident electron beam spot, 
+evidently due to  local differential expansion of the diamond lattice arising from
+radiation damage. Once the crystal buckled, the energy of the coherent
 peak varied significantly across the electron beam spot, effectively broadening
-the peak. Fortunately, it seems that the greater stiffness of a 50 micron crystal
-suppresses this local buckling under similar conditions of radiation damage.
+the peak. Fortunately, the greater stiffness of a 50~$\mu$m crystal
+appears to suppress this local buckling under similar conditions of radiation damage.
 
-Based on these observations, we conclude that 50 microns is the
+Based on these observations, 50~$\mu$m was selected as the
 optimum thickness for \GX{} diamond radiators: thin enough to limit the effects
 of multiple scattering and thick enough to suppress buckling from internal stress
-induced by radiation damage. The effective useful lifetime of a 50 micron radiator
-in the photon source is 0.5 Coulombs. It has been suggested that this lifetime
-might be extended somewhat by the use of thermal annealing to partially remove the
-effects of radiation damage. As the pace of diamond replacement increases with the
-start of \GX{} Phase 2 full-intensity running and the number of spent radiators
-starts to accumulate, we plan to explore this possibility.
+induced by radiation damage. The effective useful lifetime of a 50~$\mu$m radiator
+in the photon source is about 0.5 C integrated incident electron charge. 
+This lifetime might be extended somewhat by the use of thermal annealing to partially remove the effects of radiation damage. As the pace of diamond replacement increases with the start of \GX{} Phase 2 full-intensity running and the number of spent radiators
+starts to accumulate, this possibility will be explored.
 
 \begin{figure}[tbp]
 \begin{center}
@@ -334,39 +353,40 @@ starts to accumulate, we plan to explore this possibility.
 %      \includegraphics[width=0.95\linewidth]{figures/BEAM_taggerdetectors.pdf}
 \caption{Schematic diagram of the tagging spectrometer, showing the paths of the electron
 and photon beams. Dotted lines indicate post-radiation electron trajectories identified by
-the energy they gave up to their radiated photon, as a fraction of the beam energy E$_0$.
-The tagger focal plane detector arrays (TAGH and TAGM) are described in the text.
+the energy the electron gave up to an associated radiated photon, as a fraction of the beam energy E$_0$.
+The tagger focal plane detector arrays TAGH and TAGM are described in the text.
        \label{fig:beam:BEAM_taggerplot}  }
 \end{center}
 \end{figure}
 
 \subsection{Photon tagging system \label{sec:tag}}
 After passing through the radiator, the combined photon and electron beams enter
-the photon tagging spectrometer (``tagger''), where the electrons are swept out of
+the photon tagging spectrometer (``tagger''), where the full-energy electrons are swept out of
 the beamline by a dipole magnet and redirected into a shielded beam dump. The
 subset of beam electrons that radiated a significant fraction of their energy in
-the radiator are bent further in the dipole field. These exit through a thin window
-along the side of the magnet, where they are intercepted by a highly segmented
+the radiator are bent further in the dipole field. 
+These post-brems\-strah\-lung electrons exit through a thin window
+along the side of the magnet, where these
+electrons are intercepted by a highly segmented
 array of scintillators called the tagger hodoscope (TAGH), as shown in
-Fig.\,\ref{fig:beam:BEAM_taggerplot}. In addition to the TAGH counters which span
-the full range in energy from 25\% to 97\% of the full electron beam energy, there
-is a high-resolution device known as the tagger microscope (TAGM) which covers the
+Fig.\,\ref{fig:beam:BEAM_taggerplot}. In addition to the TAGH counters that span
+the full range in energy from 25\% to 97\% of the full electron beam energy, a high-energy-resolution device known as the tagger microscope (TAGM) covers the
 energy range corresponding to the primary coherent peak, indicated by the denser
 portion of the focal plane in Fig.\,\ref{fig:beam:BEAM_taggerplot}. 
 The quadrupole magnet upstream of the tagger dipole provides a weak vertical focus
 to optimize the efficiency of the tagger microscope for tagging collimated photons.
-A permanent, 0.8~T$\cdot$m dipole magnet located downstream of the tagger magnet
-on the photon beam line is installed to prevent the electron beam from reaching
-Hall D, should the tagger magnet trip.
+Downstream of the tagger magnet
+on the photon beam line, a 0.8~T$\cdot$m permanent dipole magnet is installed to prevent the electron beam from reaching
+Hall D should the tagger magnet trip.
 
 Both the TAGM and TAGH devices are used to determine the energy of individual
 photons in the photon beam via coincidence, using
 the relation $E_{\gamma} = E_{0} - E_{e}$, where $E_{0}$ is the primary electron
 beam energy before interaction with the radiator, and $E_{e}$ is the
-energy of the post-radiation electron determined by its detected position at the
-focal plane. Multiple radiative interactions in a 50 micron diamond radiator
+energy of the post-brems\-strah\-lung electron determined by its detected position at the
+focal plane. Multiple radiative interactions in a 50 $\mu$m diamond radiator
 ($3\times 10^{-4}$ radiation lengths) produce uncertainty in the value of
-$E_{\gamma}$ that is on the same order as the intrinsic energy spread of the
+$E_{\gamma}$ of the same order as the intrinsic energy spread of the incident
 electron beam.
 
 \subsubsection{Tagger magnet \label{sec:tagMagnet}}
@@ -377,12 +397,15 @@ Electrons that lost little or no energy in the
 radiator are deflected by 13.4$^\circ$ into the electron beam dump.
 
 The Hall D tagger magnet is an Elbek-type room temperature dipole magnet, similar
-to the JLab Hall B tagger magnet \cite{BORGGREEN19631, Sober2000263}. The magnet
+to the JLab Hall B tagger magnet \cite{BORGGREEN19631, Sober2000263}. 
+The magnet is 1.13 m wide, 1.41 m high and 6.3 m long, weighing 80 metric tons,
+with a normal operating field of 1.5 T for a  12 GeV incident electron beam, 
+a maximum field of 1.75 T, and a pole gap of 30 mm. 
+The magnet
 design was optimized using the detailed magnetic field calculation  provided by the
 TOSCA simulation package and the ray tracing of electron beam trajectories~\cite{DIPOLE_YANG,DIPOLE_SOMOV}.
-The magnet is 1.13 m wide, 1.41 m high and 6.3 m long, weighing 80 metric tons,
-with a normal operating field of 1.5 Tesla for a  12-GeV beam, a maximum field of
-1.75 T, and a pole gap of 30 mm. The GlueX experiment requires that the scattered
+
+The GlueX experiment requires that the scattered
 electron beam be measured with an accuracy of 12~MeV (0.1\% of the incident electron
 energy). This requires that the magnetic field integrals along all useful electron
 trajectories be known to 0.1\%. The magnetic field was mapped at Jefferson Lab and
@@ -393,16 +416,16 @@ found in Ref.\,\cite{gx4271}.
 \subsubsection{Tagger microscope}\label{sec:TAGM}
 The tagger microscope (TAGM) is a high-resolution hodoscope that counts post-brems\-strah\-lung
 electrons corresponding to the primary coherent peak. Normally the TAGM is positioned
-to cover between 8.2 and 9.2~GeV in photon energy, but it is designed to be movable should a
-different peak energy be needed. The microscope is segmented along the horizontal axis into
+to cover between 8.2 and 9.2~GeV in photon energy, but TAGM is designed to be movable should a
+different peak energy be desired. The microscope is segmented along the horizontal axis into
 102 energy bins (columns) of approximately equal width. Each column is segmented 
 in 5 sections (rows) along the vertical axis, for a total of 510 independent electronic
 channels. The vertical segmentation allows the possibility of scattered electron
 collimation, which gives a significant increase in photon polarization when used in
 combination with photon collimation. The purpose of the quadrupole magnet upstream
-of the dipole is to provide the vertical focus that is needed to make the
+of the dipole is to provide the vertical focus needed to make the
 double-collimation scheme work efficiently. Summed signals are also available for
-each column, for use in normal operation when electron collimation is not desired.
+each column for use in normal operation when electron collimation is not desired.
 
 The tagger microscope consists of a two-dimensional array of square scintillating
 fibers packed in a dense array of dimensions $102\times 5$. The fibers are multi-clad
@@ -415,11 +438,11 @@ averages 75\% across its full energy range, in good agreement with the geometric
 factor of 77\%.
 
 Each scintillating fiber is 10~mm long, fused at its downstream end to
-a clear light guide of matching dimensions (Saint Gobain BCF-98) which
+a clear light guide of matching dimensions (Saint Gobain BCF-98) that
 transmits the scintillation light away from the focal plane to a shielded box where
-silicon photomultipliers convert the light pulses into electronic signals. The
+a silicon photomultipliers (SiPM) converts light pulses into electronic signals. The
 scintillators are oriented so that the electron trajectories are parallel to the
-fiber axis, providing large signals for electrons from the radiator in contrast
+fiber axis, providing large signals for electrons from the radiator, in contrast
 to the omni-directional electromagnetic background that fills the tagger hall.
 
 \begin{figure}[tbh]
@@ -443,28 +466,29 @@ fan-out that is implemented by small evenly-distributed gaps at the rear ends of
 adjacent 6-column groups (bundles). A total of 17 such bundles comprise the full
 tagger microscope.
 
-The far ends of the scintillation light guides are coupled to Hamamatsu SiPMs\footnote{Model S10931-050P.} The SiPMs are mounted on a custom-built two-stage preamplifier board, 15 per board. In addition to the 15 individual signals generated
-by each preamplifier, the boards also produce 3 analog sum outputs, each the sum
-of 5 adjacent SiPMs which correspond to the 5 fibers in a single column. All 510
+The far ends of the scintillation light guides are coupled to Hamamatsu S10931-050P SiPMs. The SiPMs are mounted on a custom-built two-stage preamplifier board, with 15 SiPMs per board. In addition to the 15 individual signals generated
+by each preamplifier, the boards also produce three analog sum outputs, each the sum
+of five adjacent SiPMs corresponding to the five fibers in a single column. All 510
 SiPMs are individually biased by custom bias control boards, one for every two
 preamplifier boards. The control boards connect to the
 preamplifiers over a custom backplane, and communicate with the
 experimental slow controls over ethernet. Each control board has the
-capability to electronically switch its preamplifiers between two gain modes,
-a low gain mode that is used during regular tagging operation, and a high gain
-mode that is used for triggering on single-pixel pulses during bias calibration.
+capability to electronically select between two gain modes for the preamplifiers
+on that board:
+a low gain mode used during regular tagging operation, and a high gain
+mode used for triggering on single-pixel pulses during bias calibration.
 Each bias control board manages the control and biasing for two preamplifiers.
 The control board also measures live values for environmental parameters
 (voltage levels and temperatures) in the TAGM electronics, so that alarms can
 be generated by the experimental control system whenever any of these parameters
 strays outside predefined limits.
 
-The TAGM signals are digitized in 122 channels of ADC and TDC. These 122
+Pulse height and timing information for 122 channels from the TAGM is provided by analog-to-digital converters (ADCs) and time-to-digital converters (TDCs). These 122
 signals include the 102 column sums plus the individual fiber signals from
-columns 7, 27, 81, and 97. Signals from the frontend go through a 50-50
-passive splitter, with one output going to the ADC's and the other through
-discriminators to the TDCs. The ADCs are 250 MHz flash ADC's with a 12 bits
-or resolution and a full-scale pulse amplitude of 1 V. The TDC's are based
+columns 7, 27, 81, and 97. Each signal for these 122 channels goes through a 1:1
+passive splitter, with one output going to an ADC and the other through
+discriminators to a TDC. The ADCs are 250-MHz flash ADC's with 12-bit
+resolution and a full-scale pulse amplitude of 1 V. The TDCs are based
 on the F1TDC chip, with a least-count of 62~ps. Pulse thresholds in both
 the ADC and discriminator modules are programmable over the range 1-1000 mV
 on an individual channel basis, covering the full dynamic range of the TAGM
@@ -472,34 +496,34 @@ frontend. The TAGM preamplifier outputs (before splitting) saturate around
 2~V pulse amplitude.
 
 The mean pulse charge in units of SiPM pixels corresponding to a
-single high energy electron varies from 150 to 300, depending on the fiber,
-with an average of 220 and standard deviation of 25. During calibration,
+single high-energy electron varies from 150 to 300 pC, depending on the fiber,
+with an average of 220 pC and standard deviation of 25 pC. During calibration,
 this yield is measured individually for each fiber by selectively biasing
 the SiPMs on each row of fibers, one row at a time, and reading out the column
 sums. Once all 510 individual fiber yields have been measured, the bias voltages
 within each column are adjusted to compensate for yield variations, so
 that the mean pulse height in a given column is the same regardless of which
-fiber in the column saw the electron. The ADC readout and discriminator
+fiber in the column detected the electron. The ADC readout and discriminator
 thresholds are set individually for each column, for optimum efficiency and
 noise rejection.
 
 The ADC firmware provides an approximate time for each pulse, in addition to the
-pulse amplitude. During offline reconstruction, this information is used to
+pulse amplitude. During offline reconstruction, this time information is used to
 associate ADC and TDC pulse information from the same channel, so that a
 time-walk correction can be applied to the TDC time. Once this correction
 has been applied, a time resolution of 230~ps is achieved for the TAGM.
 This resolution is based on data collected at rates on the order of 1~MHz
-per column, a factor 2 lower than the 2.2~MHz peak rate anticipated during
+per column, a factor of 2 lower than the 2.2~MHz peak rate anticipated during
 \GX{} Phase 2 running. A brief test above 2~MHz per column allowed visual
 inspection of the pulse waveforms from the TAGM, and no change in the
 pulse shape or amplitude was observed. Given that the readout was designed
 to operate at rates up to 4~MHz per column without significant degradation
-in performance, it is expected that the TAGM time resolution will be
-substantially unaffected by the increased intensity of \GX{} Phase 2.
+in performance, the TAGM time resolution should be
+substantially unaffected by the increased beam intensity of \GX{} Phase 2.
 
 \subsubsection{Broadband tagging hodoscope}\label{sec:TAGHIntro}
 The tagger hodoscope (TAGH) is a device consisting of $\sim$220 scintillator counters distributed over a length of 9.25~m and mounted just behind the focal plane of the tagger magnet.
-Its function is to tag the full range in photon energy from 25\% to 97\%
+The function of this hodoscope is to tag the full range in photon energy from 25\% to 97\%
 of the incident electron energy, with a gap in the middle of that range
 left open for the tagger microscope. The geometry of the counters in the
 vicinity of the microscope is shown in Fig.\,\ref{fig:beam:BEAM_taggerdetectors}. 
@@ -507,30 +531,31 @@ This broad coverage aids in alignment of the diamond radiator and expands the \G
 The coverage of the hodoscope counters in the region below 60\% drops to half,
 with substantial gaps in energy between the counters. This was done because
 the events of primary interest to \GX{} come from interactions of photons
-within and above the coherent peak; there the coverage is 100\%.
+within and above the coherent peak; 
+within and above the coherent peak the coverage is 100\% up to the 97\% $E_0$ cutoff.
 
 Each counter in the hodoscope is a sheet of EJ-228 scintillator, 6 mm thick and
 40 mm high. The counter widths vary along the focal plane, from 21~mm near the
-end-point region down to 21~mm at the downstream end. The scintillators are
-coupled to a Hamamatsu R9800 PMT via a cylindrical acrylic (UVT-PMMA) light
-guide 22.2 mm in diameter and 120 mm long. The PMT's are wrapped in $\mu$-metal
-to shield them from the fringe field of the tagger magnet.
+end-point region down to 3~mm at the downstream end. The scintillators are
+coupled to a Hamamatsu R9800 photomultiplier tube (PMT) via a cylindrical acrylic (UVT-PMMA) light
+guide 22.2 mm in diameter and 120 mm long. Each PMT is wrapped in $\mu$-metal
+to shield the tube from the fringe field of the tagger magnet.
 
-The PMTs are instrumented with a locally-designed active base~\cite{tagh:base}.
-It consists of a high-voltage divider and an amplifier powered by current
+Each PMT is instrumented with a locally-designed active base~\cite{tagh:base},
+consisting of a high-voltage divider and an amplifier powered by current
 flowing through the divider. The base provides two signal outputs, one going
 to a flash ADC and the other through a discriminator to a TDC.
-The amplifier with a gain factor of 8.5 allows to operate the PMT at a
+Operating the amplifier with a gain factor of 8.5 allows the PMT to operate at a
 lower voltage of 900 V and reduce the PMT anode current, therefore improving
 the rate capability. The energy bite of each counter ranges between 8.5 and
-30 MeV for an 12 GeV incident electron beam.  Typical rates during production
+30 MeV for a 12 GeV incident electron beam.  Typical rates during production
 running are 1 MHz above the coherent peak and 2 MHz per counter below the
 coherent peak. The maximum sustainable rate per counter is about 4~MHz.
 
 The counters are mounted with their faces normal to the path of the
-scattered electrons in two or three rows slightly downstream the focal
+scattered electrons in two or three rows slightly downstream of the focal
 plane, as shown in Fig.\,\ref{fig:beam:BEAM_taggerdetectors}.
-This allows the counters to be positioned without horizontal gaps in
+This mounting approach allows the counters to be positioned without horizontal gaps in
 the dispersion direction, enabling complete coverage of the entire
 tagged photon energy range.
 
@@ -546,56 +571,63 @@ tagged photon energy range.
 \end{center}
 \end{figure}
 
-The mounting frame of the hodoscope is suspended from the Tagger-Hall ceiling
-to provide full flexibility of microscope positioning. The frame is constructed
-to support the addition of counters to fill in the energy range currently
-occupied by the microscope, in case the TAGM is moved to another location.
+The mounting frame of the hodoscope is suspended from the ceiling of the Tagger Hall
+to provide full flexibility for positioning TAGH. The frame is constructed
+to also support the addition of counters to fill in the energy range currently
+occupied by the microscope when the TAGM location is changed.
 
 A similar procedure to that described above for the TAGM is used to apply
 a time-walk correction to the TDC times from the TAGH counters. Once this
+time-walk correction
 is applied, the time resolution of the TAGH is 200~ps. No significant
 degradation of this resolution is expected at the operating rates planned
 for Phase 2 running, which are on the order of 2 MHz per counter above
 the coherent peak. Under these conditions, the rates in the TAGH counters
 below the coherent peak would average around 4~Mhz, which is at the top
-of their allowed range. These counters will normally be turned off when
+of their allowed range; these counters will normally be turned off when
 running at full intensity in Phase 2.
 
 \subsection{Beam profiler}
 The beam profiler is located immediately upstream of the collimator and is
-used to measure photon beam profiles. The profiler consists of two planes
+used to measure the photon beam intensity in a plane normal to the incident
+photon beam. The profiler consists of two planes
 of scintillating fibers, giving information on the photon beam profile
-in the X and Y projections. Each plane is made up of 64 square fibres,
-2 mm in width, read out by four 16-channel multi-anode PMTs. The profilers
-are only used during beam setup until the beam is centered on the active collimator and it can be used reliably to provide feedback on
-the beam position. They are retracted during physics production runs.
+in the X and Y projections. Each plane consists of 64 square fibers,
+2 mm in width, read out by four 16-channel multi-anode PMTs. The beam profiler
+is only used during beam setup until the photon beam is centered on the active collimator.
+This beam profiler can be used reliably to provide feedback on
+the beam position during setup, but is retracted during physics production runs.
 
 \subsection{Active collimator \label{sec:coll}}
 The active collimator monitors the photon beam position and provides
 feedback to micro-steering magnets in the electron beamline, for the
-purpose of suppressing drifts in photon beam position. It is located on
+purpose of suppressing drifts in photon beam position. 
+The
+design of the active collimator for \GX{} is based on a device 
+developed at SLAC for monitoring
+the coherent bremsstrahlung beam there \cite{Miller:1973yi}.
+The \GX{} active collimator is located on
 the upstream face of the primary collimator, and consists of a dense
 array of tungsten pins attached to tungsten base plates. The tungsten
 plate intercepts off-axis beam photons before they enter the collimator,
 creating an electromagnetic shower that cascades through the array
-of pins. High-energy delta rays known as {\em knock-ons} created by the
-shower in the pins are emitted forward into the primary collimator, and
+of pins. High-energy delta rays created by the
+shower in the pins (known as ``knock-ons") 
+are emitted forward into the primary collimator, and
 result in a net current between the tungsten plates and the collimator
 that is proportional to the intensity of the photon beam on the plate.
-The tungsten plates are mounted on an insulating support, and their
-currents are monitored by a preamplifier with pA sensitivity. This
-design is based on a device developed at SLAC for monitoring
-their coherent bremsstrahlung beam \cite{Miller:1973yi}.
+The tungsten plates are mounted on an insulating support, and the plate
+currents are monitored by a preamplifier with pA sensitivity. 
 
 The tungsten plate is segmented radially into two rings, and each ring is
-segmented azimuthally into 4 quadrants. The asymmetry of the induced 
+segmented azimuthally into four quadrants. The asymmetry of the induced 
 currents on the plates in opposite quadrants indicate the degree of
-displacement of the  beam from its intended center position. Typical
+displacement of the photon beam from the intended center position. Typical
 currents on the tungsten sectors are at the level of 1.4~nA (inner ring)
 and 0.85~nA (outer ring) when running with a 50~$\mu$m diamond crystal
-and 200~nA electron beam current. The current-sensitive preamplifiers
+and a 200-nA incident electron beam current. The current-sensitive preamplifiers
 used with the active collimator are PMT-5R devices manufactured by
-ARI Corporation. The PMT-5R has 6 remotely selectable gain settings
+ARI Corporation. The PMT-5R has six remotely selectable gain settings
 ranging from $10^{12}$~V/A to $10^6$~V/A, selectable by powers of 10.
 This provides excellent dynamic
 range for operation of the beam over a wide range of intensities, from
@@ -605,32 +637,33 @@ the higher gain settings, for example 2~Hz at $10^{12}$~V/A, 20~Hz at
 $10^{11}$~V/A, and so on.
 
 In-situ electronic noise on the individual wedge currents is measured to
-be 1.5~pA/$\sqrt{Hz}$ on the inner ring, and 15~pA/$\sqrt{Hz}$ on the
-outer ring. The sensitivity of the current asymmetry to position is
+be 1.5~pA/$\sqrt{\mbox{Hz}}$ on the inner ring, and 15~pA/$\sqrt{\mbox{Hz}}$
+on the outer ring. The sensitivity of the current asymmetry to position is
 0.160/mm for the inner ring and 0.089/mm for the outer. The electronic
-noise on the individual wedge currents is
-1.5~pA/$\sqrt{Hz}$ (inner ring) and 15~pA/$\sqrt{Hz}$ (outer ring).
+noise on the individual wedge currents is 1.5~pA/$\sqrt{\mbox{Hz}}$
+(inner ring) and 15~pA/$\sqrt{\mbox{Hz}}$ (outer ring).
 With a 50~micron diamond and 200~nA beam current, operating the active
 collimator at a bandwidth of 1~kHz yields a measurement error in the
 position of the beam centroid of 150~$\mu$m for the inner ring and
 450~$\mu$m for the outer ring.
-The purpose of the outer ring is to help locate the beam when it
-is shifted more than 2~mm from the collimator axis, where the response
+The purpose of the outer ring is to help locate the beam when the beam location
+has shifted more than 2~mm from the collimator axis, where the response
 of the inner ring sectors becomes nonlinear.
 
 The maximum deviation allowed for the Hall D photon beam position 
 relative to the collimator axis is 200~$\mu$m. The active collimator
-readout was designed with kHz bandwidth so that it could be used in a
-fast feedback loop to suppress motion of the beam at 60~Hz and harmonics
+readout was designed with kHz bandwidth so that use in a
+fast feedback loop would suppress motion of the beam at 60~Hz and harmonics
 that might exceed this limit. Experience with the Hall D beam has shown
 that the electron beam feedback systems already suppresses this motion
 to less than 100~$\mu$m amplitude, so that fast feedback using the active
-collimator is not required during normal operation. Instead, it is
+collimator is not required during normal operation. Instead, the active collimator is
 used in a slow feedback loop which locks the photon beam position at
 the collimator with a correction time constant of a few seconds. This
+slow feedback system
 is essential for preventing long-term drifts in the photon beam
 position that would otherwise occur on the time scale of hours or
-days. Operating in this mode with noise averaging over 5 seconds intervals,
+days. Operating in this mode with noise averaging over 5 s intervals,
 the  active collimator can achieve 200~$\mu$m position resolution down
 to beam currents as low as 2~nA. 
 
@@ -652,32 +685,29 @@ Under normal \GX{} running conditions.
 The tungsten collimator is surrounded by lead shielding.
 The collimator may also be positioned to block the beam to prevent
 high intensity beam from entering the experimental hall during tuning
-of the electron beam. Downstream of the primary collimator there is a
+of the electron beam. Downstream of the primary collimator, a
 sweeping magnet and shield wall, followed by a secondary collimator
-with its sweeping magnet and shield wall. These suppress charged
+with its sweeping magnet and shield wall, suppress charged
 particles and gamma background around the photon beam that are
 generated in the primary collimator. The photon beam exiting the
 collimation system then passes through a thin pair conversion target
-which allows continuous monitoring of the beam flux and polarization.
+that allows continuous monitoring of the photon beam flux and polarization.
 
 \subsection{Triplet polarimeter \label{sec:tpol}}
 The triplet polarimeter (TPOL) is used to measure the degree of polarization
-of the linearly polarized photon beam \cite{DUGGER2017115}.
+of the linearly-polarized photon beam \cite{DUGGER2017115}.
 The polarimeter uses the process of $e^+e^-$ pair production on atomic electrons 
 in a beryllium target foil, with these scattered atomic electrons
 measured using a silicon strip detector.
-Information of the degree of polarization of the photon beam is
-obtained by analysing the azimuthal distribution of the scattered
+Information on the degree of polarization of the photon beam is
+obtained by analyzing the azimuthal distribution of the scattered
 atomic electrons measured by this device.
 
 \subsubsection{Determination of photon polarization \label{sec:polarization}}
-The triplet polarimeter determines the degree of polarization of the
-incident photon beam by measuring the azimuthal distribution of the
-recoil electron arising from the triplet photoproduction process.
 Triplet photoproduction occurs when the polarized electron beam interacts
 with the electric field of an atomic electron within a target material
-and produces a high energy electron-positron pair. When coupled with
-trajectory and energy information of the lepton pair, the azimuthal
+and produces a high energy $e^+e^-$ pair. When coupled with
+trajectory and energy information of the $e^+e^-$ lepton pair, the azimuthal
 angular distribution of the recoil electron provides a measure of
 the photon beam polarization. The cross section for triplet photoproduction
 can be written as $\sigma_t = \sigma_0 [ 1 - P \Sigma \cos(2\varphi)]$
@@ -691,10 +721,10 @@ to the function $A [ 1- B \cos(2\varphi)]$  where the variables $A$ and
 $B$ are parameters of the fit, with $B = P \Sigma$. The value of
 $\Sigma$ depends on the intensity profile of the photon beam, the
 thickness of the converter target, and many other details of the setup.
-It was determined to be $0.1990 ± 0.0008$ at 9~GeV for the \GX{} beamline
+The value of $\Sigma$ was determined to be $0.1990 \pm 0.0008$ at 9~GeV for the \GX{} beamline
 and a 75~micron Be converter~\cite{DUGGER2017115}.
 
-The triplet polarimeter (TPOL) is a system for detection of recoil electrons
+The triplet polarimeter (TPOL) detects the recoil electron arising
 from triplet photoproduction. This system consists of a converter tray and
 positioning assembly, which holds and positions a beryllium foil converter
 within which the triplet photoproduction takes place; a silicon strip detector
@@ -710,37 +740,43 @@ fed through a vacuum flange into a charge-sensitive preamplifier.
 In operation, the TPOL vacuum box is coupled directly to the evacuated
 beamline through which the polarized photon beam passes. 
 
-In summation, upon entering TPOL, the photon beam passes into the
+Upon entering TPOL, the photon beam passes into the
 beryllium converter, triplet photoproduction takes place, an
-electron-positron pair is emitted from the target in the forward direction,
+$e^+e^-$ pair is emitted from the target in the forward direction,
 and a recoil electron ejected from the target at large angles with
 respect to the beam is detected by the SSD within the TPOL vacuum chamber.
-The electron-positron pair, together with any beam photons that did not
+The $e^+e^-$ pair, together with any beam photons that did not
 interact with the converter material, pass through the downstream port of
 the TPOL vacuum box into the evacuated beamline, which in turn passes
-through a shielding wall into the Hall D experimental area. The electron
-and positron pair then enter the vacuum box and magnetic field of the GlueX
+through a shielding wall into the Hall D experimental area. 
+The $e^+e^-$ pair then enters the vacuum box and magnetic field of the \GX{}
 pair spectrometer, while photons continue through an evacuated beamline to
 the target region of the GlueX detector. Accounting for all sources of
 uncertainty from this setup, the total estimated systematic error in
 the TPOL asymmetry $\Sigma$ is 1.5\% \cite{DUGGER2017115}.
 
 \subsection{Pair spectrometer  \label{sec:ps}}
+The main purpose of the pair spectrometer (PS) \cite{BARBOSA2015376} 
+is to measure the spectrum of the
+collimated photon beam and determine the fraction of linearly polarized
+photons in the coherent peak energy region. The TPOL relies on the PS
+to trigger on pairs in coincidence with hits in the recoil detector.
+The PS is also used to monitor the photon beam flux, and for 
+energy calibration of the tagging hodoscope and microscope detectors.
 
-The pair spectrometer (PS) \cite{BARBOSA2015376} is located at the
-entrance to Hall D.%(Fig.~\ref{fig:beam:hall-d}).
-The PS reconstructs the energy of a beam photon by detecting
-the $e^\pm$ pairs produced by the photon in a thin converter.
-The converter used is typically the one housed within the triplet
-polarimeter, otherwise the PS has additional converters that may
+The PS, located at the entrance to Hall D, %(Fig.~\ref{fig:beam:hall-d}).
+reconstructs the energy of a beam photon by detecting
+the $e^+e^-$ pair produced by the photon in a thin converter.
+The converter used is typically the beryllium target housed within TPOL; 
+otherwise the PS has additional converters that may
 be inserted into the beam with thicknesses ranging between 0.03\%
 and 0.5\% of a radiation length.
-The produced leptons are deflected in a modified 18D36 dipole magnet
+The produced $e^+e^-$ leptons are deflected in a modified 18D36 dipole magnet
 with an effective field length of about 0.94~m and detected in two
 layers of scintillator detectors: a high-granularity hodoscope and
 a set of coarse counters, referred to as PS and PSC counters, respectively.
-The detectors are partitioned into two arms positioned symmetrically
-with respect to the photon beam line. The PSC consists of sixteen
+The detectors are partitioned into two identical arms positioned symmetrically on
+opposite sides of the photon beam line. The PSC consists of sixteen
 scintillator counters, eight in each detector arm. Each PSC counter is
 4.4~cm wide and 2~cm thick in the direction along the lepton trajectory
 and 6~cm high. Light from the PSC counters is detected using Hamamatsu
@@ -752,21 +788,16 @@ readout of the PS counters
 Each detector arm covers a momentum range of $e^\pm$ between 3.0 GeV/c
 and 6.2 GeV/c,  corresponding to reconstructed photon energies between
 6~GeV and 12.4~GeV. The relatively large acceptance of the hodoscope
-allows one to reconstruct photons with energies below the coherent peak
-all the way through the beam end-point energy near 12~GeV.
+enables energy determination for photons with energies from below the coherent peak
+to the beam endpoint energy near 12~GeV.
 
-The main purpose of the spectrometer is to measure the spectrum of the
-collimated photon beam and determine the fraction of linearly polarized
-photons in the coherent peak energy region. The TPOL relies on the PS
-to trigger on pairs in coincidence with hits in the recoil detector.
-The PS is also used to monitor the photon beam flux, and for 
-energy calibration of the tagging hodoscope and microscope detectors.
+
 
 The pair energy resolution of the PS hodoscope is about 25 MeV.
 The time resolution of the PSC counters is 120 ps. This resolution
-allows one to distinguish the electron beam bunch where the bremsstrahlung
+allows determination of the electron beam bunch in which the bremsstrahlung
 photon was emitted, and to associate hits from the tagging detectors and PS
-from the same event. The PS detector is integrated to the trigger system,
+from the same event. Signals from the PS detector are provided to the trigger system,
 as described in Section~\ref{sec:trig}. The typical rate of PS coincidences
 is a few kHz. Details about the performance of the spectrometer are given in~\cite{Somov:2017vhp,Somov:2016bgb}.
 
@@ -1010,42 +1041,43 @@ of energy. Data from the PS are  collected using a PS trigger, which
 runs in parallel to the  main \GX{} physics trigger, as described in
 Section~\ref{sec:trig}. The number of beam photons integrated over
 the run period is obtained individually for each tagger counter (TAGH
-and TAGM), i.e., for each specific beam energy bin. 
+and TAGM), i.e., for each specific photon beam energy bin. 
 
 The PS calibration parameter used in the flux determination, a product
 of the  converter thickness, acceptance, and the detection efficiency
 for leptons, is determined using calibration runs with the total 
 absorption counter (TAC)~\cite{somov_flux}. The TAC is a small calorimeter
-(see Section~\ref{sec:tac}) that is inserted directly into the photon
-beam and counts the number of beam photons as a function of energy.
-These absolute flux calibration runs are performed at small beam flux in
+(see Section~\ref{sec:tac}) inserted directly into the photon
+beam to count the number of beam photons as a function of energy.
+These absolute flux calibration runs are performed at reduced beam flux in
 order to limit the rate of accidental tagging coincidences.
-Data are acquired simultaneously for the PS and TAC.
-These data enable an absolute flux calibration of the PS
-by measuring the number of reconstructed $e^{\pm}$ pairs for a given
+Data are acquired simultaneously from the PS and TAC.
+These data enable an absolute flux calibration for the PS
+by measuring the number of reconstructed $e^+e^-$ pairs for a given
 number of photons of the same energy seen by the TAC. 
 Uncertainties on the photon flux determinations are currently being
 investigated. The expected precision of the flux determination is on
 the level of $1\%$.
 
 \subsection{Total absorption counter \label{sec:tac}}
-The total absorption counter (TAC) is a high-efficiency lead glass
+Not every photon produced at the radiator reaches the hall, and in
+normal \GX{} running, not every photon that reaches the hall causes
+an interaction that is seen in the \GX{} detector.
+The total absorption counter (TAC) is a
+detector with nearly 100\% efficiency that is used to empirically
+determine this ``tagging fraction" individually for each tagging counter.
+The device is a high-efficiency lead glass
 calorimeter, used at low beam currents ($<5$nA) to determine the overall
 normalization of the flux from the \GX{} coherent bremsstrahlung facility.
 The TAC was originally developed for and deployed in Hall B, for
 photon beam operations with CLAS
 \cite{clasnote1992014, clasnote1993011,clasnote1999002},
 and was transferred to Hall D to serve the same purpose for \GX{}.
-Not every photon produced at the radiator reaches the hall, and in
-normal \GX{} running, not every photon that reaches the hall causes
-an interaction that is seen in the \GX{} detector. The TAC is a
-detector with nearly 100\% efficiency that is used to empirically
-determine this fraction individually for each tagging counter.
 
 Using the TAC at normal \GX{} production currents is not possible,
 as it would be overwhelmed with rate and would very quickly succumb
 to radiation damage. Therefore the TAC is only inserted into the
-beam during special runs at very low intensities where it runs
+beam during special runs at very low intensities where the detector can run
 with near 100\% efficiency.
 From these TAC coincidence measurements, the fraction of tagged photons
 reaching the \GX{} target is determined as a function of energy.
