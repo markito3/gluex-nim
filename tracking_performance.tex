@@ -30,11 +30,11 @@ initial pass of the filter we do not use the drift time information from the
 wires.  We assume that each particle is a pion, except for low momentum track 
 candidates ($p < 0.8$~GeV/$c$), for which we redo the fits with a proton hypothesis.
 
-The third stage we matches each fitted track from the second 
-stage to the start counter, the time-of-flight scintillators, the BCAL and the 
+The third stage matches each fitted track from the second 
+stage to one of the start counter, the time-of-flight scintillators, the BCAL, or the 
 FCAL to determine a start time $t_0$ so that the drift time to each wire 
 associated with the track can be used in the fit.  Each track is then refitted with
-the drift information separately for each value of mass for particles in the set \{$e^\pm,\pi^\pm,K^\pm,p^\pm$\}.
+the drift information, separately for each value of mass for particles in the set \{$e^\pm,\pi^\pm,K^\pm,p^\pm$\}.
 
 
 
