@@ -9,11 +9,11 @@ Hits in adjacent rings in the axial layers of the CDC are also associated into
 segments that are linked together with other segments in other axial layers
 and fitted with circles in the projection perpendicular to the beam line. We 
 then find intersections between these circles and the stereo wires and perform 
-a linear fit to find a z-position near the beam line and the tangent to the dip
+a linear fit to find a $z$-position near the beam line and the tangent to the dip
  angle $\lambda=\pi/2-\theta$.  These parameters in addition to the circle fit 
 parameters form a CDC track candidate for each set of linked axial and stereo 
 layers.   We link FDC and CDC track candidates together that emerge from the 
-target in the $\theta=5^\circ-20^\circ$ range that pass through both the FDC 
+target in the range $5^\circ < \theta < 20^\circ$ that pass through both the FDC 
 and the CDC.
 
 The second stage uses a Kalman Filter \cite{KalmanFilter, KalmanFilter2} to find the fitted track parameters
@@ -23,19 +23,18 @@ track candidate parameters as an initial guess.  Here $D$ is the signed
 distance of closest approach to the beam line.  The Kalman Filter proceeds in 
 steps from
 the hits farthest from the beam line toward the beam line, taking into account
-energy loss and multiple scattering at each step along the way and incorporating
+energy loss and multiple scattering at each step along the way, according to
 a map of the magnetic field within the bore of the solenoid magnet.  For the 
 first 
 initial pass of the filter we do not use the drift time information from the 
 wires.  We assume that each particle is a pion, except for low momentum track 
-candidates (p$<$0.8 GeV/c), for which we redo the fits with a proton hypothesis.
+candidates ($p < 0.8$~GeV/$c$), for which we redo the fits with a proton hypothesis.
 
-At the beginning of the third stage we match each fitted track from the second 
+The third stage we matches each fitted track from the second 
 stage to the start counter, the time-of-flight scintillators, the BCAL and the 
 FCAL to determine a start time $t_0$ so that the drift time to each wire 
-associated with the track can be used in the fit.  Each track is refitted with
-the drift information multiple times using the set \{$e^\pm,\pi^\pm,K^\pm,p^\pm$\} 
-of mass hypotheses.
+associated with the track can be used in the fit.  Each track is then refitted with
+the drift information separately for each value of mass for particles in the set \{$e^\pm,\pi^\pm,K^\pm,p^\pm$\}.
 
 
 
@@ -52,7 +51,7 @@ Fig.~\ref{fig:angle res}.
 \includegraphics[width=0.45\textwidth]{figures/PionMomentumResolution.pdf}
 \includegraphics[width=0.45\textwidth]{figures/ProtonMomentumResolution.pdf}
 \caption{\label{fig:dp_p} (Left) Momentum resolution for $\pi^-$ tracks.
-(Right) Momentum resolution for proton tracks. (Color online)}
+(Right) Momentum resolution for proton tracks.}
 \end{center}
 \end{figure}
 
@@ -61,8 +60,7 @@ Fig.~\ref{fig:angle res}.
 \includegraphics[width=0.45\textwidth]{figures/PionThetaResolution.pdf}
 \includegraphics[width=0.45\textwidth]{figures/PionPhiResolution.pdf}
 \caption{\label{fig:angle res} (Left) Polar angle resolution for $\pi^-$ tracks.
-(Right) Azimuthal angle resolution for $\pi^-$ tracks.
- (Color online)}
+(Right) Azimuthal angle resolution for $\pi^-$ tracks.}
 \end{center}
 \end{figure}
 
@@ -72,18 +70,18 @@ Fig.~\ref{fig:angle res}.
 The thin windows of the cryogenic target and the exit window of the target
 vacuum chamber provide a means to estimate the 
 vertex resolution of the tracking system.  We use pairs of tracks from 
-``empty target'' runs to reconstruct these windows as illustrated in 
+empty target runs to reconstruct these windows as illustrated in 
 Fig.~\ref{fig:z-vertex}.  We required $d<1$ cm, where $d$ is the 
-distance-of-closest-approach between the two tracks. The ``vertex'' position 
-is at the mid-point of the line segment of length $d$ connecting the two tracks.
-The estimated z-position resolution is 3 mm.
+distance-of-closest-approach between the two tracks. The vertex position 
+is taken to be the mid-point of the line segment (of length $d$) defined by the points of closest approach for each track.
+The estimated $z$-position resolution is 3 mm.
 
 \begin{figure}[tbp]
 \begin{center}
 \includegraphics[width=0.7\textwidth]{figures/ZVertex.pdf}  
 \caption{\label{fig:z-vertex} Reconstructed vertex positions within 1 cm radial
  distance with respect to the beam line for an empty target run.  The curve shows the result of a fit to the vertex distribution used to determine the vertex
-resolution.  (Color online). 
+resolution.
 }   
 \end{center}  
 \end{figure}

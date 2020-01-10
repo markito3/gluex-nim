@@ -1,6 +1,7 @@
 TEX_FILES_0 = GlueX_nim gluex_experiment beamline solenoid detector_overview \
 	tracking_detectors calorimeters scintillators controls online \
-	reconstruction simulation performance summary authors
+	reconstruction simulation performance summary authors \
+	tracking_performance
 TEX_FILES = $(addsuffix .tex,$(TEX_FILES_0)) # add .tex suffix
 
 all : GlueX_nim.pdf
